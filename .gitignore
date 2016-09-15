@@ -1,4 +1,5 @@
 Podfile.lock
+Pods/*
 Pods/Manifest.lock
 Pods/Firebase/.cocoapods.yml
 Pods/Firebase/CHANGELOG.md
