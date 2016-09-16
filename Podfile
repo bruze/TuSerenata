@@ -6,5 +6,13 @@ target 'TuSerenata' do
   use_frameworks!
 
   # Pods for TuSerenata
+  #Backend
   pod 'Firebase', '2.0'
+  #Side Menu
+  pod 'DualSlideMenu'
+  #Soporte para widgets especiales
+  pod 'LTInfiniteScrollView'
+  #Herramientas
+  pod 'EZSwiftExtensions'
+  pod 'PropertyExtensions'
 end

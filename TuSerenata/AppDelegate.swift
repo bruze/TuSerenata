@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import DualSlideMenu
 
-
+let appDelegate = (UIApplication.sharedApplication().delegate as? AppDelegate)!
 let FirebaseUrl = "https://tuserenata-dd913.firebaseio.com/"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyboard: UIStoryboard?
+    var slide: DualSlideMenuViewController?
 
     override init() {
         super.init()
@@ -23,7 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftView = storyboard?.instantiateViewControllerWithIdentifier("Menu")
+        let mainView = storyboard?.instantiateInitialViewController()//.instantiateViewControllerWithIdentifier("Main")
+        
+        slide = DualSlideMenuViewController(mainViewController: mainView!, leftMenuViewController: leftView!)
+        window!.rootViewController = slide
+        window!.makeKeyAndVisible()
         return true
     }
 

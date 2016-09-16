@@ -14,6 +14,9 @@
 		9D31B5B21D8B359500AFC5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5B11D8B359500AFC5EF /* Assets.xcassets */; };
 		9D31B5B51D8B359500AFC5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5B31D8B359500AFC5EF /* LaunchScreen.storyboard */; };
 		9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5BD1D8B39C900AFC5EF /* Musico.swift */; };
+		9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D301D8C754E00ECF101 /* MenuVC.swift */; };
+		9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */; };
+		9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FA1D8C78D400639952 /* Gradiente.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		9D31B5B61D8B359500AFC5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D31B5BD1D8B39C900AFC5EF /* Musico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Musico.swift; path = Model/Musico.swift; sourceTree = "<group>"; };
 		9D31B5BF1D8B3AB200AFC5EF /* TuSerenata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuSerenata-Bridging-Header.h"; sourceTree = "<group>"; };
+		9DA82D301D8C754E00ECF101 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = Controles/MenuVC.swift; sourceTree = "<group>"; };
+		9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Ext.swift"; path = "Tool/UIColor+Ext.swift"; sourceTree = "<group>"; };
+		9DC593FA1D8C78D400639952 /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradiente.swift; path = Fabrica/Gradiente.swift; sourceTree = "<group>"; };
 		C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.release.xcconfig"; sourceTree = "<group>"; };
 		CCA922768C27437FE26509AC /* Pods-TuSerenata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +88,9 @@
 		9D31B5A91D8B359500AFC5EF /* TuSerenata */ = {
 			isa = PBXGroup;
 			children = (
+				9DC593F91D8C78B700639952 /* Fabrica */,
+				9DA82D321D8C767D00ECF101 /* Tool */,
+				9DA82D2F1D8C753900ECF101 /* Controles */,
 				9D31B5BC1D8B39AA00AFC5EF /* Model */,
 				9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */,
 				9D31B5AC1D8B359500AFC5EF /* ViewController.swift */,
@@ -99,6 +108,30 @@
 				9D31B5BD1D8B39C900AFC5EF /* Musico.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		9DA82D2F1D8C753900ECF101 /* Controles */ = {
+			isa = PBXGroup;
+			children = (
+				9DA82D301D8C754E00ECF101 /* MenuVC.swift */,
+			);
+			name = Controles;
+			sourceTree = "<group>";
+		};
+		9DA82D321D8C767D00ECF101 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		9DC593F91D8C78B700639952 /* Fabrica */ = {
+			isa = PBXGroup;
+			children = (
+				9DC593FA1D8C78D400639952 /* Gradiente.swift */,
+			);
+			name = Fabrica;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */,
+				9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */,
+				9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */,
+				9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */,
 				9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */,
 				9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */,
 			);
