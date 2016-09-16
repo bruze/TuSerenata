@@ -12,6 +12,7 @@ import IQKeyboardManagerSwift
 
 let appDelegate = (UIApplication.sharedApplication().delegate as? AppDelegate)!
 let FirebaseUrl = "https://tuserenata-dd913.firebaseio.com/"
+let FirebaseRef = Firebase(url: FirebaseUrl)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

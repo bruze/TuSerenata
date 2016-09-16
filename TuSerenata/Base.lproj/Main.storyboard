@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="494" y="380"/>
         </scene>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="Ynf-G4-FmF">
             <objects>
-                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DtM-ay-SmC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DtM-ay-SmC" customClass="Login" customModule="TuSerenata" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LpW-ge-fBl"/>
                         <viewControllerLayoutGuide type="bottom" id="ZBm-qo-jEq"/>
@@ -161,7 +161,11 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="defLabelYOffset">
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="intenteLogueo"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="DtM-ay-SmC" id="FOa-Ix-ZDb"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>
