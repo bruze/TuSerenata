@@ -17,6 +17,23 @@
 		9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D301D8C754E00ECF101 /* MenuVC.swift */; };
 		9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */; };
 		9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FA1D8C78D400639952 /* Gradiente.swift */; };
+		9DC593FD1D8C7E4500639952 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FC1D8C7E4500639952 /* Login.swift */; };
+		9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */; };
+		9DC594121D8C82B900639952 /* AMKEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594021D8C82B900639952 /* AMKEncoder.swift */; };
+		9DC594131D8C82B900639952 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594031D8C82B900639952 /* CGRect+Extension.swift */; };
+		9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594051D8C82B900639952 /* AMKButton+Animation.swift */; };
+		9DC594151D8C82B900639952 /* AMKButton+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594061D8C82B900639952 /* AMKButton+Delegate.swift */; };
+		9DC594161D8C82B900639952 /* AMKButton+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594071D8C82B900639952 /* AMKButton+Image.swift */; };
+		9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594081D8C82B900639952 /* AMKButton+KVO.swift */; };
+		9DC594181D8C82B900639952 /* AMKButton+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594091D8C82B900639952 /* AMKButton+Label.swift */; };
+		9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940A1D8C82B900639952 /* AMKButton+Persistence.swift */; };
+		9DC5941A1D8C82B900639952 /* AMKButton+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940B1D8C82B900639952 /* AMKButton+Touch.swift */; };
+		9DC5941B1D8C82B900639952 /* AMKButton+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940C1D8C82B900639952 /* AMKButton+View.swift */; };
+		9DC5941C1D8C82B900639952 /* AMKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940D1D8C82B900639952 /* AMKButton.swift */; };
+		9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940F1D8C82B900639952 /* AMKCarousel+Scroll.swift */; };
+		9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594101D8C82B900639952 /* AMKCarousel.swift */; };
+		9DC594201D8C834900639952 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5941F1D8C834900639952 /* String+Additions.swift */; };
+		9DC594221D8C83AB00639952 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594211D8C83AB00639952 /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +50,23 @@
 		9DA82D301D8C754E00ECF101 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = Controles/MenuVC.swift; sourceTree = "<group>"; };
 		9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Ext.swift"; path = "Tool/UIColor+Ext.swift"; sourceTree = "<group>"; };
 		9DC593FA1D8C78D400639952 /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradiente.swift; path = Fabrica/Gradiente.swift; sourceTree = "<group>"; };
+		9DC593FC1D8C7E4500639952 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Controles/Login.swift; sourceTree = "<group>"; };
+		9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKEncoder+Extension.swift"; sourceTree = "<group>"; };
+		9DC594021D8C82B900639952 /* AMKEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKEncoder.swift; sourceTree = "<group>"; };
+		9DC594031D8C82B900639952 /* CGRect+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
+		9DC594051D8C82B900639952 /* AMKButton+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Animation.swift"; sourceTree = "<group>"; };
+		9DC594061D8C82B900639952 /* AMKButton+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Delegate.swift"; sourceTree = "<group>"; };
+		9DC594071D8C82B900639952 /* AMKButton+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Image.swift"; sourceTree = "<group>"; };
+		9DC594081D8C82B900639952 /* AMKButton+KVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+KVO.swift"; sourceTree = "<group>"; };
+		9DC594091D8C82B900639952 /* AMKButton+Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Label.swift"; sourceTree = "<group>"; };
+		9DC5940A1D8C82B900639952 /* AMKButton+Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Persistence.swift"; sourceTree = "<group>"; };
+		9DC5940B1D8C82B900639952 /* AMKButton+Touch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Touch.swift"; sourceTree = "<group>"; };
+		9DC5940C1D8C82B900639952 /* AMKButton+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+View.swift"; sourceTree = "<group>"; };
+		9DC5940D1D8C82B900639952 /* AMKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKButton.swift; sourceTree = "<group>"; };
+		9DC5940F1D8C82B900639952 /* AMKCarousel+Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKCarousel+Scroll.swift"; sourceTree = "<group>"; };
+		9DC594101D8C82B900639952 /* AMKCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKCarousel.swift; sourceTree = "<group>"; };
+		9DC5941F1D8C834900639952 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Additions.swift"; path = "Tool/String+Additions.swift"; sourceTree = "<group>"; };
+		9DC594211D8C83AB00639952 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Tool/Global.swift; sourceTree = "<group>"; };
 		C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.release.xcconfig"; sourceTree = "<group>"; };
 		CCA922768C27437FE26509AC /* Pods-TuSerenata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +122,7 @@
 		9D31B5A91D8B359500AFC5EF /* TuSerenata */ = {
 			isa = PBXGroup;
 			children = (
+				9DC593FE1D8C82AB00639952 /* AMKFactory */,
 				9DC593F91D8C78B700639952 /* Fabrica */,
 				9DA82D321D8C767D00ECF101 /* Tool */,
 				9DA82D2F1D8C753900ECF101 /* Controles */,
@@ -114,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA82D301D8C754E00ECF101 /* MenuVC.swift */,
+				9DC593FC1D8C7E4500639952 /* Login.swift */,
 			);
 			name = Controles;
 			sourceTree = "<group>";
@@ -121,6 +157,8 @@
 		9DA82D321D8C767D00ECF101 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				9DC594211D8C83AB00639952 /* Global.swift */,
+				9DC5941F1D8C834900639952 /* String+Additions.swift */,
 				9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */,
 			);
 			name = Tool;
@@ -132,6 +170,59 @@
 				9DC593FA1D8C78D400639952 /* Gradiente.swift */,
 			);
 			name = Fabrica;
+			sourceTree = "<group>";
+		};
+		9DC593FE1D8C82AB00639952 /* AMKFactory */ = {
+			isa = PBXGroup;
+			children = (
+				9DC593FF1D8C82B900639952 /* AMKFactory */,
+			);
+			name = AMKFactory;
+			sourceTree = "<group>";
+		};
+		9DC593FF1D8C82B900639952 /* AMKFactory */ = {
+			isa = PBXGroup;
+			children = (
+				9DC594001D8C82B900639952 /* Tool */,
+				9DC594041D8C82B900639952 /* View */,
+			);
+			path = AMKFactory;
+			sourceTree = "<group>";
+		};
+		9DC594001D8C82B900639952 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */,
+				9DC594021D8C82B900639952 /* AMKEncoder.swift */,
+				9DC594031D8C82B900639952 /* CGRect+Extension.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		9DC594041D8C82B900639952 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DC594051D8C82B900639952 /* AMKButton+Animation.swift */,
+				9DC594061D8C82B900639952 /* AMKButton+Delegate.swift */,
+				9DC594071D8C82B900639952 /* AMKButton+Image.swift */,
+				9DC594081D8C82B900639952 /* AMKButton+KVO.swift */,
+				9DC594091D8C82B900639952 /* AMKButton+Label.swift */,
+				9DC5940A1D8C82B900639952 /* AMKButton+Persistence.swift */,
+				9DC5940B1D8C82B900639952 /* AMKButton+Touch.swift */,
+				9DC5940C1D8C82B900639952 /* AMKButton+View.swift */,
+				9DC5940D1D8C82B900639952 /* AMKButton.swift */,
+				9DC5940E1D8C82B900639952 /* AMKCarousel */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DC5940E1D8C82B900639952 /* AMKCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				9DC5940F1D8C82B900639952 /* AMKCarousel+Scroll.swift */,
+				9DC594101D8C82B900639952 /* AMKCarousel.swift */,
+			);
+			path = AMKCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,12 +347,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC594121D8C82B900639952 /* AMKEncoder.swift in Sources */,
+				9DC593FD1D8C7E4500639952 /* Login.swift in Sources */,
+				9DC594151D8C82B900639952 /* AMKButton+Delegate.swift in Sources */,
+				9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */,
 				9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */,
 				9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */,
+				9DC5941C1D8C82B900639952 /* AMKButton.swift in Sources */,
+				9DC594221D8C83AB00639952 /* Global.swift in Sources */,
+				9DC5941A1D8C82B900639952 /* AMKButton+Touch.swift in Sources */,
+				9DC5941B1D8C82B900639952 /* AMKButton+View.swift in Sources */,
 				9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */,
+				9DC594201D8C834900639952 /* String+Additions.swift in Sources */,
 				9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */,
 				9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */,
+				9DC594181D8C82B900639952 /* AMKButton+Label.swift in Sources */,
+				9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */,
+				9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */,
+				9DC594161D8C82B900639952 /* AMKButton+Image.swift in Sources */,
+				9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */,
 				9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */,
+				9DC594131D8C82B900639952 /* CGRect+Extension.swift in Sources */,
+				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
+				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

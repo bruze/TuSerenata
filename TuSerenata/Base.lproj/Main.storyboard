@@ -105,6 +105,107 @@
             </objects>
             <point key="canvasLocation" x="494" y="380"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Ynf-G4-FmF">
+            <objects>
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DtM-ay-SmC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LpW-ge-fBl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZBm-qo-jEq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ePN-Wu-o0W" customClass="Gradiente" customModule="TuSerenata" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ust-Eg-aux">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfB-HB-nXe" userLabel="Contenido">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pnw-11-e6B" userLabel="usuario">
+                                                <rect key="frame" x="139" y="309" width="97" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="97" id="o7Y-S3-zzz"/>
+                                                    <constraint firstAttribute="height" constant="30" id="zdH-0f-yZl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WSP-Au-siO" userLabel="password">
+                                                <rect key="frame" x="139" y="370" width="97" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="97" id="1NE-s9-gae"/>
+                                                    <constraint firstAttribute="height" constant="30" id="cUQ-oZ-9oh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oeo-xf-htB" userLabel="Button Login" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                                <rect key="frame" x="67" y="445" width="240" height="65"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Login"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
+                                                        <color key="value" red="0.9678105323397248" green="0.9685220060793438" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
+                                                        <color key="value" red="0.41741940510630415" green="0.79306231524177795" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
+                                                        <color key="value" red="0.20559378303143416" green="0.31831438944583701" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="defLabelXOffset">
+                                                        <real key="value" value="95"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="defLabelYOffset">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WSP-Au-siO" firstAttribute="centerX" secondItem="BfB-HB-nXe" secondAttribute="centerX" id="7Dz-yA-Qp7"/>
+                                            <constraint firstItem="pnw-11-e6B" firstAttribute="top" secondItem="BfB-HB-nXe" secondAttribute="top" constant="309" id="9dB-gj-BaJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="pnw-11-e6B" secondAttribute="bottom" constant="308" id="EGJ-3Y-TJY"/>
+                                            <constraint firstItem="WSP-Au-siO" firstAttribute="top" secondItem="BfB-HB-nXe" secondAttribute="top" constant="370" id="Fbn-Ge-J0R"/>
+                                            <constraint firstItem="pnw-11-e6B" firstAttribute="centerX" secondItem="BfB-HB-nXe" secondAttribute="centerX" id="I4f-dB-lPy"/>
+                                            <constraint firstAttribute="bottom" secondItem="WSP-Au-siO" secondAttribute="bottom" constant="247" id="P8M-MR-Ssx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BfB-HB-nXe" firstAttribute="height" secondItem="ust-Eg-aux" secondAttribute="height" id="3ZZ-4Y-e3k"/>
+                                    <constraint firstItem="BfB-HB-nXe" firstAttribute="width" secondItem="ust-Eg-aux" secondAttribute="width" id="CCr-dt-LtP"/>
+                                    <constraint firstItem="BfB-HB-nXe" firstAttribute="leading" secondItem="ust-Eg-aux" secondAttribute="leading" id="J40-L1-cPc"/>
+                                    <constraint firstAttribute="trailing" secondItem="BfB-HB-nXe" secondAttribute="trailing" id="LXo-gR-63e"/>
+                                    <constraint firstAttribute="bottom" secondItem="BfB-HB-nXe" secondAttribute="bottom" id="Lwm-XI-SVI"/>
+                                    <constraint firstItem="BfB-HB-nXe" firstAttribute="top" secondItem="ust-Eg-aux" secondAttribute="top" id="bYX-WZ-v2F"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZBm-qo-jEq" firstAttribute="top" secondItem="ust-Eg-aux" secondAttribute="bottom" id="6NJ-Dt-T3p"/>
+                            <constraint firstAttribute="trailing" secondItem="ust-Eg-aux" secondAttribute="trailing" id="Cjc-PB-l4s"/>
+                            <constraint firstItem="ust-Eg-aux" firstAttribute="leading" secondItem="ePN-Wu-o0W" secondAttribute="leading" id="Ggh-k8-FKZ"/>
+                            <constraint firstItem="ust-Eg-aux" firstAttribute="top" secondItem="LpW-ge-fBl" secondAttribute="bottom" id="Zlr-9y-Jeq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">
+                                <color key="value" red="0.45442169570791302" green="1" blue="0.34466844401094165" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="gradienteFinal">
+                                <color key="value" red="1" green="0.95602651642917413" blue="0.98165089502874636" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uy2-g1-Buf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049.5" y="336.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="face1" width="40" height="40"/>

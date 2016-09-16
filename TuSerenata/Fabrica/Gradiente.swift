@@ -10,7 +10,7 @@ import UIKit
 import PropertyExtensions
 
 @IBDesignable
-class Gradiente: UIView, PropertyExtensions {
+class Gradiente: UIView {
     var capaGradiente: CAGradientLayer {
         get {
             return getProperty("capaGradiente", initial: CAGradientLayer.init())

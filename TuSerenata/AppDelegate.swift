@@ -8,6 +8,7 @@
 
 import UIKit
 import DualSlideMenu
+import IQKeyboardManagerSwift
 
 let appDelegate = (UIApplication.sharedApplication().delegate as? AppDelegate)!
 let FirebaseUrl = "https://tuserenata-dd913.firebaseio.com/"
@@ -28,12 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let leftView = storyboard?.instantiateViewControllerWithIdentifier("Menu")
+        /*let leftView = storyboard?.instantiateViewControllerWithIdentifier("Menu")
         let mainView = storyboard?.instantiateInitialViewController()//.instantiateViewControllerWithIdentifier("Main")
         
-        slide = DualSlideMenuViewController(mainViewController: mainView!, leftMenuViewController: leftView!)
-        window!.rootViewController = slide
+        slide = DualSlideMenuViewController(mainViewController: mainView!, leftMenuViewController: leftView!)*/
+        let login = storyboard!.instantiateViewControllerWithIdentifier("Login")
+        window!.rootViewController = login//slide
         window!.makeKeyAndVisible()
+        
+        IQKeyboardManager.sharedManager().enable = true
         return true
     }
 

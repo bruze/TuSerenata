@@ -12,6 +12,8 @@ target 'TuSerenata' do
   pod 'DualSlideMenu'
   #Soporte para widgets especiales
   pod 'LTInfiniteScrollView'
+  #Manejo de Teclado
+  pod 'IQKeyboardManagerSwift'
   #Herramientas
   pod 'EZSwiftExtensions'
   pod 'PropertyExtensions'
