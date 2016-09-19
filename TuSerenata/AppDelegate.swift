@@ -26,19 +26,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         super.init()
         FIRApp.configure()
-        //Firebase.defaultConfig().persistenceEnabled = true
+        FIRDatabase.database().persistenceEnabled = true
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         storyboard = UIStoryboard(name: "Main", bundle: nil)
-        /*let leftView = storyboard?.instantiateViewControllerWithIdentifier("Menu")
-        let mainView = storyboard?.instantiateInitialViewController()//.instantiateViewControllerWithIdentifier("Main")
-        
-        slide = DualSlideMenuViewController(mainViewController: mainView!, leftMenuViewController: leftView!)*/
-        let login = storyboard!.instantiateViewControllerWithIdentifier("Login")
-        window!.rootViewController = login//slide
-        window!.makeKeyAndVisible()
+        if let authorized = FIRAuth.auth()?.currentUser {
+            print(authorized.email)
+            print(Gerente.unistancia.obtenerUsuario(authorized.uid))
+            print(Gerente.unistancia.usuario)
+            mostrarPantallaAterrizaje()
+        } else {
+            print("Please log in")
+            let login = storyboard!.instantiateViewControllerWithIdentifier("Login")
+            window!.rootViewController = login//slide
+            window!.makeKeyAndVisible()
+        }
 
         IQKeyboardManager.sharedManager().enable = true
         return true

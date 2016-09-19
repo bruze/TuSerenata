@@ -12,21 +12,16 @@ import FirebaseAuth
 
 class Login: UIViewController {
     internal func intenteLogueo() {
-        FIRAuth.auth()?.signInWithEmail("prueba@gmail.com", password: "123456", completion: { (user, error) in
+        FIRAuth.auth()?.signInWithEmail("dos@dos.com", password: "123456", completion: { (user, error) in
             if let loggedUser = user {
                 let users = FirebaseRef.child("users")
                 users.observeEventType(.Value, withBlock: { (captura) in
                     if captura.hasChild(loggedUser.uid) {
                         
-                        Gerente.unistancia.usuario = (captura.childSnapshotForPath(loggedUser.uid).childSnapshotForPath("nombre").value! as? String)!
+                        print(Gerente.unistancia.obtenerUsuario(loggedUser.uid))
+                        print(Gerente.unistancia.usuario?.toAnyObject())
                         
-                        let storyboard = appDelegate.storyboard!
-                        let leftView = storyboard.instantiateViewControllerWithIdentifier("Menu")
-                        let mainView = storyboard.instantiateInitialViewController()
-                        
-                        let slide = DualSlideMenuViewController(mainViewController: mainView!, leftMenuViewController: leftView)
-                        appDelegate.slide = slide
-                        appDelegate.window?.rootViewController = slide
+                        appDelegate.mostrarPantallaAterrizaje()
                     } else {
                         // Los datos de usuario deberían encontrarse
                         // ya que se ingresan al hacer el flujo de registro

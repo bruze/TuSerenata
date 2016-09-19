@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func itemMenuTap(sender: UIBarButtonItem) {
-        print(Gerente.unistancia.usuario)
+        print(Gerente.unistancia.usuario?.toAnyObject())
         appDelegate.slide!.toggle("right")
     }
 
