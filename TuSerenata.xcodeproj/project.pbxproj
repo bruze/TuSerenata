@@ -34,6 +34,8 @@
 		9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594101D8C82B900639952 /* AMKCarousel.swift */; };
 		9DC594201D8C834900639952 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5941F1D8C834900639952 /* String+Additions.swift */; };
 		9DC594221D8C83AB00639952 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594211D8C83AB00639952 /* Global.swift */; };
+		9DC594241D905A3C00639952 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DC594231D905A3C00639952 /* GoogleService-Info.plist */; };
+		9DC594271D906EFD00639952 /* Gerente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594261D906EFD00639952 /* Gerente.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		9DC594101D8C82B900639952 /* AMKCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKCarousel.swift; sourceTree = "<group>"; };
 		9DC5941F1D8C834900639952 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Additions.swift"; path = "Tool/String+Additions.swift"; sourceTree = "<group>"; };
 		9DC594211D8C83AB00639952 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Tool/Global.swift; sourceTree = "<group>"; };
+		9DC594231D905A3C00639952 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9DC594261D906EFD00639952 /* Gerente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gerente.swift; path = Gerente/Gerente.swift; sourceTree = "<group>"; };
 		C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.release.xcconfig"; sourceTree = "<group>"; };
 		CCA922768C27437FE26509AC /* Pods-TuSerenata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +126,7 @@
 		9D31B5A91D8B359500AFC5EF /* TuSerenata */ = {
 			isa = PBXGroup;
 			children = (
+				9DC594251D906EE300639952 /* Gerente */,
 				9DC593FE1D8C82AB00639952 /* AMKFactory */,
 				9DC593F91D8C78B700639952 /* Fabrica */,
 				9DA82D321D8C767D00ECF101 /* Tool */,
@@ -133,6 +138,7 @@
 				9D31B5B11D8B359500AFC5EF /* Assets.xcassets */,
 				9D31B5B31D8B359500AFC5EF /* LaunchScreen.storyboard */,
 				9D31B5B61D8B359500AFC5EF /* Info.plist */,
+				9DC594231D905A3C00639952 /* GoogleService-Info.plist */,
 			);
 			path = TuSerenata;
 			sourceTree = "<group>";
@@ -225,6 +231,14 @@
 			path = AMKCarousel;
 			sourceTree = "<group>";
 		};
+		9DC594251D906EE300639952 /* Gerente */ = {
+			isa = PBXGroup;
+			children = (
+				9DC594261D906EFD00639952 /* Gerente.swift */,
+			);
+			name = Gerente;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D31B5B51D8B359500AFC5EF /* LaunchScreen.storyboard in Resources */,
+				9DC594241D905A3C00639952 /* GoogleService-Info.plist in Resources */,
 				9D31B5B21D8B359500AFC5EF /* Assets.xcassets in Resources */,
 				9D31B5B01D8B359500AFC5EF /* Main.storyboard in Resources */,
 			);
@@ -357,6 +372,7 @@
 				9DC594221D8C83AB00639952 /* Global.swift in Sources */,
 				9DC5941A1D8C82B900639952 /* AMKButton+Touch.swift in Sources */,
 				9DC5941B1D8C82B900639952 /* AMKButton+View.swift in Sources */,
+				9DC594271D906EFD00639952 /* Gerente.swift in Sources */,
 				9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */,
 				9DC594201D8C834900639952 /* String+Additions.swift in Sources */,
 				9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */,

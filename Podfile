@@ -1,5 +1,5 @@
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+#source 'https://github.com/CocoaPods/Specs.git'
+#platform :ios, '9.0'
 
 target 'TuSerenata' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
@@ -7,7 +7,9 @@ target 'TuSerenata' do
 
   # Pods for TuSerenata
   #Backend
-  pod 'Firebase', '2.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   #Side Menu
   pod 'DualSlideMenu'
   #Soporte para widgets especiales

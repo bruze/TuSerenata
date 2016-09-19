@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import Firebase
 
 struct Musico {
     
     let key: String!
     let nombre: String!
     let genero: String!
-    let ref: Firebase?
+    //let ref: Firebase?
     var completed: Bool!
     
     // Initialize from arbitrary data
@@ -22,16 +23,16 @@ struct Musico {
         self.nombre = nombre
         self.genero = genero
         self.completed = completed
-        self.ref = nil
+        //self.ref = nil
     }
     
-    init(snapshot: FDataSnapshot) {
-        key = snapshot.key
+    /*init(/*snapshot: FDataSnapshot*/) {
+       /* key = snapshot.key
         genero = snapshot.value["genero"] as! String
         nombre = snapshot.value["nombre"] as! String
         completed = snapshot.value["completed"] as! Bool
-        ref = snapshot.ref
-    }
+        ref = snapshot.ref*/
+    }*/
     
     func toAnyObject() -> AnyObject {
         return [

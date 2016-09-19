@@ -9,10 +9,12 @@
 import UIKit
 import DualSlideMenu
 import IQKeyboardManagerSwift
+import Firebase
 
 let appDelegate = (UIApplication.sharedApplication().delegate as? AppDelegate)!
 let FirebaseUrl = "https://tuserenata-dd913.firebaseio.com/"
-let FirebaseRef = Firebase(url: FirebaseUrl)
+let FirebaseRef = FIRDatabase.database().reference()
+//let FirebaseRef = Firebase(url: FirebaseUrl)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var storyboard: UIStoryboard?
     var slide: DualSlideMenuViewController?
-
+    
     override init() {
         super.init()
-        
+        FIRApp.configure()
         //Firebase.defaultConfig().persistenceEnabled = true
     }
 
@@ -37,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let login = storyboard!.instantiateViewControllerWithIdentifier("Login")
         window!.rootViewController = login//slide
         window!.makeKeyAndVisible()
-        
+
         IQKeyboardManager.sharedManager().enable = true
         return true
     }
