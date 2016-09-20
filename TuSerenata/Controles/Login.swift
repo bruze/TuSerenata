@@ -17,18 +17,19 @@ class Login: UIViewController {
                 let users = FirebaseRef.child("users")
                 users.observeEventType(.Value, withBlock: { (captura) in
                     if captura.hasChild(loggedUser.uid) {
-                        
-                        print(Gerente.unistancia.obtenerUsuario(loggedUser.uid))
-                        print(Gerente.unistancia.usuario?.toAnyObject())
-                        
-                        appDelegate.mostrarPantallaAterrizaje()
+                        Gerente.unistancia.obtenerUsuario(loggedUser.uid, finalizar: { (usuario) in
+                            Gerente.unistancia.usuario = usuario
+                            appDelegate.mostrarPantallaAterrizaje()
+                        })
                     } else {
                         // Los datos de usuario deberían encontrarse
                         // ya que se ingresan al hacer el flujo de registro
+                        print("NO SE ENCONTRARON DATOS DEL USUARIO")
                     }
                 })
             } else {
                 // El usuario no se encontró
+                print("NO SE ENCONTRO EL USUARIO EN EL SERVIDOR")
             }
         })
     }

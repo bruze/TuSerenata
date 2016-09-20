@@ -15,6 +15,8 @@ typealias Filter = Global.Filter
 typealias Notif = Global.Notifications
 typealias GlobErr = Global.ErrorMessages
 
+let gerente = Gerente.unistancia
+let usuario = gerente.usuario
 let notifiCenter = NSNotificationCenter.defaultCenter()
 
 infix operator ~> {}

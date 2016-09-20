@@ -8,6 +8,7 @@
 
 import UIKit
 import DualSlideMenu
+import JLChatViewController
 
 class ViewController: UIViewController {
 
@@ -26,5 +27,20 @@ class ViewController: UIViewController {
         appDelegate.slide!.toggle("right")
     }
 
+    @IBAction func rightItemTap(sender: UIBarButtonItem) {
+        if let vc = JLBundleController.instantiateJLChatVC() as? ChatVC {
+            
+            vc.view.frame = self.view.frame
+            
+            let chatSegue = UIStoryboardSegue(identifier: "goChat", source: self, destination: vc, performHandler: { () -> Void in
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
+            
+            self.prepareForSegue(chatSegue, sender: nil)
+            
+            chatSegue.perform()
+        }
+    }
 }
 

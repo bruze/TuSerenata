@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
+		9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B37101D91E7F700A7F235 /* ChatVC.swift */; };
 		9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */; };
 		9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AC1D8B359500AFC5EF /* ViewController.swift */; };
 		9D31B5B01D8B359500AFC5EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5AE1D8B359500AFC5EF /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2B37101D91E7F700A7F235 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = Controles/ChatVC.swift; sourceTree = "<group>"; };
 		9D31B5A71D8B359500AFC5EF /* TuSerenata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuSerenata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D31B5AC1D8B359500AFC5EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				9DA82D301D8C754E00ECF101 /* MenuVC.swift */,
 				9DC593FC1D8C7E4500639952 /* Login.swift */,
+				9D2B37101D91E7F700A7F235 /* ChatVC.swift */,
 			);
 			name = Controles;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */,
 				9DC594181D8C82B900639952 /* AMKButton+Label.swift in Sources */,
 				9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */,
+				9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */,
 				9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */,
 				9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */,
 				9DC594161D8C82B900639952 /* AMKButton+Image.swift in Sources */,

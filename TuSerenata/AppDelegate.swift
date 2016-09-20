@@ -10,6 +10,7 @@ import UIKit
 import DualSlideMenu
 import IQKeyboardManagerSwift
 import Firebase
+import JLChatViewController
 
 let appDelegate = (UIApplication.sharedApplication().delegate as? AppDelegate)!
 let FirebaseUrl = "https://tuserenata-dd913.firebaseio.com/"
@@ -33,17 +34,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let authorized = FIRAuth.auth()?.currentUser {
-            print(authorized.email)
-            print(Gerente.unistancia.obtenerUsuario(authorized.uid))
-            print(Gerente.unistancia.usuario)
             mostrarPantallaAterrizaje()
+            Gerente.unistancia.obtenerUsuario(authorized.uid, finalizar: {usuario in
+                Gerente.unistancia.usuario = usuario
+            })
         } else {
             print("Please log in")
             let login = storyboard!.instantiateViewControllerWithIdentifier("Login")
             window!.rootViewController = login//slide
             window!.makeKeyAndVisible()
         }
-
+        JLBundleController.loadJLChatStoryboard()
         IQKeyboardManager.sharedManager().enable = true
         return true
     }

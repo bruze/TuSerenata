@@ -19,4 +19,6 @@ target 'TuSerenata' do
   #Herramientas
   pod 'EZSwiftExtensions'
   pod 'PropertyExtensions'
+  #Chat
+  pod "JLChatViewController"
 end
