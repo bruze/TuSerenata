@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TuSerenata/ViewController.swift"
-            timestampString = "496102270.252275"
+            filePath = "TuSerenata/Model/Usuario.swift"
+            timestampString = "496163626.382858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "rightItemTap(_:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "init(snapshot:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuSerenata/Model/Usuario.swift"
+            timestampString = "496163672.808878"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "cargarMensajes()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

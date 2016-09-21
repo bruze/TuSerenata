@@ -5,7 +5,6 @@
 //  Created by Bruno Garelli on 9/15/16.
 //  Copyright © 2016 Bruno Garelli. All rights reserved.
 //
-
 import UIKit
 import DualSlideMenu
 import IQKeyboardManagerSwift

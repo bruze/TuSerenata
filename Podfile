@@ -21,4 +21,6 @@ target 'TuSerenata' do
   pod 'PropertyExtensions'
   #Chat
   pod "JLChatViewController"
+  #Pagos
+  pod 'PayPal-iOS-SDK'
 end

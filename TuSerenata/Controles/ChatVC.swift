@@ -7,8 +7,18 @@
 //
 
 import JLChatViewController
+import IQKeyboardManagerSwift
 
 class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatMessagesMenuDelegate, ChatDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        toolBar.leftButton.hidden = true
+        //IQKeyboardManager.sharedManager().enable = false
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        //IQKeyboardManager.sharedManager().enable = true
+    }
     /**
      This method will be called always when its necessary to get the corresponding message of indexPath
      - parameter indexPath: The position of JLMessage required
@@ -62,7 +72,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      executed to discover if the UIMenuItem with title can be shown
      */
     func shouldShowMenuItemForCellAtIndexPath(title:String,indexPath:NSIndexPath)->Bool {
-        return true
+        return false
     }
     /**
      Define the title of the UIMenuItem that excutes the delete action.
@@ -71,8 +81,8 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      
      Return nil if you want to use the default title.
      */
-    func titleForDeleteMenuItem()->String? {
-        return "Delete"
+    func titleForDeleteMenuItem() -> String? {
+        return "Borrar"
     }
     /**
      Define the title of the UIMenuItem that excutes the send action.
@@ -81,8 +91,8 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      
      Return nil if you want to use the default title.
      */
-    func titleForSendMenuItem()->String? {
-        return "Send"
+    func titleForSendMenuItem() -> String? {
+        return "Enviar"
     }
     /**
      The action that delete message.
