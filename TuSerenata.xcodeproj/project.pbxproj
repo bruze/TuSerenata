@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
+		9D1489261D93155D00AEFC45 /* ViewController+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */; };
 		9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B37101D91E7F700A7F235 /* ChatVC.swift */; };
 		9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */; };
 		9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AC1D8B359500AFC5EF /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Pay.swift"; sourceTree = "<group>"; };
 		9D2B37101D91E7F700A7F235 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = Controles/ChatVC.swift; sourceTree = "<group>"; };
 		9D31B5A71D8B359500AFC5EF /* TuSerenata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuSerenata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				9D31B5B61D8B359500AFC5EF /* Info.plist */,
 				9DC594231D905A3C00639952 /* GoogleService-Info.plist */,
 				9DC594281D907A6800639952 /* AppDelegate+Ext.swift */,
+				9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */,
 			);
 			path = TuSerenata;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				9DC594131D8C82B900639952 /* CGRect+Extension.swift in Sources */,
 				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
 				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,
+				9D1489261D93155D00AEFC45 /* ViewController+Pay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

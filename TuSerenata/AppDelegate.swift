@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         JLBundleController.loadJLChatStoryboard()
         IQKeyboardManager.sharedManager().enable = true
+        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentSandbox: "bruno.garelli-facilitator_api1.yahoo.com"])
         return true
     }
 

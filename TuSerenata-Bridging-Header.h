@@ -10,5 +10,6 @@
 #define TuSerenata_Bridging_Header_h
 
 #import <Firebase/Firebase.h>
+#import <PayPal-iOS-SDK/PayPalMobile.h>
 
 #endif /* TuSerenata_Bridging_Header_h */
