@@ -107,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-gy-eu8" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="67" y="576" width="240" height="51"/>
+                                <rect key="frame" x="68" y="606" width="240" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="9IY-7x-xTO"/>
@@ -126,11 +126,60 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfQ-Sa-EZJ">
+                                <rect key="frame" x="10" y="129" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7z-Hs-NWk">
+                                <rect key="frame" x="10" y="158" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5t2-6A-AgL">
+                                <rect key="frame" x="10" y="259" width="355" height="337"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UOJ-LI-g8T" id="MP2-go-rPV"/>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="EfI-2k-g4a"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wef-KA-tfl" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="135" y="212" width="105" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="BPH-In-zkg"/>
+                                    <constraint firstAttribute="width" constant="105" id="VcE-QY-GDM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Buscar"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
+                                        <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
+                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
+                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UrP-gy-eu8" firstAttribute="leading" secondItem="2Zh-Tv-q0H" secondAttribute="leading" constant="67" id="1tN-xk-n8C"/>
-                            <constraint firstItem="aAu-8X-MzC" firstAttribute="top" secondItem="UrP-gy-eu8" secondAttribute="bottom" constant="40" id="ib2-iQ-BI5"/>
+                            <constraint firstItem="jfQ-Sa-EZJ" firstAttribute="leading" secondItem="2Zh-Tv-q0H" secondAttribute="leading" constant="10" id="2uI-bo-O8a"/>
+                            <constraint firstAttribute="trailing" secondItem="5t2-6A-AgL" secondAttribute="trailing" constant="10" id="5mE-tZ-HJT"/>
+                            <constraint firstItem="5t2-6A-AgL" firstAttribute="top" secondItem="wef-KA-tfl" secondAttribute="bottom" constant="10" id="6x2-P6-i8x"/>
+                            <constraint firstItem="H7z-Hs-NWk" firstAttribute="top" secondItem="jfQ-Sa-EZJ" secondAttribute="bottom" constant="8" id="8WA-ZK-bwx"/>
+                            <constraint firstItem="wef-KA-tfl" firstAttribute="centerX" secondItem="2Zh-Tv-q0H" secondAttribute="centerX" id="FP9-qA-WDo"/>
+                            <constraint firstItem="jfQ-Sa-EZJ" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="65" id="Jrb-17-hZj"/>
+                            <constraint firstItem="wef-KA-tfl" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="148" id="QWe-LA-HzT"/>
+                            <constraint firstItem="5t2-6A-AgL" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="SfH-o9-F3a"/>
+                            <constraint firstItem="H7z-Hs-NWk" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="YQz-YO-48A"/>
+                            <constraint firstItem="UrP-gy-eu8" firstAttribute="top" secondItem="5t2-6A-AgL" secondAttribute="bottom" constant="10" id="ctL-qc-9fN"/>
+                            <constraint firstItem="aAu-8X-MzC" firstAttribute="top" secondItem="UrP-gy-eu8" secondAttribute="bottom" constant="10" id="ib2-iQ-BI5"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">
@@ -142,6 +191,9 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="5t2-6A-AgL" id="XWa-Ci-Vwt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoC-E8-SNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

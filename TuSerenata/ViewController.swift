@@ -26,10 +26,14 @@ class ViewController: UIViewController {
         localizador.startUpdatingLocation()
         setInitialRecognizeButtonHeight()
         setupTable()
-        gerente.filtrarMusicos()
+        gerente.filtrarMusicos({ self.notificarActualizarFiltrados() })
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    func notificarActualizarFiltrados() {
+        print("se actualizaron los filtrados")
+    }
+    
     func seleccioneTipoReserva() {
         ventanaEmergente(["acc1": "Reserva Inmediata", "acc2": "Reserva Fecha"], acciones: [{ print("Aun no creada esta vista") }, { self.performSegueWithIdentifier("crearSerenata", sender: nil) }])
     }
@@ -46,7 +50,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rightItemTap(sender: UIBarButtonItem) {
-        let payment = PayPalPayment.init()
+        /*let payment = PayPalPayment.init()
         
         // Amount, currency, and description
         payment.amount = 19.95
@@ -79,20 +83,21 @@ class ViewController: UIViewController {
         let paymentViewController = PayPalPaymentViewController.init(payment: payment, configuration: paypalConfig, delegate: self)
         
         // Present the PayPalPaymentViewController.
-        presentViewController(paymentViewController!, animated: true, completion: nil)
-        /*if let vc = JLBundleController.instantiateJLChatVC() as? ChatVC {
+        presentViewController(paymentViewController!, animated: true, completion: nil)*/
+        
+        if let vc = JLBundleController.instantiateJLChatVC() as? ChatVC {
          
             vc.view.frame = self.view.frame
             
             let chatSegue = UIStoryboardSegue(identifier: "goChat", source: self, destination: vc, performHandler: { () -> Void in
-                
+                vc.contestatario = gerente.musicosFiltrados[0]
                 self.navigationController?.pushViewController(vc, animated: true)
             })
             
             self.prepareForSegue(chatSegue, sender: nil)
             
             chatSegue.perform()
-        }*/
+        }
     }
 }
 

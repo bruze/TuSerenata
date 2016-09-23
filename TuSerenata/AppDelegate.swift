@@ -46,6 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window!.rootViewController = login//slide
             window!.makeKeyAndVisible()
         }
+        
+        JLChatAppearence.configIncomingMessages(nil, showIncomingSenderImage: false, incomingTextColor: nil)
+        JLChatAppearence.configOutgoingMessages(nil, showOutgoingSenderImage: false, outgoingTextColor: nil)
+        
         JLBundleController.loadJLChatStoryboard()
         IQKeyboardManager.sharedManager().enable = true
         PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentSandbox: "bruno.garelli-facilitator_api1.yahoo.com"])

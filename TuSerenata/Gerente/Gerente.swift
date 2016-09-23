@@ -11,10 +11,13 @@ import JLChatViewController
 class Gerente: NSObject {
     var usuario: Usuario? = nil
     let users: FIRDatabaseReference = FirebaseRef.child("users")
+    let grupos: FIRDatabaseReference = FirebaseRef.child("grupos")
+    var musicosFiltrados: [Musico] = []
     //var mensajes: [JLMessage]? = nil
 
     override init() {
         users.keepSynced(true)
+        grupos.keepSynced(true)
         super.init()
     }
     
@@ -51,26 +54,36 @@ class Gerente: NSObject {
     }
     func obtenerMusico(uid: String, finalizar: (Musico?) -> ()) {
         //let users: FIRDatabaseReference = FirebaseRef.child("users")
-        users.observeSingleEventOfType(.Value, withBlock: { (captura) in
+        users.observeEventType(.Value, withBlock: { (captura) in
             if captura.hasChild(uid) {
                 let capturaMusico = captura.childSnapshotForPath(uid)
-                if (capturaMusico.childSnapshotForPath("musico").value! as? Int)! == 1 {
-                    finalizar(Musico(captura: capturaMusico))
-                } else {
-                    print("El id buscado no corresponde a un grupo")
+                if capturaMusico.hasChild("musico") {
+                    if (capturaMusico.childSnapshotForPath("musico").value! as? Int)! == 1 {
+                        if capturaMusico.hasChild("genero") {
+                            finalizar(Musico(captura: capturaMusico))
+                        } else {
+                            return // esperar actualización del servidor
+                        }
+                    } else {
+                        print("El id buscado no corresponde a un grupo")
+                    }
                 }
             }
         })
     }
-    func filtrarMusicos() {
-        /*let query = users.observeSingleEventOfType(.Value) { (captura) in
-            
-        }
-        print(query)*/
+    func filtrarMusicos(notificar: BloqueVoid) /*-> [Musico]*/ {
+        musicosFiltrados.removeAll()
+        grupos.observeEventType(.ChildAdded, withBlock: { (captura) in
+            for child in captura.children {
+                self.obtenerMusico(child.key!!, finalizar: { musico in
+                    if !self.musicosFiltrados.contains(musico!) {
+                        self.musicosFiltrados.append(musico!)
+                    }
+                    if UInt(self.musicosFiltrados.count) == captura.childrenCount {
+                        notificar()
+                    }
+                })
+            }
+        })
     }
-    /*func obtenerMensajes(idUsuario: String) -> JLMessage? {
-        let usuario = obtenerUsuario(idUsuario) { (usuario) in
-            self.mensajes = 
-        }
-    }*/
 }

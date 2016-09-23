@@ -39,10 +39,10 @@ class Usuario: NSObject {
             if mensajes.hasChild("nuevos") {
                 let mensajesNuevos = mensajes.childSnapshotForPath("nuevos")
             }
-            if mensajes.hasChild("viejos") {
+            /*if mensajes.hasChild("viejos") {
                 let mensajesViejos = mensajes.childSnapshotForPath("viejos")
                 print(mensajesViejos)
-            }
+            }*/
             //checkearNuevosMensajes()
         }
         super.init()
@@ -67,8 +67,8 @@ class Usuario: NSObject {
             }
         })*/
         ref!.observeEventType(.Value, andPreviousSiblingKeyWithBlock: { (captura, llave) in
-            print(llave)
-            print(captura)
+            //print(llave)
+            //print(captura)
             }) { (error) in
                 
         }

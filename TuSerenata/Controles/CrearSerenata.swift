@@ -9,6 +9,8 @@
 import UIKit
 
 class CrearSerenata: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
     var botonCompra: AMKButton {
         get {
             return (view.viewWithTag(1)! as? AMKButton)!

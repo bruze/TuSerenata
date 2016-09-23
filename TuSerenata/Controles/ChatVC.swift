@@ -10,14 +10,50 @@ import JLChatViewController
 import IQKeyboardManagerSwift
 
 class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatMessagesMenuDelegate, ChatDelegate {
+    var contestatario: Musico!
+    var mensajes: [JLMessage] = []
+    internal func cargarMensajes() {
+        gerente.usuario!.refMensajes!.observeEventType(.Value, withBlock: { (captura) in
+            if captura.exists() {
+                if captura.hasChild("nuevos") {
+                    let nuevos = captura.childSnapshotForPath("nuevos")
+                    for capturaIntermedia in nuevos.children {
+                        let capturaMensajes = (capturaIntermedia as? FIRDataSnapshot)!
+                        for capturaMensaje in capturaMensajes.children {
+                            self.chatTableView.addNewMessages(1, changesHandler: {}, completionHandler: nil)
+                            self.mensajes.append(JLMessage.desdeCaptura(capturaMensaje as! FIRDataSnapshot))
+                            print(self.chatTableView.chatDataSource!)
+                            print(self.chatTableView.chatDelegate)
+                            self.chatTableView.reloadData()
+                        }
+                        
+                    }
+                }
+            }
+        })
+        /*if gerente.usuario!.refMensajes! {
+            let mensajesSesion = gerente.usuario!.refMensajes!.child(contestatario.key)
+            mensajesSesion.observeEventType(.Value, withBlock: { (captura) in
+                if captura.exists() {
+                    self.mensajes.append(JLMessage.desdeCaptura(captura))
+                }
+            })
+        }
+        if let nuevos = gerente.usuario?.mensajesNuevos {
+            
+        }*/
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         toolBar.leftButton.hidden = true
-        //IQKeyboardManager.sharedManager().enable = false
+        cargarMensajes()
+        
+        self.chatTableView.chatDataSource = self
+        self.chatTableView.chatDelegate = self
+        chatTableView.reloadData()
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillDisappear(animated)
-        //IQKeyboardManager.sharedManager().enable = true
     }
     /**
      This method will be called always when its necessary to get the corresponding message of indexPath
@@ -25,7 +61,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      */
     
     func jlChatMessageAtIndexPath(indexPath:NSIndexPath)->JLMessage? {
-        return nil
+        return mensajes[indexPath.row]
     }
     /**
      The number of messages in corresponding section
@@ -33,7 +69,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      - returns: The number of messages of the corresponding section
      */
     func jlChatNumberOfMessagesInSection(section:Int)->Int {
-        return 0
+        return mensajes.count
     }
     
     /**
@@ -42,13 +78,15 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      - returns: The loaded cell
      */
     func jlChat(chat:JLChatTableView,MessageCellForRowAtIndexPath indexPath:NSIndexPath)->JLChatMessageCell {
-        return JLChatMessageCell.init(style: .Default, reuseIdentifier: "ChatCell")
+        let cell = JLChatMessageCell.init(style: .Default, reuseIdentifier: "ChatCell")
+        cell.textLabel?.text = mensajes[indexPath.row].text!
+        return cell
     }
     /**
      Executed when it is necessary to load older messages.
      */
     func loadOlderMessages() {
-        
+        print("laoding older")
     }
     /**
      Executed when there is a tap on any message.

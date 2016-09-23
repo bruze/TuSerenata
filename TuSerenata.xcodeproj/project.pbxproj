@@ -25,6 +25,8 @@
 		9DAE43EA1D946C2C00E418B8 /* ViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E91D946C2C00E418B8 /* ViewController+TableViewDataSource.swift */; };
 		9DAE43EC1D955C7000E418B8 /* Serenata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43EB1D955C7000E418B8 /* Serenata.swift */; };
 		9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */; };
+		9DAE43F01D95C77400E418B8 /* CrearSerenata+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */; };
+		9DAE43F21D95CCE600E418B8 /* JLMessage+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43F11D95CCE600E418B8 /* JLMessage+Conversion.swift */; };
 		9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FA1D8C78D400639952 /* Gradiente.swift */; };
 		9DC593FD1D8C7E4500639952 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FC1D8C7E4500639952 /* Login.swift */; };
 		9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */; };
@@ -71,6 +73,8 @@
 		9DAE43E91D946C2C00E418B8 /* ViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		9DAE43EB1D955C7000E418B8 /* Serenata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serenata.swift; path = Model/Serenata.swift; sourceTree = "<group>"; };
 		9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearSerenata.swift; path = Controles/CrearSerenata.swift; sourceTree = "<group>"; };
+		9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CrearSerenata+TableView.swift"; path = "Controles/CrearSerenata+TableView.swift"; sourceTree = "<group>"; };
+		9DAE43F11D95CCE600E418B8 /* JLMessage+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JLMessage+Conversion.swift"; path = "Tool/JLMessage+Conversion.swift"; sourceTree = "<group>"; };
 		9DC593FA1D8C78D400639952 /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradiente.swift; path = Fabrica/Gradiente.swift; sourceTree = "<group>"; };
 		9DC593FC1D8C7E4500639952 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Controles/Login.swift; sourceTree = "<group>"; };
 		9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKEncoder+Extension.swift"; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				9DC593FC1D8C7E4500639952 /* Login.swift */,
 				9D2B37101D91E7F700A7F235 /* ChatVC.swift */,
 				9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */,
+				9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */,
 			);
 			name = Controles;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				9DC5941F1D8C834900639952 /* String+Additions.swift */,
 				9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */,
 				9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */,
+				9DAE43F11D95CCE600E418B8 /* JLMessage+Conversion.swift */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */,
 				9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */,
 				9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */,
+				9DAE43F21D95CCE600E418B8 /* JLMessage+Conversion.swift in Sources */,
 				9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */,
 				9DC594161D8C82B900639952 /* AMKButton+Image.swift in Sources */,
 				9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */,
@@ -429,6 +436,7 @@
 				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
 				9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */,
 				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,
+				9DAE43F01D95C77400E418B8 /* CrearSerenata+TableView.swift in Sources */,
 				9D1489261D93155D00AEFC45 /* ViewController+Pay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
