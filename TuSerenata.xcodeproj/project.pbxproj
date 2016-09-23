@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
 		9D1489261D93155D00AEFC45 /* ViewController+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */; };
+		9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */; };
+		9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */; };
 		9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B37101D91E7F700A7F235 /* ChatVC.swift */; };
 		9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */; };
 		9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AC1D8B359500AFC5EF /* ViewController.swift */; };
@@ -18,6 +20,11 @@
 		9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5BD1D8B39C900AFC5EF /* Musico.swift */; };
 		9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D301D8C754E00ECF101 /* MenuVC.swift */; };
 		9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */; };
+		9DAE43E41D943F1400E418B8 /* ViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */; };
+		9DAE43E61D94457500E418B8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */; };
+		9DAE43EA1D946C2C00E418B8 /* ViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E91D946C2C00E418B8 /* ViewController+TableViewDataSource.swift */; };
+		9DAE43EC1D955C7000E418B8 /* Serenata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43EB1D955C7000E418B8 /* Serenata.swift */; };
+		9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */; };
 		9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FA1D8C78D400639952 /* Gradiente.swift */; };
 		9DC593FD1D8C7E4500639952 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FC1D8C7E4500639952 /* Login.swift */; };
 		9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */; };
@@ -45,6 +52,8 @@
 /* Begin PBXFileReference section */
 		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Pay.swift"; sourceTree = "<group>"; };
+		9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Loc.swift"; sourceTree = "<group>"; };
+		9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+QuickReturnButton.swift"; sourceTree = "<group>"; };
 		9D2B37101D91E7F700A7F235 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = Controles/ChatVC.swift; sourceTree = "<group>"; };
 		9D31B5A71D8B359500AFC5EF /* TuSerenata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuSerenata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +66,11 @@
 		9D31B5BF1D8B3AB200AFC5EF /* TuSerenata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuSerenata-Bridging-Header.h"; sourceTree = "<group>"; };
 		9DA82D301D8C754E00ECF101 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = Controles/MenuVC.swift; sourceTree = "<group>"; };
 		9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Ext.swift"; path = "Tool/UIColor+Ext.swift"; sourceTree = "<group>"; };
+		9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Ext.swift"; path = "Tool/UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		9DAE43E91D946C2C00E418B8 /* ViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		9DAE43EB1D955C7000E418B8 /* Serenata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serenata.swift; path = Model/Serenata.swift; sourceTree = "<group>"; };
+		9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearSerenata.swift; path = Controles/CrearSerenata.swift; sourceTree = "<group>"; };
 		9DC593FA1D8C78D400639952 /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradiente.swift; path = Fabrica/Gradiente.swift; sourceTree = "<group>"; };
 		9DC593FC1D8C7E4500639952 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Controles/Login.swift; sourceTree = "<group>"; };
 		9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKEncoder+Extension.swift"; sourceTree = "<group>"; };
@@ -149,6 +163,10 @@
 				9DC594231D905A3C00639952 /* GoogleService-Info.plist */,
 				9DC594281D907A6800639952 /* AppDelegate+Ext.swift */,
 				9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */,
+				9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */,
+				9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */,
+				9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */,
+				9DAE43E91D946C2C00E418B8 /* ViewController+TableViewDataSource.swift */,
 			);
 			path = TuSerenata;
 			sourceTree = "<group>";
@@ -158,6 +176,7 @@
 			children = (
 				9D31B5BD1D8B39C900AFC5EF /* Musico.swift */,
 				9DC5942A1D907C1500639952 /* Usuario.swift */,
+				9DAE43EB1D955C7000E418B8 /* Serenata.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,6 +187,7 @@
 				9DA82D301D8C754E00ECF101 /* MenuVC.swift */,
 				9DC593FC1D8C7E4500639952 /* Login.swift */,
 				9D2B37101D91E7F700A7F235 /* ChatVC.swift */,
+				9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */,
 			);
 			name = Controles;
 			sourceTree = "<group>";
@@ -178,6 +198,7 @@
 				9DC594211D8C83AB00639952 /* Global.swift */,
 				9DC5941F1D8C834900639952 /* String+Additions.swift */,
 				9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */,
+				9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -376,16 +397,21 @@
 			files = (
 				9DC5942B1D907C1500639952 /* Usuario.swift in Sources */,
 				9DC594121D8C82B900639952 /* AMKEncoder.swift in Sources */,
+				9DAE43EC1D955C7000E418B8 /* Serenata.swift in Sources */,
 				9DC593FD1D8C7E4500639952 /* Login.swift in Sources */,
 				9DC594151D8C82B900639952 /* AMKButton+Delegate.swift in Sources */,
 				9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */,
+				9DAE43EA1D946C2C00E418B8 /* ViewController+TableViewDataSource.swift in Sources */,
 				9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */,
+				9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */,
+				9DAE43E41D943F1400E418B8 /* ViewController+TableViewDelegate.swift in Sources */,
 				9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */,
 				9DC5941C1D8C82B900639952 /* AMKButton.swift in Sources */,
 				9DC594221D8C83AB00639952 /* Global.swift in Sources */,
 				9DC5941A1D8C82B900639952 /* AMKButton+Touch.swift in Sources */,
 				9DC5941B1D8C82B900639952 /* AMKButton+View.swift in Sources */,
 				9DC594271D906EFD00639952 /* Gerente.swift in Sources */,
+				9DAE43E61D94457500E418B8 /* UIViewController+Ext.swift in Sources */,
 				9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */,
 				9DC594201D8C834900639952 /* String+Additions.swift in Sources */,
 				9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */,
@@ -399,7 +425,9 @@
 				9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */,
 				9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */,
 				9DC594131D8C82B900639952 /* CGRect+Extension.swift in Sources */,
+				9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */,
 				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
+				9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */,
 				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,
 				9D1489261D93155D00AEFC45 /* ViewController+Pay.swift in Sources */,
 			);

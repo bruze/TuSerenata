@@ -10,6 +10,15 @@ import UIKit
 import PropertyExtensions
 
 extension AMKButton {
+    @IBInspectable var autoCenter: Bool {
+        get {
+            return getProperty("autoCenter", initial: false)
+        }
+        set {
+            setValue(newValue, forProperty: "autoCenter")
+            currentDefaultLabel?.center = CGPoint.init(x: w / 2, y: h / 2)
+        }
+    }
     var currentDefaultLabel: UILabel? {
         get {
             if let view = viewWithTag(AMKTypeTag.LabelDefault.rawValue) {
@@ -86,13 +95,21 @@ extension AMKButton {
         }
     }
     internal func addLabelWith(Text labelText: String, AndOffset offset: CGPoint) {
-        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, w: w - (w/6), h: h - (h / 4)))
+        let setW = w //- (w/6)
+        let setH = h //- (h / 4)
+        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, w: setW, h: setH))
+        label.textAlignment = .Center
         label.tag = AMKTypeTag.LabelDefault.rawValue
         label.text = labelText
         addSubview(label)
         label.layer.zPosition = 1000
-        label.origin = CGPoint.init(x: defLabelXOffset, y: defLabelYOffset)
-        //label.centerYInSuperView()
+        if autoCenter {
+            //label.origin = CGPoint.init(x: 10, y: 0)
+            label.center = CGPoint.init(x: setW + 15, y: setH)
+        } else {
+            label.origin = CGPoint.init(x: defLabelXOffset, y: defLabelYOffset)
+        }
+        label.centerYInSuperView()
         /*if let image = currentImage where labelRelativeImage != 0 {
             currentDefaultLabel?.origin.x = image.origin.x + image.w + labelRelativeImage
         }*/

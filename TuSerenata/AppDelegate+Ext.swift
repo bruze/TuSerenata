@@ -10,10 +10,11 @@ import DualSlideMenu
 extension AppDelegate {
     func mostrarPantallaAterrizaje() {
         let storyboard = appDelegate.storyboard!
-        let leftView = storyboard.instantiateViewControllerWithIdentifier("Menu")
+        let leftView = (storyboard.instantiateViewControllerWithIdentifier("Menu") as? MenuVC)!
         let mainView = storyboard.instantiateInitialViewController()
 
         slide = DualSlideMenuViewController(mainViewController: mainView!, leftMenuViewController: leftView)
+        slide?.delegate = leftView
         window?.rootViewController = slide
     }
 }

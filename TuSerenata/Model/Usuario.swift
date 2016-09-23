@@ -9,7 +9,7 @@
 import FirebaseDatabase
 import JLChatViewController
 
-struct Usuario {
+class Usuario: NSObject {
     let key: String!
     let nombre: String!
     //let genero: String!
@@ -25,8 +25,9 @@ struct Usuario {
         //self.genero = genero
         //self.completed = completed
         self.ref = nil
+        super.init()
     }
-    
+
     init(snapshot: FIRDataSnapshot) {
         key = snapshot.key
         nombre = snapshot.value!["nombre"] as! String
@@ -42,9 +43,10 @@ struct Usuario {
                 let mensajesViejos = mensajes.childSnapshotForPath("viejos")
                 print(mensajesViejos)
             }
-            cargarMensajes()
             //checkearNuevosMensajes()
         }
+        super.init()
+        cargarMensajes()
     }
     
     func toAnyObject() -> AnyObject {
@@ -55,7 +57,7 @@ struct Usuario {
         ]
     }
     
-    mutating func cargarMensajes() {
+    func cargarMensajes() {
         /*ref!.observeSingleEventOfType(.Value, withBlock: { (captura) in
             if captura.hasChild("mensajes") {
                 let mensajes = captura.childSnapshotForPath("mensajes")
@@ -77,5 +79,9 @@ struct Usuario {
             return
         }
         //refMensajes.obs
+    }
+    
+    func esMusico() -> Bool {
+        return self.isKindOfClass(Musico)
     }
 }

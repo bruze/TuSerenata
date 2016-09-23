@@ -7,17 +7,39 @@
 //
 
 import UIKit
+import EZSwiftExtensions
+import DualSlideMenu
 
-@IBDesignable class MenuVC: UIViewController {
+@IBDesignable class MenuVC: UIViewController, DualSlideMenuViewControllerDelegate {
 
     @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var nombre: UILabel!
+    var crearSerenata: AMKButton? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let boton = view.viewWithTag(1) as? AMKButton {
+            crearSerenata = boton
+            crearSerenata?.addBlock({ self.irACrearSerenata() }, ForAction: 0)
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func irACrearSerenata() {
+        appDelegate.slide!.toggle("right")
+        let navegador = ((ez.topMostVC! as? DualSlideMenuViewController)!.mainView as? UINavigationController)!
+        navegador.childViewControllers[0].performSegueWithIdentifier("crearSerenata", sender: nil)
+    }
+    
+    func onSwipe() {
+        nombre.text = gerente.usuario!.nombre
+    }
+    
+    func didChangeView() {
+        
     }
 }

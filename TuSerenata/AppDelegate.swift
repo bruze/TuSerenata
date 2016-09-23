@@ -10,10 +10,12 @@ import DualSlideMenu
 import IQKeyboardManagerSwift
 import Firebase
 import JLChatViewController
+import CoreLocation
 
 let appDelegate = (UIApplication.sharedApplication().delegate as? AppDelegate)!
 let FirebaseUrl = "https://tuserenata-dd913.firebaseio.com/"
 let FirebaseRef = FIRDatabase.database().reference()
+let localizador = CLLocationManager.init()
 //let FirebaseRef = Firebase(url: FirebaseUrl)
 
 @UIApplicationMain
@@ -25,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     override init() {
         super.init()
+        localizador.requestAlwaysAuthorization()
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
     }

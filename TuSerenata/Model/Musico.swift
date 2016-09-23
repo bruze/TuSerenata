@@ -9,37 +9,40 @@
 import Foundation
 import Firebase
 
-struct Musico {
+class Musico: Usuario {
     
-    let key: String!
-    let nombre: String!
+    //let key: String!
+    //let nombre: String!
     let genero: String!
-    //let ref: Firebase?
-    var completed: Bool!
+    //let ref: FIRDatabaseReference?
+    //var completed: Bool!
     
     // Initialize from arbitrary data
-    init(nombre: String, genero: String, completed: Bool, key: String = "") {
-        self.key = key
-        self.nombre = nombre
+    override init(nombre: String, genero: String, completed: Bool, key: String = "") {
         self.genero = genero
-        self.completed = completed
+        super.init(nombre: nombre, genero: genero, completed: completed, key: key)
+        //self.completed = completed
         //self.ref = nil
     }
     
-    /*init(/*snapshot: FDataSnapshot*/) {
+    init(captura: FIRDataSnapshot) {
+        genero = (captura.value!["genero"] as? String)!
+        super.init(snapshot: captura)
        /* key = snapshot.key
         genero = snapshot.value["genero"] as! String
         nombre = snapshot.value["nombre"] as! String
         completed = snapshot.value["completed"] as! Bool
         ref = snapshot.ref*/
-    }*/
+    }
     
-    func toAnyObject() -> AnyObject {
+    override func toAnyObject() -> AnyObject {
         return [
             "nombre": nombre,
-            "genero": genero,
-            "completed": completed
+            "genero": genero
         ]
     }
     
+    deinit {
+        
+    }
 }

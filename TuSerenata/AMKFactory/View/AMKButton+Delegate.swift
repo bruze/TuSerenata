@@ -92,7 +92,9 @@ extension AMKButton {
                     executer.performSelector(aSelector, withObject: "")
                 }
             } else {
-                actionBlocks?.first!()
+                for action in actionBlocks! {
+                    action()
+                }
             }
         //}
     }
@@ -112,8 +114,9 @@ extension AMKButton {
             }
         }
     }
-    internal func addBlock(block: () -> (), ForAction action: Int) {
+    internal func addBlock(block: () -> (), ForAction action: Int) -> AMKButton {
         actionBlocks?.append(block)
+        return self
     }
     //internal func delegatePerform() {
         /*for action in actions {

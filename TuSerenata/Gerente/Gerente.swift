@@ -28,6 +28,14 @@ class Gerente: NSObject {
             }
         })
     }
+    func obtenerMusico(uid: String, finalizar: (Musico?) -> ()) {
+        let users: FIRDatabaseReference = FirebaseRef.child("users")
+        users.observeSingleEventOfType(.Value, withBlock: { (captura) in
+            if captura.hasChild(uid) {
+                finalizar(Musico(captura: captura.childSnapshotForPath(uid)))
+            }
+        })
+    }
     /*func obtenerMensajes(idUsuario: String) -> JLMessage? {
         let usuario = obtenerUsuario(idUsuario) { (usuario) in
             self.mensajes = 

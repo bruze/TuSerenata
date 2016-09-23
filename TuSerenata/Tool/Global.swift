@@ -15,6 +15,10 @@ typealias Filter = Global.Filter
 typealias Notif = Global.Notifications
 typealias GlobErr = Global.ErrorMessages
 
+typealias DicStrAny = [String: AnyObject]
+typealias DicStrStr = [String: String]
+typealias BloqueVoid = () -> ()
+
 let gerente = Gerente.unistancia
 let usuario = gerente.usuario
 let notifiCenter = NSNotificationCenter.defaultCenter()

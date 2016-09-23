@@ -69,7 +69,7 @@ class AMKButton: UIView {
         if superview != nil {
             centerInSuperView()
             superview!.layoutIfNeeded()
-            setNeedsLayout()
+            layoutIfNeeded()
         }
     }
     override init(frame: CGRect) {
