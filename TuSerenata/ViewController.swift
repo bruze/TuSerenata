@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         localizador.startUpdatingLocation()
         setInitialRecognizeButtonHeight()
         setupTable()
+        gerente.filtrarMusicos()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

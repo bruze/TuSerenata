@@ -9,5 +9,13 @@
 import UIKit
 
 class CrearSerenata: UIViewController {
+    var botonCompra: AMKButton {
+        get {
+            return (view.viewWithTag(1)! as? AMKButton)!
+        }
+    }
     
+    override func viewDidLoad() {
+        botonCompra.addBlock({}, ForAction: 0)
+    }
 }

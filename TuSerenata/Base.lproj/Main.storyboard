@@ -94,24 +94,58 @@
             </objects>
             <point key="canvasLocation" x="217.5" y="1186.5"/>
         </scene>
-        <!--Crear Serenata-->
+        <!--Comprar Serenata-->
         <scene sceneID="FMz-tK-Vhx">
             <objects>
-                <viewController id="UOJ-LI-g8T" customClass="CrearSerenata" customModule="TuSerenata" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Comprar Serenata" id="UOJ-LI-g8T" customClass="CrearSerenata" customModule="TuSerenata" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Njn-0E-8Gp"/>
                         <viewControllerLayoutGuide type="bottom" id="aAu-8X-MzC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2Zh-Tv-q0H">
+                    <view key="view" contentMode="scaleToFill" id="2Zh-Tv-q0H" customClass="Gradiente" customModule="TuSerenata" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-gy-eu8" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="67" y="576" width="240" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9IY-7x-xTO"/>
+                                    <constraint firstAttribute="height" constant="51" id="Y9W-nN-YSh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
+                                        <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Comprar"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
+                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
+                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UrP-gy-eu8" firstAttribute="leading" secondItem="2Zh-Tv-q0H" secondAttribute="leading" constant="67" id="1tN-xk-n8C"/>
+                            <constraint firstItem="aAu-8X-MzC" firstAttribute="top" secondItem="UrP-gy-eu8" secondAttribute="bottom" constant="40" id="ib2-iQ-BI5"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">
+                                <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="gradienteFinal">
+                                <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoC-E8-SNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746.5" y="1191.5"/>
+            <point key="canvasLocation" x="805.5" y="1094.5"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="IHl-Kl-6mJ">
@@ -333,6 +367,6 @@
         <image name="profile" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oCw-2d-vay"/>
+        <segue reference="mix-QV-U7c"/>
     </inferredMetricsTieBreakers>
 </document>
