@@ -23,4 +23,6 @@ target 'TuSerenata' do
   pod "JLChatViewController"
   #Pagos
   pod 'PayPal-iOS-SDK'
+  #Animación de Carga
+  pod 'UCZProgressView'
 end

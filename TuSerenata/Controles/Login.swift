@@ -11,6 +11,15 @@ import DualSlideMenu
 import FirebaseAuth
 
 class Login: UIViewController {
+    
+    @IBOutlet weak var campoNombre: UITextField!
+    @IBOutlet weak var campoContrasena: UITextField!
+    @IBOutlet weak var botonEntrar: AMKButton!
+    
+    internal func irRegistro() {
+        performSegueWithIdentifier("irRegistro", sender: nil)
+    }
+    
     internal func intenteLogueo() {
         FIRAuth.auth()?.signInWithEmail("dos@dos.com", password: "123456", completion: { (user, error) in
             if let loggedUser = user {
@@ -36,6 +45,7 @@ class Login: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        botonEntrar.enabled = false
         // 1
         /*FirebaseRef.observeAuthEventWithBlock { (authData) -> Void in
             // 2

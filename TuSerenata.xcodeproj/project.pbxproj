@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
-		9D1489261D93155D00AEFC45 /* ViewController+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */; };
 		9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */; };
 		9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */; };
+		9D24805D1D998B4A001440EB /* UIViewController+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */; };
+		9D24805F1D998F1E001440EB /* Login+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24805E1D998F1E001440EB /* Login+TextField.swift */; };
 		9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B37101D91E7F700A7F235 /* ChatVC.swift */; };
 		9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */; };
 		9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AC1D8B359500AFC5EF /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 		9D31B5B21D8B359500AFC5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5B11D8B359500AFC5EF /* Assets.xcassets */; };
 		9D31B5B51D8B359500AFC5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5B31D8B359500AFC5EF /* LaunchScreen.storyboard */; };
 		9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5BD1D8B39C900AFC5EF /* Musico.swift */; };
+		9D483D3C1D99AF2B00AD569C /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D483D3B1D99AF2B00AD569C /* Registro.swift */; };
 		9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D301D8C754E00ECF101 /* MenuVC.swift */; };
 		9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */; };
 		9DAE43E41D943F1400E418B8 /* ViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */; };
@@ -53,9 +55,10 @@
 
 /* Begin PBXFileReference section */
 		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Pay.swift"; sourceTree = "<group>"; };
 		9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Loc.swift"; sourceTree = "<group>"; };
 		9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+QuickReturnButton.swift"; sourceTree = "<group>"; };
+		9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Pay.swift"; path = "Tool/UIViewController+Pay.swift"; sourceTree = "<group>"; };
+		9D24805E1D998F1E001440EB /* Login+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Login+TextField.swift"; path = "Controles/Login+TextField.swift"; sourceTree = "<group>"; };
 		9D2B37101D91E7F700A7F235 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = Controles/ChatVC.swift; sourceTree = "<group>"; };
 		9D31B5A71D8B359500AFC5EF /* TuSerenata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuSerenata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		9D31B5B61D8B359500AFC5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D31B5BD1D8B39C900AFC5EF /* Musico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Musico.swift; path = Model/Musico.swift; sourceTree = "<group>"; };
 		9D31B5BF1D8B3AB200AFC5EF /* TuSerenata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuSerenata-Bridging-Header.h"; sourceTree = "<group>"; };
+		9D483D3B1D99AF2B00AD569C /* Registro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Registro.swift; path = Controles/Registro.swift; sourceTree = "<group>"; };
 		9DA82D301D8C754E00ECF101 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = Controles/MenuVC.swift; sourceTree = "<group>"; };
 		9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Ext.swift"; path = "Tool/UIColor+Ext.swift"; sourceTree = "<group>"; };
 		9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -166,7 +170,6 @@
 				9D31B5B61D8B359500AFC5EF /* Info.plist */,
 				9DC594231D905A3C00639952 /* GoogleService-Info.plist */,
 				9DC594281D907A6800639952 /* AppDelegate+Ext.swift */,
-				9D1489251D93155D00AEFC45 /* ViewController+Pay.swift */,
 				9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */,
 				9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */,
 				9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */,
@@ -193,6 +196,8 @@
 				9D2B37101D91E7F700A7F235 /* ChatVC.swift */,
 				9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */,
 				9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */,
+				9D24805E1D998F1E001440EB /* Login+TextField.swift */,
+				9D483D3B1D99AF2B00AD569C /* Registro.swift */,
 			);
 			name = Controles;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				9DC5941F1D8C834900639952 /* String+Additions.swift */,
 				9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */,
 				9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */,
+				9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */,
 				9DAE43F11D95CCE600E418B8 /* JLMessage+Conversion.swift */,
 			);
 			name = Tool;
@@ -409,6 +415,7 @@
 				9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */,
 				9DAE43EA1D946C2C00E418B8 /* ViewController+TableViewDataSource.swift in Sources */,
 				9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */,
+				9D483D3C1D99AF2B00AD569C /* Registro.swift in Sources */,
 				9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */,
 				9DAE43E41D943F1400E418B8 /* ViewController+TableViewDelegate.swift in Sources */,
 				9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */,
@@ -424,6 +431,7 @@
 				9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */,
 				9DC594181D8C82B900639952 /* AMKButton+Label.swift in Sources */,
 				9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */,
+				9D24805F1D998F1E001440EB /* Login+TextField.swift in Sources */,
 				9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */,
 				9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */,
 				9DAE43F21D95CCE600E418B8 /* JLMessage+Conversion.swift in Sources */,
@@ -436,8 +444,8 @@
 				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
 				9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */,
 				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,
+				9D24805D1D998B4A001440EB /* UIViewController+Pay.swift in Sources */,
 				9DAE43F01D95C77400E418B8 /* CrearSerenata+TableView.swift in Sources */,
-				9D1489261D93155D00AEFC45 /* ViewController+Pay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

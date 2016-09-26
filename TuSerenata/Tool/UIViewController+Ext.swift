@@ -7,6 +7,7 @@
 //
 
 import PropertyExtensions
+import JLChatViewController
 
 extension UIViewController: PropertyExtensions {
     internal var capa: UIView {
@@ -61,5 +62,24 @@ extension UIViewController: PropertyExtensions {
         button2.origin.y += 75
         view.addSubview(popup)
         popup.centerInSuperView()
+    }
+    //MARK:CHAT
+    /**
+        You must have a segue named "goChat" to get this working
+    */
+    func openChat() {
+        if let vc = JLBundleController.instantiateJLChatVC() as? ChatVC {
+            
+            vc.view.frame = self.view.frame
+            
+            let chatSegue = UIStoryboardSegue(identifier: "goChat", source: self, destination: vc, performHandler: { () -> Void in
+                vc.contestatario = gerente.musicosFiltrados[0]
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
+            
+            self.prepareForSegue(chatSegue, sender: nil)
+            
+            chatSegue.perform()
+        }
     }
 }

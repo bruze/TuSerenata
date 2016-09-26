@@ -17,14 +17,22 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
             if captura.exists() {
                 if captura.hasChild("nuevos") {
                     let nuevos = captura.childSnapshotForPath("nuevos")
+                    print(self.chatTableView.myID)
                     for capturaIntermedia in nuevos.children {
                         let capturaMensajes = (capturaIntermedia as? FIRDataSnapshot)!
                         for capturaMensaje in capturaMensajes.children {
-                            self.chatTableView.addNewMessages(1, changesHandler: {}, completionHandler: nil)
-                            self.mensajes.append(JLMessage.desdeCaptura(capturaMensaje as! FIRDataSnapshot))
-                            print(self.chatTableView.chatDataSource!)
-                            print(self.chatTableView.chatDelegate)
-                            self.chatTableView.reloadData()
+                            self.chatTableView.addNewMessages(1, changesHandler: {}, completionHandler: { self.chatTableView.reloadData(); self.chatTableView.reloadSections(NSIndexSet.init(indexesInRange: NSRange.init(0...0)), withRowAnimation: .Automatic) })
+                            self.chatTableView.addOldMessages(1, changesHandler: { 
+                                
+                            })
+                            let nuevo = JLMessage.init(text: "HOLA", senderID: (gerente.usuario?.key)!, messageDate: NSDate.init(), senderImage: nil)
+                            self.mensajes.append(nuevo)
+                            let otro = JLMessage.desdeCaptura(capturaMensaje as! FIRDataSnapshot)
+                            self.mensajes.append(otro)
+                            //print(self.mensajes)
+                            /*print(self.chatTableView.chatDataSource!)
+                            print(self.chatTableView.chatDelegate)*/
+                            //self.loadOlderMessages()
                         }
                         
                     }
@@ -46,11 +54,23 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
     override func viewDidLoad() {
         super.viewDidLoad()
         toolBar.leftButton.hidden = true
+        toolBar.rightButton.enabled = true
         cargarMensajes()
+
+        chatTableView.myID = gerente.usuario?.key
+        chatTableView.chatDataSource = self
+        chatTableView.chatDelegate = self
+        chatTableView.messagesMenuDelegate = self
+        configDefault()
+    }
+    func configDefault(){
+        //2-start
+        JLChatAppearence.configIncomingMessages(nil, showIncomingSenderImage: true, incomingTextColor: nil)
         
-        self.chatTableView.chatDataSource = self
-        self.chatTableView.chatDelegate = self
-        chatTableView.reloadData()
+        JLChatAppearence.configOutgoingMessages(nil, showOutgoingSenderImage: true, outgoingTextColor: UIColor.e2eTomatoColor())
+        //2-end
+        
+        JLChatAppearence.configErrorButton(nil, selectedStateImage: nil)
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -63,6 +83,15 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
     func jlChatMessageAtIndexPath(indexPath:NSIndexPath)->JLMessage? {
         return mensajes[indexPath.row]
     }
+    func jlChatKindOfHeaderViewInSection(section: Int) -> JLChatSectionHeaderViewKind {
+        //you can change it to see the diference
+        if  self.mensajes.count == 0{
+            return JLChatSectionHeaderViewKind.CustomView
+        }
+        
+        //return JLChatSectionHeaderViewKind.CustomDateView
+        return JLChatSectionHeaderViewKind.DefaultDateView
+    }
     /**
      The number of messages in corresponding section
      - parameter section: The section that have the header views with date for example
@@ -71,7 +100,9 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
     func jlChatNumberOfMessagesInSection(section:Int)->Int {
         return mensajes.count
     }
-    
+    func numberOfDateAndCustomSectionsInJLChat(chat: JLChatTableView) -> Int {
+        return mensajes.count
+    }
     /**
      Implement this method to load the correct message cell for the indexPath
      - parameter indexPath: The indexPath for the cell
@@ -79,14 +110,23 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      */
     func jlChat(chat:JLChatTableView,MessageCellForRowAtIndexPath indexPath:NSIndexPath)->JLChatMessageCell {
         let cell = JLChatMessageCell.init(style: .Default, reuseIdentifier: "ChatCell")
-        cell.textLabel?.text = mensajes[indexPath.row].text!
+        let message = mensajes[indexPath.row]
+        if message.senderID != gerente.usuario?.key { // soy yo
+            cell.textLabel?.textAlignment = .Right
+        }
+        cell.textLabel?.text = message.text!
         return cell
     }
     /**
      Executed when it is necessary to load older messages.
      */
     func loadOlderMessages() {
-        print("laoding older")
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            
+            self.chatTableView.reloadData()
+            
+        }
     }
     /**
      Executed when there is a tap on any message.
@@ -110,7 +150,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      executed to discover if the UIMenuItem with title can be shown
      */
     func shouldShowMenuItemForCellAtIndexPath(title:String,indexPath:NSIndexPath)->Bool {
-        return false
+        return true
     }
     /**
      Define the title of the UIMenuItem that excutes the delete action.
