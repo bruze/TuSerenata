@@ -26,12 +26,14 @@ class ViewController: UIViewController {
         localizador.startUpdatingLocation()
         setInitialRecognizeButtonHeight()
         setupTable()
+        mostrarCarga()
         gerente.filtrarMusicos({ self.notificarActualizarFiltrados() })
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     func notificarActualizarFiltrados() {
         //print(gerente.filtrarGrupos([{(musico: Musico) in musico.nombre.contains("land")}]))
+        ocultarCarga()
         print("se actualizaron los filtrados")
     }
     

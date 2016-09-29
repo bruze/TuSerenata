@@ -6,9 +6,13 @@
 //  Copyright © 2016 Bruno Garelli. All rights reserved.
 //
 
-//import Foundation
+import UIKit
 
 class Registro: UIViewController {
+    @IBAction func irAtras(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func viewDidLoad() {
     }
 }

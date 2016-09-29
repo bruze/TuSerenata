@@ -8,8 +8,17 @@
 
 import PropertyExtensions
 import JLChatViewController
+import UCZProgressView
 
 extension UIViewController: PropertyExtensions {
+    internal var cargando: UCZProgressView {
+        get {
+            return getProperty("cargando", initial: cargaVacia)
+        }
+        set {
+            setValue(newValue, forProperty: "cargando")
+        }
+    }
     internal var capa: UIView {
         get {
             return getProperty("capa", initial: UIView.init())
@@ -62,6 +71,16 @@ extension UIViewController: PropertyExtensions {
         button2.origin.y += 75
         view.addSubview(popup)
         popup.centerInSuperView()
+    }
+    //MARK:CARGA
+    func mostrarCarga() {
+        cargando = UCZProgressView.init(frame: view.frame)
+        cargando.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cargando)
+    }
+    func ocultarCarga() {
+        cargando.removeFromSuperview()
+        cargando = cargaVacia
     }
     //MARK:CHAT
     /**

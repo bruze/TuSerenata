@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import UCZProgressView
 
 typealias GlobS = Global.Strings
 typealias GlobB = Global.Buttons
@@ -23,6 +24,7 @@ typealias ChequeoGrupo = (Musico) -> Bool
 let gerente = Gerente.unistancia
 let usuario = gerente.usuario
 let notifiCenter = NSNotificationCenter.defaultCenter()
+let cargaVacia = UCZProgressView.init()
 
 infix operator ~> {}
 private let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)
