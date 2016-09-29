@@ -38,9 +38,11 @@ class Gerente: NSObject {
                 })*/
                 if capturaUsuario.hasChild("musico") {
                     if (capturaUsuario.childSnapshotForPath("musico").value! as? Int)! == 0 {
-                        finalizar(Usuario(snapshot: capturaUsuario))
+                        if capturaUsuario.hasChild("ciudad") {
+                            finalizar(Usuario(snapshot: capturaUsuario))
+                        }
                     } else {
-                        if capturaUsuario.hasChild("genero") {
+                        if capturaUsuario.hasChild("genero") && capturaUsuario.hasChild("ciudad") {
                             finalizar(Musico(captura: capturaUsuario))
                         } else {
                             return // esperar otro update del server
@@ -59,7 +61,7 @@ class Gerente: NSObject {
                 let capturaMusico = captura.childSnapshotForPath(uid)
                 if capturaMusico.hasChild("musico") {
                     if (capturaMusico.childSnapshotForPath("musico").value! as? Int)! == 1 {
-                        if capturaMusico.hasChild("genero") {
+                        if capturaMusico.hasChild("genero") && capturaMusico.hasChild("ciudad") {
                             finalizar(Musico(captura: capturaMusico))
                         } else {
                             return // esperar actualización del servidor
@@ -70,6 +72,22 @@ class Gerente: NSObject {
                 }
             }
         })
+    }
+    func filtrarGrupos(condiciones: [ChequeoGrupo]) -> [Musico] {
+        var gruposDeInteres: [Musico] = []
+        for grupo in musicosFiltrados {
+            var cumple = true
+            for condicion in condiciones {
+                if !condicion(grupo) {
+                    cumple = false
+                    break;
+                }
+            }
+            if cumple {
+                gruposDeInteres.append(grupo)
+            }
+        }
+        return gruposDeInteres
     }
     func filtrarMusicos(notificar: BloqueVoid) /*-> [Musico]*/ {
         musicosFiltrados.removeAll()

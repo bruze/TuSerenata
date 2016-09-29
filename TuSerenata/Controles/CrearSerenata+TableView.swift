@@ -20,12 +20,19 @@ extension CrearSerenata: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if gruposBuscados.count > 0 || filtrando {
+           return gruposBuscados.count
+        }
         return gerente.musicosFiltrados.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .Default, reuseIdentifier: "")
-        cell.textLabel?.text = gerente.musicosFiltrados[indexPath.row].nombre
+        if gruposBuscados.count > 0 || filtrando {
+            cell.textLabel?.text = gruposBuscados[indexPath.row].nombre
+        } else {
+            cell.textLabel?.text = gerente.musicosFiltrados[indexPath.row].nombre
+        }
         return cell
     }
 }

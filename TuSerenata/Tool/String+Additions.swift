@@ -66,9 +66,9 @@ extension String {
         return capitalizedString
     }
 
-    func contains(substring: String) -> Bool {
+    /*func contains(substring: String) -> Bool {
         return rangeOfString(substring) != nil
-    }
+    }*/
 
     func chompLeft(prefix: String) -> String {
         if let prefixRange = rangeOfString(prefix) {

@@ -128,13 +128,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfQ-Sa-EZJ">
-                                <rect key="frame" x="10" y="129" width="59" height="21"/>
+                                <rect key="frame" x="10" y="131" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7z-Hs-NWk">
-                                <rect key="frame" x="10" y="158" width="61" height="21"/>
+                                <rect key="frame" x="10" y="165" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -147,7 +147,7 @@
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="EfI-2k-g4a"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wef-KA-tfl" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                            <view tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wef-KA-tfl" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
                                 <rect key="frame" x="135" y="212" width="105" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="BPH-In-zkg"/>
@@ -166,16 +166,39 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xii-JL-Pot">
+                                <rect key="frame" x="99" y="125" width="266" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="7uW-Qt-ivS"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ti7-K6-s5W">
+                                <rect key="frame" x="99" y="158" width="266" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="H9W-s9-E1q"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UrP-gy-eu8" firstAttribute="leading" secondItem="2Zh-Tv-q0H" secondAttribute="leading" constant="67" id="1tN-xk-n8C"/>
+                            <constraint firstItem="Ti7-K6-s5W" firstAttribute="leading" secondItem="Xii-JL-Pot" secondAttribute="leading" id="2fA-E0-S4Y"/>
                             <constraint firstItem="jfQ-Sa-EZJ" firstAttribute="leading" secondItem="2Zh-Tv-q0H" secondAttribute="leading" constant="10" id="2uI-bo-O8a"/>
+                            <constraint firstItem="Ti7-K6-s5W" firstAttribute="height" secondItem="Xii-JL-Pot" secondAttribute="height" id="3Ma-jA-JYW"/>
                             <constraint firstAttribute="trailing" secondItem="5t2-6A-AgL" secondAttribute="trailing" constant="10" id="5mE-tZ-HJT"/>
+                            <constraint firstItem="Ti7-K6-s5W" firstAttribute="trailing" secondItem="Xii-JL-Pot" secondAttribute="trailing" id="5rv-ab-vfk"/>
                             <constraint firstItem="5t2-6A-AgL" firstAttribute="top" secondItem="wef-KA-tfl" secondAttribute="bottom" constant="10" id="6x2-P6-i8x"/>
-                            <constraint firstItem="H7z-Hs-NWk" firstAttribute="top" secondItem="jfQ-Sa-EZJ" secondAttribute="bottom" constant="8" id="8WA-ZK-bwx"/>
+                            <constraint firstItem="H7z-Hs-NWk" firstAttribute="top" secondItem="jfQ-Sa-EZJ" secondAttribute="bottom" constant="13" id="8WA-ZK-bwx"/>
+                            <constraint firstItem="Xii-JL-Pot" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="trailing" constant="30" id="8ay-MI-b8R"/>
+                            <constraint firstItem="Xii-JL-Pot" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="61" id="EFV-xZ-thj"/>
                             <constraint firstItem="wef-KA-tfl" firstAttribute="centerX" secondItem="2Zh-Tv-q0H" secondAttribute="centerX" id="FP9-qA-WDo"/>
-                            <constraint firstItem="jfQ-Sa-EZJ" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="65" id="Jrb-17-hZj"/>
+                            <constraint firstItem="jfQ-Sa-EZJ" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="67" id="Jrb-17-hZj"/>
+                            <constraint firstItem="Ti7-K6-s5W" firstAttribute="top" secondItem="Xii-JL-Pot" secondAttribute="bottom" constant="3" id="N3T-jp-jUE"/>
+                            <constraint firstItem="Xii-JL-Pot" firstAttribute="trailing" secondItem="5t2-6A-AgL" secondAttribute="trailing" id="Oap-WT-0KH"/>
                             <constraint firstItem="wef-KA-tfl" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="148" id="QWe-LA-HzT"/>
                             <constraint firstItem="5t2-6A-AgL" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="SfH-o9-F3a"/>
                             <constraint firstItem="H7z-Hs-NWk" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="YQz-YO-48A"/>
@@ -193,6 +216,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="campoCiudad" destination="Xii-JL-Pot" id="CKi-UR-hGm"/>
+                        <outlet property="campoGenero" destination="Ti7-K6-s5W" id="NQv-H2-Jca"/>
                         <outlet property="tableView" destination="5t2-6A-AgL" id="XWa-Ci-Vwt"/>
                     </connections>
                 </viewController>

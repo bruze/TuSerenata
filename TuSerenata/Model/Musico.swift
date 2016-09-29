@@ -18,9 +18,9 @@ class Musico: Usuario {
     //var completed: Bool!
     
     // Initialize from arbitrary data
-    override init(nombre: String, genero: String, completed: Bool, key: String = "") {
+    override init(nombre: String, genero: String, ciudad: String, completed: Bool, key: String = "") {
         self.genero = genero
-        super.init(nombre: nombre, genero: genero, completed: completed, key: key)
+        super.init(nombre: nombre, genero: genero, ciudad: ciudad, completed: completed, key: key)
         //self.completed = completed
         //self.ref = nil
     }

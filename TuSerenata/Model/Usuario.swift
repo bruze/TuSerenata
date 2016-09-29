@@ -12,16 +12,17 @@ import JLChatViewController
 class Usuario: NSObject {
     let key: String!
     let nombre: String!
-    //let genero: String!
+    let ciudad: String!
     let ref: FIRDatabaseReference?
     var refMensajes: FIRDatabaseReference?
     var mensajesNuevos: [JLMessage]?
     //var completed: Bool!
     
     // Initialize from arbitrary data
-    init(nombre: String, genero: String, completed: Bool, key: String = "") {
+    init(nombre: String, genero: String, ciudad: String, completed: Bool, key: String = "") {
         self.key = key
         self.nombre = nombre
+        self.ciudad = ciudad
         //self.genero = genero
         //self.completed = completed
         self.ref = nil
@@ -31,6 +32,7 @@ class Usuario: NSObject {
     init(snapshot: FIRDataSnapshot) {
         key = snapshot.key
         nombre = snapshot.value!["nombre"] as! String
+        ciudad = snapshot.value!["ciudad"] as! String
         ref = snapshot.ref
         if snapshot.hasChild("mensajes") {
             let mensajes = snapshot.childSnapshotForPath("mensajes")
@@ -51,7 +53,8 @@ class Usuario: NSObject {
     
     func toAnyObject() -> AnyObject {
         return [
-            "nombre": nombre//,
+            "nombre": nombre,
+            "ciudad": ciudad
             //"genero": genero,
             //"completed": completed
         ]

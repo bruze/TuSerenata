@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     }
 
     func notificarActualizarFiltrados() {
+        //print(gerente.filtrarGrupos([{(musico: Musico) in musico.nombre.contains("land")}]))
         print("se actualizaron los filtrados")
     }
     
