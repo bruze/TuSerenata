@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CVCalendar
 
 class CrearSerenata: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -23,6 +24,11 @@ class CrearSerenata: UIViewController {
             return (view.viewWithTag(2)! as? AMKButton)!
         }
     }
+    var calendario: CVCalendarView {
+        get {
+            return (view.viewWithTag(3)! as? CVCalendarView)!
+        }
+    }
     override func viewDidLoad() {
         botonCompra.addBlock({}, ForAction: 0)
         botonBuscar.addBlock({ self.gruposBuscados = gerente.filtrarGrupos([{ musico in
@@ -33,5 +39,20 @@ class CrearSerenata: UIViewController {
                  return resultado || self.campoCiudad.text!.isEmpty()
             }]) }, ForAction: 0)
         botonBuscar.addBlock({ self.tableView.reloadData() }, ForAction: 1)
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        //menuView.commitMenuViewUpdate()
+        calendario.commitCalendarViewUpdate()
+    }
+}
+
+extension CrearSerenata: CVCalendarViewDelegate {
+    func presentationMode() -> CalendarMode {
+        return .MonthView
+    }
+    func firstWeekday() -> Weekday {
+        return .Sunday
     }
 }

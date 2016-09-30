@@ -25,4 +25,6 @@ target 'TuSerenata' do
   pod 'PayPal-iOS-SDK'
   #Animación de Carga
   pod 'UCZProgressView'
+  #Calendario
+  pod 'CVCalendar', '1.3.0'
 end
