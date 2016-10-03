@@ -15,9 +15,9 @@ target 'TuSerenata' do
   #Soporte para widgets especiales
   pod 'LTInfiniteScrollView'
   #Manejo de Teclado
-  pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift', '4.0.5'
   #Herramientas
-  pod 'EZSwiftExtensions'
+  pod 'EZSwiftExtensions', '1.6'
   pod 'PropertyExtensions'
   #Chat
   pod "JLChatViewController"

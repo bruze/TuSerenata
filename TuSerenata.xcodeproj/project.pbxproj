@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3270170F1DA0243A00987DCF /* GoogleService-Info.plist */; };
 		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
 		9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */; };
 		9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */; };
@@ -48,13 +49,13 @@
 		9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594101D8C82B900639952 /* AMKCarousel.swift */; };
 		9DC594201D8C834900639952 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5941F1D8C834900639952 /* String+Additions.swift */; };
 		9DC594221D8C83AB00639952 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594211D8C83AB00639952 /* Global.swift */; };
-		9DC594241D905A3C00639952 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DC594231D905A3C00639952 /* GoogleService-Info.plist */; };
 		9DC594271D906EFD00639952 /* Gerente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594261D906EFD00639952 /* Gerente.swift */; };
 		9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594281D907A6800639952 /* AppDelegate+Ext.swift */; };
 		9DC5942B1D907C1500639952 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5942A1D907C1500639952 /* Usuario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3270170F1DA0243A00987DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Loc.swift"; sourceTree = "<group>"; };
 		9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+QuickReturnButton.swift"; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		9DC594101D8C82B900639952 /* AMKCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKCarousel.swift; sourceTree = "<group>"; };
 		9DC5941F1D8C834900639952 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Additions.swift"; path = "Tool/String+Additions.swift"; sourceTree = "<group>"; };
 		9DC594211D8C83AB00639952 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Tool/Global.swift; sourceTree = "<group>"; };
-		9DC594231D905A3C00639952 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DC594261D906EFD00639952 /* Gerente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gerente.swift; path = Gerente/Gerente.swift; sourceTree = "<group>"; };
 		9DC594281D907A6800639952 /* AppDelegate+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Ext.swift"; sourceTree = "<group>"; };
 		9DC5942A1D907C1500639952 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = Model/Usuario.swift; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 				9D31B5AE1D8B359500AFC5EF /* Main.storyboard */,
 				9D31B5B11D8B359500AFC5EF /* Assets.xcassets */,
 				9D31B5B31D8B359500AFC5EF /* LaunchScreen.storyboard */,
+				3270170F1DA0243A00987DCF /* GoogleService-Info.plist */,
 				9D31B5B61D8B359500AFC5EF /* Info.plist */,
-				9DC594231D905A3C00639952 /* GoogleService-Info.plist */,
 				9DC594281D907A6800639952 /* AppDelegate+Ext.swift */,
 				9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */,
 				9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */,
@@ -349,7 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D31B5B51D8B359500AFC5EF /* LaunchScreen.storyboard in Resources */,
-				9DC594241D905A3C00639952 /* GoogleService-Info.plist in Resources */,
+				327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */,
 				9D31B5B21D8B359500AFC5EF /* Assets.xcassets in Resources */,
 				9D31B5B01D8B359500AFC5EF /* Main.storyboard in Resources */,
 			);

@@ -13,6 +13,17 @@ class Gerente: NSObject {
     let users: FIRDatabaseReference = FirebaseRef.child("users")
     let grupos: FIRDatabaseReference = FirebaseRef.child("grupos")
     var musicosFiltrados: [Musico] = []
+    var serenatasContratadas: [String] = ["Reserva con Fecha 30/06/2016 grupo Los Galgos",
+                                          "Reserva con Fecha 08/04/2016 grupo Canarios Verdes",
+                                          "Reserva Inmediata 25/02/2016 grupo La Lukita",
+                                          "Reserva con Fecha 15/01/2016 grupo Santino y Los Churros",
+                                          "Reserva Inmediata 24/12/2015 grupo Las Lindas",
+                                          "Reserva con Fecha 21/06/2015 grupo Guapo Gimenez",
+                                          "Reserva con Fecha 15/04/2015 grupo Andina",
+                                          "Reserva con Fecha 01/02/2015 grupo Rockazilla",
+                                          "Reserva con Fecha 15/06/2014 grupo Mandragora",
+                                          "Reserva con Fecha 15/06/2014 grupo Los Sultanes",
+                                          ]
     //var mensajes: [JLMessage]? = nil
 
     override init() {

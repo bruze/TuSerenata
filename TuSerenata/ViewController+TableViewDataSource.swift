@@ -14,10 +14,12 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return gerente.serenatasContratadas.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell.init(style: .Default, reuseIdentifier: "")
+        let cell = UITableViewCell.init(style: .Default, reuseIdentifier: "")
+        cell.textLabel?.text = gerente.serenatasContratadas[indexPath.row]
+        return cell
     }
 }
