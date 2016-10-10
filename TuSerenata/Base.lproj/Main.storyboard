@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8mU-XG-Y8D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8mU-XG-Y8D">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -121,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="217.5" y="1186.5"/>
         </scene>
-        <!--Comprar Serenata-->
+        <!--Delegate-->
         <scene sceneID="FMz-tK-Vhx">
             <objects>
                 <viewController title="Comprar Serenata" definesPresentationContext="YES" id="UOJ-LI-g8T" customClass="CrearSerenata" customModule="TuSerenata" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,27 +154,27 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfQ-Sa-EZJ">
-                                <rect key="frame" x="10" y="131" width="59" height="21"/>
+                                <rect key="frame" x="10" y="79" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7z-Hs-NWk">
-                                <rect key="frame" x="10" y="165" width="61" height="21"/>
+                                <rect key="frame" x="10" y="113" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5t2-6A-AgL">
-                                <rect key="frame" x="10" y="259" width="355" height="337"/>
+                                <rect key="frame" x="10" y="351" width="355" height="245"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="UOJ-LI-g8T" id="MP2-go-rPV"/>
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="EfI-2k-g4a"/>
                                 </connections>
                             </tableView>
-                            <view tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wef-KA-tfl" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="135" y="212" width="105" height="37"/>
+                            <view tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wef-KA-tfl" userLabel="Buscar" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="135" y="304" width="105" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="BPH-In-zkg"/>
                                     <constraint firstAttribute="width" constant="105" id="VcE-QY-GDM"/>
@@ -193,7 +193,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xii-JL-Pot">
-                                <rect key="frame" x="99" y="125" width="266" height="30"/>
+                                <rect key="frame" x="99" y="73" width="266" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -201,7 +201,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ti7-K6-s5W">
-                                <rect key="frame" x="99" y="158" width="266" height="30"/>
+                                <rect key="frame" x="99" y="106" width="266" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -212,6 +212,106 @@
                                     <constraint firstAttribute="width" constant="276" id="42u-yd-0qJ"/>
                                     <constraint firstAttribute="height" constant="302" id="vJT-R6-Ppb"/>
                                 </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNM-mZ-BZG">
+                                <rect key="frame" x="10" y="147" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dS9-aM-HH1">
+                                <rect key="frame" x="99" y="139" width="266" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puntuación:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QQ-l8-43i">
+                                <rect key="frame" x="10" y="181" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="577-YT-Ra1" userLabel="Estrella1" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="109" y="180" width="24" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="BUr-bV-RoR"/>
+                                    <constraint firstAttribute="width" constant="24" id="Cg2-DC-kdJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="5o6-oB-XRy"/>
+                                    <outlet property="nextSibling" destination="fsP-zr-f8i" id="5Jv-7G-Lpu"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsP-zr-f8i" userLabel="Estrella2" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="141" y="180" width="24" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="NH4-d8-RwO"/>
+                                    <constraint firstAttribute="height" constant="24" id="Voi-Yb-aEZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella2"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="9VN-uZ-pIG"/>
+                                    <outlet property="nextSibling" destination="nb0-d8-ikq" id="LRX-rt-aEh"/>
+                                    <outlet property="previousSibling" destination="577-YT-Ra1" id="rtf-Si-WMt"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nb0-d8-ikq" userLabel="Estrella3" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="173" y="180" width="24" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="LRA-Dk-d3d"/>
+                                    <constraint firstAttribute="height" constant="24" id="yIF-R8-fUg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella3"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="dGb-Io-1h3"/>
+                                    <outlet property="nextSibling" destination="mR8-Zz-2Ia" id="yZg-bS-Hz0"/>
+                                    <outlet property="previousSibling" destination="fsP-zr-f8i" id="qi6-jR-3vQ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-Zz-2Ia" userLabel="Estrella4" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="205" y="180" width="24" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="ChP-Fb-ICy"/>
+                                    <constraint firstAttribute="width" constant="24" id="eG3-U0-Kye"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella4"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="LOt-7Z-IvP"/>
+                                    <outlet property="nextSibling" destination="2Hz-Gv-Zv8" id="bbg-3j-gLc"/>
+                                    <outlet property="previousSibling" destination="nb0-d8-ikq" id="nqU-Gu-mxe"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-Gv-Zv8" userLabel="Estrella5" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="237" y="180" width="24" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="D4I-Hp-Q1V"/>
+                                    <constraint firstAttribute="height" constant="24" id="rDF-rS-NFC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="KOc-AL-tkh"/>
+                                    <outlet property="previousSibling" destination="mR8-Zz-2Ia" id="Ae9-Ph-7QX"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -225,18 +325,35 @@
                             <constraint firstItem="5t2-6A-AgL" firstAttribute="top" secondItem="wef-KA-tfl" secondAttribute="bottom" constant="10" id="6x2-P6-i8x"/>
                             <constraint firstItem="H7z-Hs-NWk" firstAttribute="top" secondItem="jfQ-Sa-EZJ" secondAttribute="bottom" constant="13" id="8WA-ZK-bwx"/>
                             <constraint firstItem="Xii-JL-Pot" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="trailing" constant="30" id="8ay-MI-b8R"/>
-                            <constraint firstItem="Xii-JL-Pot" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="61" id="EFV-xZ-thj"/>
+                            <constraint firstItem="Xii-JL-Pot" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="9" id="EFV-xZ-thj"/>
                             <constraint firstItem="wef-KA-tfl" firstAttribute="centerX" secondItem="2Zh-Tv-q0H" secondAttribute="centerX" id="FP9-qA-WDo"/>
+                            <constraint firstItem="fsP-zr-f8i" firstAttribute="leading" secondItem="577-YT-Ra1" secondAttribute="trailing" constant="8" id="Jcc-rV-5oi"/>
+                            <constraint firstItem="dS9-aM-HH1" firstAttribute="top" secondItem="Ti7-K6-s5W" secondAttribute="bottom" constant="3" id="JeH-vU-iQ0"/>
                             <constraint firstItem="FGW-Ff-mxc" firstAttribute="centerY" secondItem="2Zh-Tv-q0H" secondAttribute="centerY" id="Jic-c0-D27"/>
-                            <constraint firstItem="jfQ-Sa-EZJ" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="67" id="Jrb-17-hZj"/>
+                            <constraint firstItem="jfQ-Sa-EZJ" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="15" id="Jrb-17-hZj"/>
+                            <constraint firstItem="2Hz-Gv-Zv8" firstAttribute="centerY" secondItem="mR8-Zz-2Ia" secondAttribute="centerY" id="MRq-NV-6KT"/>
                             <constraint firstItem="Ti7-K6-s5W" firstAttribute="top" secondItem="Xii-JL-Pot" secondAttribute="bottom" constant="3" id="N3T-jp-jUE"/>
+                            <constraint firstItem="577-YT-Ra1" firstAttribute="leading" secondItem="2QQ-l8-43i" secondAttribute="trailing" constant="8" id="OQD-bN-ggu"/>
                             <constraint firstItem="Xii-JL-Pot" firstAttribute="trailing" secondItem="5t2-6A-AgL" secondAttribute="trailing" id="Oap-WT-0KH"/>
-                            <constraint firstItem="wef-KA-tfl" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="148" id="QWe-LA-HzT"/>
+                            <constraint firstItem="dS9-aM-HH1" firstAttribute="leading" secondItem="Ti7-K6-s5W" secondAttribute="leading" id="Ovs-Cp-Y2m"/>
+                            <constraint firstItem="2Hz-Gv-Zv8" firstAttribute="leading" secondItem="mR8-Zz-2Ia" secondAttribute="trailing" constant="8" id="Pjw-4v-zdW"/>
+                            <constraint firstItem="wef-KA-tfl" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="240" id="QWe-LA-HzT"/>
                             <constraint firstItem="5t2-6A-AgL" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="SfH-o9-F3a"/>
+                            <constraint firstItem="nb0-d8-ikq" firstAttribute="centerY" secondItem="fsP-zr-f8i" secondAttribute="centerY" id="Sxr-Ro-rgL"/>
+                            <constraint firstItem="dS9-aM-HH1" firstAttribute="trailing" secondItem="Ti7-K6-s5W" secondAttribute="trailing" id="Vsg-mQ-tkf"/>
+                            <constraint firstItem="CNM-mZ-BZG" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="WXn-RC-I4o"/>
+                            <constraint firstItem="577-YT-Ra1" firstAttribute="centerY" secondItem="2QQ-l8-43i" secondAttribute="centerY" id="XMZ-Gn-5Dx"/>
                             <constraint firstItem="H7z-Hs-NWk" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="YQz-YO-48A"/>
                             <constraint firstItem="UrP-gy-eu8" firstAttribute="top" secondItem="5t2-6A-AgL" secondAttribute="bottom" constant="10" id="ctL-qc-9fN"/>
+                            <constraint firstItem="mR8-Zz-2Ia" firstAttribute="centerY" secondItem="nb0-d8-ikq" secondAttribute="centerY" id="dsc-SA-WSn"/>
                             <constraint firstItem="FGW-Ff-mxc" firstAttribute="centerX" secondItem="2Zh-Tv-q0H" secondAttribute="centerX" id="hkB-gx-HOU"/>
                             <constraint firstItem="aAu-8X-MzC" firstAttribute="top" secondItem="UrP-gy-eu8" secondAttribute="bottom" constant="10" id="ib2-iQ-BI5"/>
+                            <constraint firstItem="nb0-d8-ikq" firstAttribute="leading" secondItem="fsP-zr-f8i" secondAttribute="trailing" constant="8" id="mMs-2I-FVK"/>
+                            <constraint firstItem="fsP-zr-f8i" firstAttribute="centerY" secondItem="577-YT-Ra1" secondAttribute="centerY" id="mgC-NC-YHd"/>
+                            <constraint firstItem="2QQ-l8-43i" firstAttribute="top" secondItem="CNM-mZ-BZG" secondAttribute="bottom" constant="13" id="pZ7-jm-NZF"/>
+                            <constraint firstItem="2QQ-l8-43i" firstAttribute="leading" secondItem="CNM-mZ-BZG" secondAttribute="leading" id="u2c-0w-hvi"/>
+                            <constraint firstItem="CNM-mZ-BZG" firstAttribute="top" secondItem="H7z-Hs-NWk" secondAttribute="bottom" constant="13" id="wS3-zK-YVx"/>
+                            <constraint firstItem="mR8-Zz-2Ia" firstAttribute="leading" secondItem="nb0-d8-ikq" secondAttribute="trailing" constant="8" id="zVq-7F-q4f"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">

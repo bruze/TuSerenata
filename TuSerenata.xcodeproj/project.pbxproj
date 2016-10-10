@@ -52,6 +52,8 @@
 		9DC594271D906EFD00639952 /* Gerente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594261D906EFD00639952 /* Gerente.swift */; };
 		9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594281D907A6800639952 /* AppDelegate+Ext.swift */; };
 		9DC5942B1D907C1500639952 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5942A1D907C1500639952 /* Usuario.swift */; };
+		9DDB35351DAC01800032F9CD /* AMKButton+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDB35341DAC01800032F9CD /* AMKButton+Navigation.swift */; };
+		9DDB35371DAC02380032F9CD /* AMKButton+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDB35361DAC02380032F9CD /* AMKButton+State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,8 @@
 		9DC594261D906EFD00639952 /* Gerente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gerente.swift; path = Gerente/Gerente.swift; sourceTree = "<group>"; };
 		9DC594281D907A6800639952 /* AppDelegate+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Ext.swift"; sourceTree = "<group>"; };
 		9DC5942A1D907C1500639952 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = Model/Usuario.swift; sourceTree = "<group>"; };
+		9DDB35341DAC01800032F9CD /* AMKButton+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Navigation.swift"; sourceTree = "<group>"; };
+		9DDB35361DAC02380032F9CD /* AMKButton+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+State.swift"; sourceTree = "<group>"; };
 		C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.release.xcconfig"; sourceTree = "<group>"; };
 		CCA922768C27437FE26509AC /* Pods-TuSerenata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,6 +270,8 @@
 				9DC5940C1D8C82B900639952 /* AMKButton+View.swift */,
 				9DC5940D1D8C82B900639952 /* AMKButton.swift */,
 				9DC5940E1D8C82B900639952 /* AMKCarousel */,
+				9DDB35341DAC01800032F9CD /* AMKButton+Navigation.swift */,
+				9DDB35361DAC02380032F9CD /* AMKButton+State.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -437,6 +443,7 @@
 				9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */,
 				9D24805F1D998F1E001440EB /* Login+TextField.swift in Sources */,
 				9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */,
+				9DDB35371DAC02380032F9CD /* AMKButton+State.swift in Sources */,
 				9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */,
 				9DAE43F21D95CCE600E418B8 /* JLMessage+Conversion.swift in Sources */,
 				9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */,
@@ -448,6 +455,7 @@
 				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
 				9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */,
 				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,
+				9DDB35351DAC01800032F9CD /* AMKButton+Navigation.swift in Sources */,
 				9D24805D1D998B4A001440EB /* UIViewController+Pay.swift in Sources */,
 				9DAE43F01D95C77400E418B8 /* CrearSerenata+TableView.swift in Sources */,
 			);

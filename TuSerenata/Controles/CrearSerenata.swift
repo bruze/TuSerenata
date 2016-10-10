@@ -46,6 +46,14 @@ class CrearSerenata: UIViewController {
         //menuView.commitMenuViewUpdate()
         calendario.commitCalendarViewUpdate()
     }
+    func filtroEstrellas(boton: AnyObject) {
+        (boton as? AMKButton)!.performOnMeAndPreviousSibling { (self) in
+            self.backgroundColor = UIColor.yellowColor()
+        }
+        (boton as? AMKButton)!.performOnNextSibling { (self) in
+            self.backgroundColor = self.defaultBackColor
+        }
+    }
 }
 
 extension CrearSerenata: CVCalendarViewDelegate {

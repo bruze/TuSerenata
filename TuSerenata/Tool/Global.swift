@@ -19,6 +19,7 @@ typealias GlobErr = Global.ErrorMessages
 typealias DicStrAny = [String: AnyObject]
 typealias DicStrStr = [String: String]
 typealias BloqueVoid = () -> ()
+typealias BloqueBoton = (AMKButton) -> ()
 typealias ChequeoGrupo = (Musico) -> Bool
 
 let gerente = Gerente.unistancia

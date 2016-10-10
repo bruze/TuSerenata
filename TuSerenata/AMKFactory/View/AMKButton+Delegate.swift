@@ -82,21 +82,21 @@ extension AMKButton {
         }
     }
     internal func delegatePerformTouch() {
-        //if !touchAction.isEmpty {
+        if !touchAction.isEmpty || !(actionBlocks?.isEmpty)! {
             if actionBlocks?.count == 0 {
                 if let executer = delegate as? UIViewController {
                     let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
-                    executer.performSelector(aSelector, withObject: "")
+                    executer.performSelector(aSelector, withObject: self)
                 } else if let executer = delegate as? ViewController {
                     let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
-                    executer.performSelector(aSelector, withObject: "")
+                    executer.performSelector(aSelector, withObject: self)
                 }
             } else {
                 for action in actionBlocks! {
                     action()
                 }
             }
-        //}
+        }
     }
     internal func delegatePerformEnable() {
         if !enabledAction.isEmpty {
