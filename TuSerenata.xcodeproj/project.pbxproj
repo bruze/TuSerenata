@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324C9B811DADEEC700462550 /* FIRDataSnapshot+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */; };
 		327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3270170F1DA0243A00987DCF /* GoogleService-Info.plist */; };
 		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
 		9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FIRDataSnapshot+Ext.swift"; path = "Tool/FIRDataSnapshot+Ext.swift"; sourceTree = "<group>"; };
 		3270170F1DA0243A00987DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Loc.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */,
 				9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */,
 				9DAE43F11D95CCE600E418B8 /* JLMessage+Conversion.swift */,
+				324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324C9B811DADEEC700462550 /* FIRDataSnapshot+Ext.swift in Sources */,
 				9DC5942B1D907C1500639952 /* Usuario.swift in Sources */,
 				9DC594121D8C82B900639952 /* AMKEncoder.swift in Sources */,
 				9DAE43EC1D955C7000E418B8 /* Serenata.swift in Sources */,

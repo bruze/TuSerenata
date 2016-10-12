@@ -41,6 +41,7 @@ class Gerente: NSObject {
             }) { (error) in
                 
         }*/
+        users.keepSynced(true)
         users.observeEventType(.Value, withBlock: { (captura) in
             if captura.hasChild(uid) {
                 let capturaUsuario = captura.childSnapshotForPath(uid)
@@ -53,7 +54,7 @@ class Gerente: NSObject {
                             finalizar(Usuario(snapshot: capturaUsuario))
                         }
                     } else {
-                        if capturaUsuario.hasChild("genero") && capturaUsuario.hasChild("ciudad") {
+                        if capturaUsuario.hasChilds("genero", "ciudad", "voz") {
                             finalizar(Musico(captura: capturaUsuario))
                         } else {
                             return // esperar otro update del server
@@ -72,7 +73,7 @@ class Gerente: NSObject {
                 let capturaMusico = captura.childSnapshotForPath(uid)
                 if capturaMusico.hasChild("musico") {
                     if (capturaMusico.childSnapshotForPath("musico").value! as? Int)! == 1 {
-                        if capturaMusico.hasChild("genero") && capturaMusico.hasChild("ciudad") {
+                        if capturaMusico.hasChilds("genero", "ciudad", "voz") {
                             finalizar(Musico(captura: capturaMusico))
                         } else {
                             return // esperar actualización del servidor

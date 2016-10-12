@@ -13,27 +13,29 @@ class Usuario: NSObject {
     let key: String!
     let nombre: String!
     let ciudad: String!
+    private let sexo: String!
     let ref: FIRDatabaseReference?
     var refMensajes: FIRDatabaseReference?
     var mensajesNuevos: [JLMessage]?
     //var completed: Bool!
     
     // Initialize from arbitrary data
-    init(nombre: String, genero: String, ciudad: String, completed: Bool, key: String = "") {
+    init(nombre: String, ciudad: String, sexo: String, completed: Bool, key: String = "") {
         self.key = key
         self.nombre = nombre
         self.ciudad = ciudad
-        //self.genero = genero
+        self.sexo = sexo
         //self.completed = completed
         self.ref = nil
         super.init()
     }
 
     init(snapshot: FIRDataSnapshot) {
-        key = snapshot.key
-        nombre = snapshot.value!["nombre"] as! String
-        ciudad = snapshot.value!["ciudad"] as! String
-        ref = snapshot.ref
+         key    = snapshot.key
+        nombre  = snapshot.value!["nombre"] as! String
+        ciudad  = snapshot.value!["ciudad"] as! String
+         sexo   = snapshot.value!["sexo"] as! String
+         ref = snapshot.ref
         if snapshot.hasChild("mensajes") {
             let mensajes = snapshot.childSnapshotForPath("mensajes")
             self.refMensajes = mensajes.ref
@@ -54,7 +56,8 @@ class Usuario: NSObject {
     func toAnyObject() -> AnyObject {
         return [
             "nombre": nombre,
-            "ciudad": ciudad
+            "ciudad": ciudad,
+            "sexo": sexo
             //"genero": genero,
             //"completed": completed
         ]

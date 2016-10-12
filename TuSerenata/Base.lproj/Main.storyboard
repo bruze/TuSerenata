@@ -305,6 +305,46 @@
                                     <outlet property="previousSibling" destination="mR8-Zz-2Ia" id="Ae9-Ph-7QX"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voz:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Naa-xa-nML">
+                                <rect key="frame" x="23" y="210" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view tag="5" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHz-Yy-CB0" userLabel="Masculina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="80" y="212" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="dBB-mH-Yke"/>
+                                    <constraint firstAttribute="height" constant="35" id="sLP-dC-KQW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="M"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="seleccionGenero:"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="Ndv-3B-Urz"/>
+                                </connections>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I94-xc-A0a" userLabel="Femenina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="115" y="212" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="i5I-58-ypr"/>
+                                    <constraint firstAttribute="width" constant="35" id="xsk-Ui-ycL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
+                                        <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="F"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="seleccionGenero:"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="UOJ-LI-g8T" id="qey-2Y-E6g"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -327,6 +367,7 @@
                             <constraint firstItem="Ti7-K6-s5W" firstAttribute="top" secondItem="Xii-JL-Pot" secondAttribute="bottom" constant="3" id="N3T-jp-jUE"/>
                             <constraint firstItem="577-YT-Ra1" firstAttribute="leading" secondItem="2QQ-l8-43i" secondAttribute="trailing" constant="8" id="OQD-bN-ggu"/>
                             <constraint firstItem="Xii-JL-Pot" firstAttribute="trailing" secondItem="5t2-6A-AgL" secondAttribute="trailing" id="Oap-WT-0KH"/>
+                            <constraint firstItem="I94-xc-A0a" firstAttribute="top" secondItem="GHz-Yy-CB0" secondAttribute="top" id="Opt-Ow-W98"/>
                             <constraint firstItem="dS9-aM-HH1" firstAttribute="leading" secondItem="Ti7-K6-s5W" secondAttribute="leading" id="Ovs-Cp-Y2m"/>
                             <constraint firstItem="2Hz-Gv-Zv8" firstAttribute="leading" secondItem="mR8-Zz-2Ia" secondAttribute="trailing" constant="8" id="Pjw-4v-zdW"/>
                             <constraint firstItem="wef-KA-tfl" firstAttribute="top" secondItem="Njn-0E-8Gp" secondAttribute="bottom" constant="240" id="QWe-LA-HzT"/>
@@ -334,10 +375,15 @@
                             <constraint firstItem="nb0-d8-ikq" firstAttribute="centerY" secondItem="fsP-zr-f8i" secondAttribute="centerY" id="Sxr-Ro-rgL"/>
                             <constraint firstItem="dS9-aM-HH1" firstAttribute="trailing" secondItem="Ti7-K6-s5W" secondAttribute="trailing" id="Vsg-mQ-tkf"/>
                             <constraint firstItem="CNM-mZ-BZG" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="WXn-RC-I4o"/>
+                            <constraint firstItem="GHz-Yy-CB0" firstAttribute="leading" secondItem="Naa-xa-nML" secondAttribute="trailing" constant="23" id="Wnt-9g-uxq"/>
                             <constraint firstItem="577-YT-Ra1" firstAttribute="centerY" secondItem="2QQ-l8-43i" secondAttribute="centerY" id="XMZ-Gn-5Dx"/>
+                            <constraint firstItem="Naa-xa-nML" firstAttribute="centerX" secondItem="jfQ-Sa-EZJ" secondAttribute="centerX" id="YCf-15-eYP"/>
                             <constraint firstItem="H7z-Hs-NWk" firstAttribute="leading" secondItem="jfQ-Sa-EZJ" secondAttribute="leading" id="YQz-YO-48A"/>
+                            <constraint firstItem="GHz-Yy-CB0" firstAttribute="top" secondItem="577-YT-Ra1" secondAttribute="bottom" constant="8" id="bKj-Pc-ZyU"/>
                             <constraint firstItem="UrP-gy-eu8" firstAttribute="top" secondItem="5t2-6A-AgL" secondAttribute="bottom" constant="10" id="ctL-qc-9fN"/>
                             <constraint firstItem="mR8-Zz-2Ia" firstAttribute="centerY" secondItem="nb0-d8-ikq" secondAttribute="centerY" id="dsc-SA-WSn"/>
+                            <constraint firstItem="I94-xc-A0a" firstAttribute="leading" secondItem="GHz-Yy-CB0" secondAttribute="trailing" id="evu-s5-Mvx"/>
+                            <constraint firstItem="Naa-xa-nML" firstAttribute="top" secondItem="2QQ-l8-43i" secondAttribute="bottom" constant="8" id="hZQ-tD-93V"/>
                             <constraint firstItem="FGW-Ff-mxc" firstAttribute="centerX" secondItem="2Zh-Tv-q0H" secondAttribute="centerX" id="hkB-gx-HOU"/>
                             <constraint firstItem="aAu-8X-MzC" firstAttribute="top" secondItem="UrP-gy-eu8" secondAttribute="bottom" constant="10" id="ib2-iQ-BI5"/>
                             <constraint firstItem="nb0-d8-ikq" firstAttribute="leading" secondItem="fsP-zr-f8i" secondAttribute="trailing" constant="8" id="mMs-2I-FVK"/>

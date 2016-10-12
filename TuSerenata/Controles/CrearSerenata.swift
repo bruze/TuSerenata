@@ -14,6 +14,20 @@ class CrearSerenata: UIViewController {
     @IBOutlet weak var campoCiudad: UITextField!
     @IBOutlet weak var campoGenero: UITextField!
     var gruposBuscados: [Musico] = []
+    var sexo: String {
+        get {
+            if botonF.selected {
+                if botonM.selected {
+                    return "AMBOS"
+                } else {
+                    return "F"
+                }
+            } else if botonM.selected {
+                return "M"
+            }
+            return "NINGUNO"
+        }
+    }
     var botonCompra: AMKButton {
         get {
             return (view.viewWithTag(1)! as? AMKButton)!
@@ -27,6 +41,16 @@ class CrearSerenata: UIViewController {
     var calendario: CVCalendarView {
         get {
             return (view.viewWithTag(3)! as? CVCalendarView)!
+        }
+    }
+    var botonF: AMKButton {
+        get {
+            return (view.viewWithTag(4)! as? AMKButton)!
+        }
+    }
+    var botonM: AMKButton {
+        get {
+            return (view.viewWithTag(5)! as? AMKButton)!
         }
     }
     override func viewDidLoad() {
@@ -53,6 +77,14 @@ class CrearSerenata: UIViewController {
         (boton as? AMKButton)!.performOnNextSibling { (self) in
             self.backgroundColor = self.defaultBackColor
         }
+    }
+    func seleccionGenero(boton: AnyObject) {
+        if (boton as? AMKButton)!.selected {
+            (boton as? AMKButton)!.labelFontColor = UIColor.whiteColor()
+        } else {
+            (boton as? AMKButton)!.labelFontColor = UIColor.blackColor()
+        }
+        print(sexo)
     }
 }
 
