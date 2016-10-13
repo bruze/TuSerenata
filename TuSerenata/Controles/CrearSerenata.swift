@@ -16,16 +16,23 @@ class CrearSerenata: UIViewController {
     var gruposBuscados: [Musico] = []
     var sexo: String {
         get {
+            var resultado = "NINGUNO"
             if botonF.selected {
                 if botonM.selected {
-                    return "AMBOS"
+                    resultado = "AMBOS"
+                    //return "AMBOS"
                 } else {
-                    return "F"
+                    resultado = "F"
+                    //return "F"
                 }
             } else if botonM.selected {
-                return "M"
+                resultado = "M"
+                //return "M"
             }
-            return "NINGUNO"
+            var array: [ChequeoGrupo] = []
+            print(gerente.musicosPor(&array, musicos: gerente.musicosFiltrados))
+            return resultado
+            //return "NINGUNO"
         }
     }
     var botonCompra: AMKButton {

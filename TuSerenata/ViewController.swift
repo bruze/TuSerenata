@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         setInitialRecognizeButtonHeight()
         setupTable()
         mostrarCarga()
-        gerente.filtrarMusicos({ self.notificarActualizarFiltrados() })
+        gerente.filtrarMusicos({ self.notificarActualizarFiltrados() }, condiciones: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

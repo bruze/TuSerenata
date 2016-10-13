@@ -101,7 +101,7 @@ class Gerente: NSObject {
         }
         return gruposDeInteres
     }
-    func filtrarMusicos(notificar: BloqueVoid) /*-> [Musico]*/ {
+    func filtrarMusicos(notificar: BloqueVoid, condiciones: [ChequeoGrupo]?) /*-> [Musico]*/ {
         musicosFiltrados.removeAll()
         grupos.observeEventType(.ChildAdded, withBlock: { (captura) in
             for child in captura.children {
@@ -115,5 +115,15 @@ class Gerente: NSObject {
                 })
             }
         })
+    }
+    func musicosPor(inout condiciones: [ChequeoGrupo], musicos: [Musico]) -> [Musico]? {
+        if condiciones.count == 0 {
+            return musicos
+        } else {
+            let filtrado = musicos.filter(condiciones.last!)
+            condiciones.popLast()
+            return musicosPor(&condiciones, musicos: filtrado)
+        }
+        //return self.musicosFiltrados.filter(<#T##includeElement: (Musico) throws -> Bool##(Musico) throws -> Bool#>)
     }
 }
