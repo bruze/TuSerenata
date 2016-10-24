@@ -13,6 +13,7 @@ class CrearSerenata: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var campoCiudad: UITextField!
     @IBOutlet weak var campoGenero: UITextField!
+    var filtros: [ChequeoGrupo] = []
     var gruposBuscados: [Musico] = []
     var sexo: String {
         get {
@@ -29,8 +30,8 @@ class CrearSerenata: UIViewController {
                 resultado = "M"
                 //return "M"
             }
-            var array: [ChequeoGrupo] = []
-            print(gerente.musicosPor(&array, musicos: gerente.musicosFiltrados))
+            //var array: [ChequeoGrupo] = []
+            //print(gerente.musicosPor(&array, musicos: gerente.musicosFiltrados))
             return resultado
             //return "NINGUNO"
         }
@@ -61,6 +62,7 @@ class CrearSerenata: UIViewController {
         }
     }
     override func viewDidLoad() {
+        cargarFiltros()
         botonCompra.addBlock({}, ForAction: 0)
         botonBuscar.addBlock({ self.gruposBuscados = gerente.filtrarGrupos([{ musico in
             let resultado = musico.genero.lowercaseString.contains(self.campoGenero.text!.lowercaseString)
@@ -91,7 +93,18 @@ class CrearSerenata: UIViewController {
         } else {
             (boton as? AMKButton)!.labelFontColor = UIColor.blackColor()
         }
-        print(sexo)
+        actualizarFiltrados()
+        //print(sexo)
+    }
+    internal func cargarFiltros() {
+        filtros.append({ musico in
+            let resultado = musico.genero.lowercaseString.contains(self.campoGenero.text!.lowercaseString)
+            return resultado || self.campoGenero.text!.isEmpty()
+        })
+    }
+    internal func actualizarFiltrados() {
+        self.gruposBuscados = gerente.filtrarGrupos(filtros)
+        tableView.reloadData()
     }
 }
 
