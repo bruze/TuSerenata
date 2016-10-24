@@ -14,6 +14,23 @@ extension CrearSerenata: UITextFieldDelegate {
             return result
         }
     }
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        actualizarFiltrados()
+        
+        return true
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        actualizarFiltrados()
+    }
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        actualizarFiltrados()
+        
+        return true
+    }
+    func textFieldDidBeginEditing(textField: UITextField) {
+        actualizarFiltrados()
+    }
     /*func textFieldDidEndEditing(textField: UITextField) {
         
     }*/
