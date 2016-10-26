@@ -13,6 +13,7 @@ class CrearSerenata: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var campoCiudad: UITextField!
     @IBOutlet weak var campoGenero: UITextField!
+    var textosFiltrantes: [String: String] = ["ciudad":"","genero":"","voz":""]
     var filtros: [ChequeoGrupo] = []
     var gruposBuscados: [Musico] = []
     var sexo: String {
@@ -61,11 +62,7 @@ class CrearSerenata: UIViewController {
             return (view.viewWithTag(5)! as? AMKButton)!
         }
     }
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        print(object)
-    }
     override func viewDidLoad() {
-        addObserver(self, forKeyPath: "campoCiudad.text", options: .New, context: nil)
         cargarFiltros()
         botonCompra.addBlock({}, ForAction: 0)
         /*botonBuscar.addBlock({ self.gruposBuscados = gerente.filtrarGrupos([{ musico in
@@ -103,19 +100,19 @@ class CrearSerenata: UIViewController {
     internal func cargarFiltros() {
         //GENERO MUSICAL
         filtros.append({ musico in
-            let resultado = musico.genero.lowercaseString.contains(self.campoGenero.text!.lowercaseString)
+            let resultado = musico.genero.lowercaseString.contains(self.textosFiltrantes["genero"]!.lowercaseString)
             return resultado || self.campoGenero.text!.isEmpty()
         })
         //CIUDAD
         filtros.append({ musico in
-            let resultado = musico.ciudad.lowercaseString.contains(self.campoCiudad.text!.lowercaseString)
+            let resultado = musico.ciudad.lowercaseString.contains(self.textosFiltrantes["ciudad"]!.lowercaseString)
             return resultado || self.campoCiudad.text!.isEmpty()
         })
         //VOCES
-        /*filtros.append({ musico in
+        filtros.append({ musico in
             let resultado = musico.voz.lowercaseString.contains(self.sexo.lowercaseString)
-            return resultado || self.sexo.isEmpty()
-        })*/
+            return resultado || self.sexo == "NINGUNO" || self.sexo == "AMBOS"
+        })
     }
     internal func actualizarFiltrados() {
         self.gruposBuscados = gerente.filtrarGrupos(filtros)
@@ -124,6 +121,9 @@ class CrearSerenata: UIViewController {
 }
 
 extension CrearSerenata: CVCalendarViewDelegate {
+    func didSelectDayView(dayView: DayView, animationDidFinish: Bool) {
+        print(dayView.dayLabel.text)
+    }
     func presentationMode() -> CalendarMode {
         return .MonthView
     }
