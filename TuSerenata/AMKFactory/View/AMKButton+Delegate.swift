@@ -82,21 +82,19 @@ extension AMKButton {
         }
     }
     internal func delegatePerformTouch() {
-        if !touchAction.isEmpty || !(actionBlocks?.isEmpty)! {
+        //if !touchAction.isEmpty {
             if actionBlocks?.count == 0 {
                 if let executer = delegate as? UIViewController {
                     let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
-                    executer.performSelector(aSelector, withObject: self)
+                    executer.performSelector(aSelector, withObject: "")
                 } else if let executer = delegate as? ViewController {
                     let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
-                    executer.performSelector(aSelector, withObject: self)
+                    executer.performSelector(aSelector, withObject: "")
                 }
             } else {
-                for action in actionBlocks! {
-                    action()
-                }
+                actionBlocks?.first!()
             }
-        }
+        //}
     }
     internal func delegatePerformEnable() {
         if !enabledAction.isEmpty {
@@ -114,9 +112,8 @@ extension AMKButton {
             }
         }
     }
-    internal func addBlock(block: () -> (), ForAction action: Int) -> AMKButton {
+    internal func addBlock(block: () -> (), ForAction action: Int) {
         actionBlocks?.append(block)
-        return self
     }
     //internal func delegatePerform() {
         /*for action in actions {

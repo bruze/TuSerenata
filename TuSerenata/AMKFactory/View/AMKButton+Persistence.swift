@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftFilePath
 
 extension AMKButton {
     /*internal override func encode() {

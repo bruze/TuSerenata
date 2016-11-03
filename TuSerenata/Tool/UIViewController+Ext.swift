@@ -60,10 +60,14 @@ extension UIViewController: PropertyExtensions {
         popup.backgroundColor = UIColor.whiteColor()
         popup.opaque = true
         
-        let button1 = AMKButton.init(frame: CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 120, height: 60))).addBlock(acciones[0], ForAction: 0).addBlock({self.fondoNormal()}, ForAction: 1)
+        let button1: AMKButton = AMKButton.init(frame: CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 120, height: 60)))
+        button1.addBlock(acciones[0], ForAction: 0)
+        button1.addBlock({self.fondoNormal()}, ForAction: 1)
         button1.defaultLabel = datos["acc1"]!
         
-        let button2 = AMKButton.init(frame: CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 120, height: 60))).addBlock(acciones[1], ForAction: 0).addBlock({self.fondoNormal()}, ForAction: 1)
+        let button2 = AMKButton.init(frame: CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 120, height: 60)))
+        button2.addBlock(acciones[1], ForAction: 0)
+        button2.addBlock({self.fondoNormal()}, ForAction: 1)
         button2.defaultLabel = datos["acc2"]!
         
         popup.addSubview(button1)

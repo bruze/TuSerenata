@@ -15,7 +15,7 @@ extension CGRect {
                          "=".join(["w", String(w)]),
                          "=".join(["h", String(h) + ","]) ])
     }
-
+    
     static public func loadFromString(model: String) -> CGRect {
         var lModel = model
         let xValue = lModel.getNextValueForModel("x=", cutAt: ",")
@@ -23,5 +23,9 @@ extension CGRect {
         let wValue = lModel.getNextValueForModel("w=", cutAt: ",")
         let hValue = lModel.getNextValueForModel("h=", cutAt: ",")
         return CGRect.init(x: xValue, y: yValue, width: wValue, height: hValue)
+    }
+    
+    func getScaledSize(factor: CGFloat, overSize: CGSize) -> CGSize {
+        return CGSize.init(width: w * (factor / overSize.width), height: h * (factor / overSize.height))
     }
 }

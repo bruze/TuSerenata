@@ -33,14 +33,14 @@ class AMKCarousel: UIView {
         super.init(frame: frame)
         self.initialize()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initialize()
     }
-
+    
     convenience init() {
-        self.init(frame: CGRect.zero)
+        self.init(frame: CGRectZero)
         self.initialize()
     }
     func initialize() {
@@ -51,11 +51,11 @@ class AMKCarousel: UIView {
             addSubview(scrollView)
             //scrollView.centerInSuperView()
             //scrollView.setNeedsLayout()
-            //setNeedsLayout()
+            setNeedsLayout()
         }
     }
     override func didAddSubview(subview: UIView) {
         //subview.centerInSuperView()
-        //setNeedsLayout()
+        setNeedsLayout()
     }
 }

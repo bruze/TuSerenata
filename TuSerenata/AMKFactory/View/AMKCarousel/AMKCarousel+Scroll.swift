@@ -19,7 +19,7 @@ extension AMKCarousel: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDeleg
             setValue(newValue, forProperty: "scrollView")
         }
     }
-
+    
     func viewAtIndex(index: Int, reusingView view: UIView?) -> UIView {
         //let button = AMKButton.init(frame: CGRect.zero)
         //button.defaultLabel = "Hello"
@@ -37,9 +37,6 @@ extension AMKCarousel: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDeleg
         } else {*/
             //return button
         //}
-        if index < views?.count {
-            return views![index]
-        }
         let newsView = UITextView.init(x: 0, y: 0, w: 350, h: 100)
         newsView.text = "asdaskdlkalsdkalskdksldkasldkalskdlaksdlaksldksalkdl" +
         "asdklaskdlksaldkasldkalsdklaskdlaksdlksaldksaldksalkdlsakdlaskdlaskd" +
@@ -47,16 +44,16 @@ extension AMKCarousel: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDeleg
         return newsView
     }
     func numberOfViews() -> Int {
-        return 1
+        return 2
     }
     func numberOfVisibleViews() -> Int {
         return 1
     }
    /* public func updateView(view: UIView!, withProgress progress: CGFloat, scrollDirection direction: ScrollDirection) {
-
+     
      }
      public func scrollView(scrollView: LTInfiniteScrollView!, didScrollToIndex index: Int) {
-
+     
      }*/
     internal func setupScroll() {
         scrollView.backgroundColor = UIColor.clearColor()
