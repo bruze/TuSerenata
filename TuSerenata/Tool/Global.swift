@@ -26,6 +26,8 @@ let gerente = Gerente.unistancia
 let usuario = gerente.usuario
 let notifiCenter = NSNotificationCenter.defaultCenter()
 let cargaVacia = UCZProgressView.init()
+let bundle = NSBundle.init()
+let fileMan = NSFileManager.defaultManager()
 
 infix operator ~> {}
 private let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)

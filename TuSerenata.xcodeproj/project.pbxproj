@@ -53,6 +53,11 @@
 		9DC594271D906EFD00639952 /* Gerente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594261D906EFD00639952 /* Gerente.swift */; };
 		9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594281D907A6800639952 /* AppDelegate+Ext.swift */; };
 		9DC5942B1D907C1500639952 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5942A1D907C1500639952 /* Usuario.swift */; };
+		9DC600721DD365A1007E4E25 /* AMKLabel+ArcText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6006D1DD365A1007E4E25 /* AMKLabel+ArcText.swift */; };
+		9DC600731DD365A1007E4E25 /* AMKLabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6006E1DD365A1007E4E25 /* AMKLabel+Inspectable.swift */; };
+		9DC600741DD365A1007E4E25 /* AMKLabel+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6006F1DD365A1007E4E25 /* AMKLabel+Touch.swift */; };
+		9DC600751DD365A1007E4E25 /* AMKLabel+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC600701DD365A1007E4E25 /* AMKLabel+Var.swift */; };
+		9DC600761DD365A1007E4E25 /* AMKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC600711DD365A1007E4E25 /* AMKLabel.swift */; };
 		9DDB35351DAC01800032F9CD /* AMKButton+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDB35341DAC01800032F9CD /* AMKButton+Navigation.swift */; };
 		9DDB35371DAC02380032F9CD /* AMKButton+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDB35361DAC02380032F9CD /* AMKButton+State.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +112,11 @@
 		9DC594261D906EFD00639952 /* Gerente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gerente.swift; path = Gerente/Gerente.swift; sourceTree = "<group>"; };
 		9DC594281D907A6800639952 /* AppDelegate+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Ext.swift"; sourceTree = "<group>"; };
 		9DC5942A1D907C1500639952 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = Model/Usuario.swift; sourceTree = "<group>"; };
+		9DC6006D1DD365A1007E4E25 /* AMKLabel+ArcText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKLabel+ArcText.swift"; sourceTree = "<group>"; };
+		9DC6006E1DD365A1007E4E25 /* AMKLabel+Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKLabel+Inspectable.swift"; sourceTree = "<group>"; };
+		9DC6006F1DD365A1007E4E25 /* AMKLabel+Touch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKLabel+Touch.swift"; sourceTree = "<group>"; };
+		9DC600701DD365A1007E4E25 /* AMKLabel+Var.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKLabel+Var.swift"; sourceTree = "<group>"; };
+		9DC600711DD365A1007E4E25 /* AMKLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKLabel.swift; sourceTree = "<group>"; };
 		9DDB35341DAC01800032F9CD /* AMKButton+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Navigation.swift"; sourceTree = "<group>"; };
 		9DDB35361DAC02380032F9CD /* AMKButton+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+State.swift"; sourceTree = "<group>"; };
 		C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.release.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +273,7 @@
 		9DC594041D8C82B900639952 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9DC6006C1DD365A1007E4E25 /* AMKLabel */,
 				9DC594051D8C82B900639952 /* AMKButton+Animation.swift */,
 				9DC594061D8C82B900639952 /* AMKButton+Delegate.swift */,
 				9DC594071D8C82B900639952 /* AMKButton+Image.swift */,
@@ -294,6 +305,18 @@
 				9DC594261D906EFD00639952 /* Gerente.swift */,
 			);
 			name = Gerente;
+			sourceTree = "<group>";
+		};
+		9DC6006C1DD365A1007E4E25 /* AMKLabel */ = {
+			isa = PBXGroup;
+			children = (
+				9DC6006D1DD365A1007E4E25 /* AMKLabel+ArcText.swift */,
+				9DC6006E1DD365A1007E4E25 /* AMKLabel+Inspectable.swift */,
+				9DC6006F1DD365A1007E4E25 /* AMKLabel+Touch.swift */,
+				9DC600701DD365A1007E4E25 /* AMKLabel+Var.swift */,
+				9DC600711DD365A1007E4E25 /* AMKLabel.swift */,
+			);
+			path = AMKLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,11 +452,15 @@
 				9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */,
 				9DAE43EA1D946C2C00E418B8 /* ViewController+TableViewDataSource.swift in Sources */,
 				9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */,
+				9DC600741DD365A1007E4E25 /* AMKLabel+Touch.swift in Sources */,
+				9DC600751DD365A1007E4E25 /* AMKLabel+Var.swift in Sources */,
 				9D483D3C1D99AF2B00AD569C /* Registro.swift in Sources */,
 				9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */,
 				9DAE43E41D943F1400E418B8 /* ViewController+TableViewDelegate.swift in Sources */,
 				9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */,
+				9DC600731DD365A1007E4E25 /* AMKLabel+Inspectable.swift in Sources */,
 				9DC5941C1D8C82B900639952 /* AMKButton.swift in Sources */,
+				9DC600761DD365A1007E4E25 /* AMKLabel.swift in Sources */,
 				9DC594221D8C83AB00639952 /* Global.swift in Sources */,
 				9DC5941A1D8C82B900639952 /* AMKButton+Touch.swift in Sources */,
 				9DC5941B1D8C82B900639952 /* AMKButton+View.swift in Sources */,
@@ -455,6 +482,7 @@
 				9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */,
 				9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */,
 				9DC594131D8C82B900639952 /* CGRect+Extension.swift in Sources */,
+				9DC600721DD365A1007E4E25 /* AMKLabel+ArcText.swift in Sources */,
 				9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */,
 				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
 				9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */,
@@ -508,6 +536,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -554,6 +583,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

@@ -13,11 +13,11 @@ import PropertyExtensions
 @objc protocol AMKEncodable {
     var storeID: String {get set}
     func encode()
-    func decode()
+    func decode(data: NSDictionary)
 }
 
-extension UIView: /*AMKEncodable,*/ PropertyExtensions {
-    @IBInspectable public var storeID: String {
+extension UIView: AMKEncodable, PropertyExtensions {
+    /*@IBInspectable public var storeID: String {
         get {
             return getProperty("storeID", initial:"")
         }
@@ -32,6 +32,45 @@ extension UIView: /*AMKEncodable,*/ PropertyExtensions {
         set {
             setValue(newValue, forProperty: "defaultLabel")
         }
+    }*/
+    @IBInspectable public var storeID: String {
+        get {
+            return getProperty("storeID", initial:"")
+        }
+        set {
+            backStoreID = storeID
+            setValue(newValue, forProperty: "storeID")
+        }
+    }
+    public var backStoreID: String {
+        get {
+            return getProperty("backStoreID", initial:"")
+        }
+        set {
+            setValue(newValue, forProperty: "backStoreID")
+        }
+    }
+    var storeLoaded: Bool {
+        get {
+            return getProperty("storeLoaded", initial:false)
+        }
+        set {
+            setValue(newValue, forProperty: "storeLoaded")
+        }
+    }
+    var defaultLabel: String {
+        get {
+            return getProperty("defaultLabel", initial:"")
+        }
+        set {
+            setValue(newValue, forProperty: "defaultLabel")
+        }
+    }
+    func encode() {
+        
+    }
+    func decode(data: NSDictionary) {
+        
     }
     /*func encode() {
         let textFile = Path.documentsDir[storeID + ".txt"]
