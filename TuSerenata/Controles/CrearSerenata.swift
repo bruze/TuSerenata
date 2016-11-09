@@ -13,6 +13,7 @@ class CrearSerenata: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var campoCiudad: UITextField!
     @IBOutlet weak var campoGenero: UITextField!
+    @IBOutlet var botonestrellas: [AMKButton]!
     var textosFiltrantes: [String: String] = ["ciudad":"","genero":"","voz":""]
     var filtros: [ChequeoGrupo] = []
     var gruposBuscados: [Musico] = []
@@ -62,6 +63,13 @@ class CrearSerenata: UIViewController {
             return (view.viewWithTag(5)! as? AMKButton)!
         }
     }
+    var estrellasFiltradas: Int {
+        get {
+            return botonestrellas.filter { (button) -> Bool in
+                return button.selected
+            }.count
+        }
+    }
     override func viewDidLoad() {
         cargarFiltros()
         botonCompra.addBlock({}, ForAction: 0)
@@ -81,12 +89,15 @@ class CrearSerenata: UIViewController {
         calendario.commitCalendarViewUpdate()
     }
     func filtroEstrellas(boton: AnyObject) {
-        (boton as? AMKButton)!.performOnMeAndPreviousSibling { (self) in
+        let amkButton = (boton as? AMKButton)!
+        amkButton.performOnMeAndPreviousSibling { (self) in
             self.backgroundColor = UIColor.yellowColor()
         }
-        (boton as? AMKButton)!.performOnNextSibling { (self) in
+        amkButton.performOnNextSibling { (self) in
             self.backgroundColor = self.defaultBackColor
         }
+        print(estrellasFiltradas)
+        print(amkButton.selected)
     }
     func seleccionGenero(boton: AnyObject) {
         if (boton as? AMKButton)!.selected {
@@ -95,7 +106,7 @@ class CrearSerenata: UIViewController {
             (boton as? AMKButton)!.labelFontColor = UIColor.blackColor()
         }
         actualizarFiltrados()
-        //print(sexo)
+        print(estrellasFiltradas)
     }
     internal func cargarFiltros() {
         //GENERO MUSICAL
@@ -113,6 +124,12 @@ class CrearSerenata: UIViewController {
             let resultado = musico.voz.lowercaseString.contains(self.sexo.lowercaseString)
             return resultado || self.sexo == "NINGUNO" || self.sexo == "AMBOS"
         })
+        //ESTRELLAS
+        filtros.append({ musico in
+            let resultado = musico.estrellas == self.estrellasFiltradas
+            return resultado || self.estrellasFiltradas == 0
+        })
+        
     }
     internal func actualizarFiltrados() {
         self.gruposBuscados = gerente.filtrarGrupos(filtros)

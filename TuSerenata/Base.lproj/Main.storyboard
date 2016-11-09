@@ -417,6 +417,11 @@
                         <outlet property="campoCiudad" destination="Xii-JL-Pot" id="8Fj-Ev-Hfm"/>
                         <outlet property="campoGenero" destination="Ti7-K6-s5W" id="ICb-zO-wgC"/>
                         <outlet property="tableView" destination="5t2-6A-AgL" id="XWa-Ci-Vwt"/>
+                        <outletCollection property="botonestrellas" destination="577-YT-Ra1" collectionClass="NSMutableArray" id="DCz-Ah-HlW"/>
+                        <outletCollection property="botonestrellas" destination="fsP-zr-f8i" collectionClass="NSMutableArray" id="Keo-d5-Pcs"/>
+                        <outletCollection property="botonestrellas" destination="nb0-d8-ikq" collectionClass="NSMutableArray" id="Fon-nj-bEc"/>
+                        <outletCollection property="botonestrellas" destination="mR8-Zz-2Ia" collectionClass="NSMutableArray" id="tiz-BK-Ep0"/>
+                        <outletCollection property="botonestrellas" destination="2Hz-Gv-Zv8" collectionClass="NSMutableArray" id="lmP-op-ln4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoC-E8-SNs" userLabel="First Responder" sceneMemberID="firstResponder"/>

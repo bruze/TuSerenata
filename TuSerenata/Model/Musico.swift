@@ -14,6 +14,7 @@ class Musico: Usuario {
     //let key: String!
     let voz: String!
     let genero: String!
+    var estrellas: Int!
     //let ref: FIRDatabaseReference?
     //var completed: Bool!
     
@@ -21,6 +22,7 @@ class Musico: Usuario {
     init(nombre: String, genero: String, ciudad: String, voz: String, completed: Bool, key: String = "") {
         self.genero = genero
         self.voz = voz
+        self.estrellas = 0
         super.init(nombre: nombre, ciudad: ciudad, sexo: "NINGUNO", completed: completed, key: key)
         //self.completed = completed
         //self.ref = nil
@@ -29,6 +31,7 @@ class Musico: Usuario {
     init(captura: FIRDataSnapshot) {
         genero = (captura.value!["genero"] as? String)!
         voz = (captura.value!["voz"] as? String)!
+        estrellas = (captura.value!["estrellas"] as? Int)!
         super.init(snapshot: captura)
        /* key = snapshot.key
         genero = snapshot.value["genero"] as! String

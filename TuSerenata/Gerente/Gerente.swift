@@ -54,7 +54,7 @@ class Gerente: NSObject {
                             finalizar(Usuario(snapshot: capturaUsuario))
                         }
                     } else {
-                        if capturaUsuario.hasChilds("genero", "ciudad", "voz") {
+                        if capturaUsuario.hasChilds("genero", "ciudad", "voz", "estrellas") {
                             finalizar(Musico(captura: capturaUsuario))
                         } else {
                             return // esperar otro update del server
@@ -73,7 +73,7 @@ class Gerente: NSObject {
                 let capturaMusico = captura.childSnapshotForPath(uid)
                 if capturaMusico.hasChild("musico") {
                     if (capturaMusico.childSnapshotForPath("musico").value! as? Int)! == 1 {
-                        if capturaMusico.hasChilds("genero", "ciudad", "voz") {
+                        if capturaMusico.hasChilds("genero", "ciudad", "voz", "estrellas") {
                             finalizar(Musico(captura: capturaMusico))
                         } else {
                             return // esperar actualización del servidor
