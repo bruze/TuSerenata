@@ -11,7 +11,7 @@ extension CrearSerenata: UITextFieldDelegate {
     internal var filtrando: Bool {
         get {
             let result = !(textosFiltrantes["ciudad"]!.isEmpty()) || !(textosFiltrantes["genero"]!.isEmpty()) ||
-                (!sexo.isEmpty && sexo != "AMBOS" && sexo != "NINGUNO")
+                (!sexo.isEmpty && sexo != "AMBOS" && sexo != "NINGUNO") || (estrellasFiltradas > 0)
             return result
         }
     }

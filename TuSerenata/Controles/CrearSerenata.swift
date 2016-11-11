@@ -90,14 +90,22 @@ class CrearSerenata: UIViewController {
     }
     func filtroEstrellas(boton: AnyObject) {
         let amkButton = (boton as? AMKButton)!
-        amkButton.performOnMeAndPreviousSibling { (self) in
-            self.backgroundColor = UIColor.yellowColor()
+        if amkButton.selected && amkButton.previousSibling == nil {
+            amkButton.backgroundColor = amkButton.defaultBackColor
+        } else {
+            amkButton.backgroundColor = UIColor.yellowColor()
+            if amkButton.selected {
+                amkButton.selected.toggle()
+            }
+            amkButton.performOnPreviousSibling { (but) in
+                but.backgroundColor = UIColor.yellowColor()
+                but.selected = true
+            }
         }
-        amkButton.performOnNextSibling { (self) in
-            self.backgroundColor = self.defaultBackColor
+        amkButton.performOnNextSibling { (but) in
+            but.backgroundColor = but.defaultBackColor
+            but.selected = false
         }
-        print(estrellasFiltradas)
-        print(amkButton.selected)
     }
     func seleccionGenero(boton: AnyObject) {
         if (boton as? AMKButton)!.selected {
@@ -106,7 +114,7 @@ class CrearSerenata: UIViewController {
             (boton as? AMKButton)!.labelFontColor = UIColor.blackColor()
         }
         actualizarFiltrados()
-        print(estrellasFiltradas)
+        //print(estrellasFiltradas)
     }
     internal func cargarFiltros() {
         //GENERO MUSICAL

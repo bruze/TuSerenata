@@ -214,7 +214,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNM-mZ-BZG">
                                 <rect key="frame" x="10" y="147" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dS9-aM-HH1">
@@ -228,7 +228,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puntuación:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QQ-l8-43i">
                                 <rect key="frame" x="10" y="181" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="577-YT-Ra1" userLabel="Estrella1" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
@@ -241,6 +241,8 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella1"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="setSelectedAfterAction" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="setSelectedAfterActionCheck" value="actualizarFiltrados"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="5o6-oB-XRy"/>
@@ -257,6 +259,8 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella2"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="setSelectedAfterAction" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="setSelectedAfterActionCheck" value="actualizarFiltrados"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="9VN-uZ-pIG"/>
@@ -274,6 +278,8 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella3"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="setSelectedAfterAction" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="setSelectedAfterActionCheck" value="actualizarFiltrados"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="dGb-Io-1h3"/>
@@ -291,6 +297,8 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella4"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="setSelectedAfterAction" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="setSelectedAfterActionCheck" value="actualizarFiltrados"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="LOt-7Z-IvP"/>
@@ -308,6 +316,8 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="storeID" value="Estrella5"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="filtroEstrellas:"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="setSelectedAfterAction" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="setSelectedAfterActionCheck" value="actualizarFiltrados"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="KOc-AL-tkh"/>
@@ -317,7 +327,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voz:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Naa-xa-nML">
                                 <rect key="frame" x="23" y="210" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view tag="5" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHz-Yy-CB0" userLabel="Masculina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">

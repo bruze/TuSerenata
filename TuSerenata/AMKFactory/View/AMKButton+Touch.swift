@@ -32,7 +32,9 @@ extension AMKButton {
         }
         setImage(ForTag: AMKTypeTag.ImageDefault)
         setDefaultBackColor()
-        selectable ? selected.toggle() : false
+        if !setSelectedAfterAction {
+            selectable ? selected.toggle() : false
+        }
         delegatePerformTouch()
         super.touchesEnded(touches, withEvent: event)
     }

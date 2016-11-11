@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import EZSwiftExtensions
 extension AMKButton {
     /*internal var actions: [String] {
         get {
@@ -81,19 +81,53 @@ extension AMKButton {
             setValue(newValue, forProperty: "delegate")
         }
     }
+    @IBInspectable var setSelectedAfterAction: Bool {
+        get {
+            return getProperty("setSelectedAfterAction", initial: false)
+        }
+        set {
+            setValue(newValue, forProperty: "setSelectedAfterAction")
+        }
+    }
+    @IBInspectable var setSelectedAfterActionCheck: String {
+        get {
+            return getProperty("setSelectedAfterActionCheck", initial: "")
+        }
+        set {
+            setValue(newValue, forProperty: "setSelectedAfterActionCheck")
+        }
+    }
     internal func delegatePerformTouch() {
         if !touchAction.isEmpty || !(actionBlocks?.isEmpty)! {
             if actionBlocks?.count == 0 {
+                let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
                 if let executer = delegate as? UIViewController {
-                    let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
                     executer.performSelector(aSelector, withObject: self)
                 } else if let executer = delegate as? ViewController {
-                    let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
                     executer.performSelector(aSelector, withObject: self)
+                } else if let executer = ez.topMostVC {
+                    if executer.respondsToSelector(aSelector) {
+                        executer.performSelector(aSelector, withObject: "")
+                    }
                 }
             } else {
                 for action in actionBlocks! {
                     action()
+                }
+            }
+        }
+        if setSelectedAfterAction {
+            selectable ? selected.toggle() : false
+            let aSelector = Selector.init(extendedGraphemeClusterLiteral: setSelectedAfterActionCheck)
+            if !setSelectedAfterActionCheck.isEmpty {
+                if let executer = delegate as? UIViewController {
+                    executer.performSelector(aSelector, withObject: self)
+                } else if let executer = delegate as? ViewController {
+                    executer.performSelector(aSelector, withObject: self)
+                } else if let executer = ez.topMostVC {
+                    if executer.respondsToSelector(aSelector) {
+                        executer.performSelector(aSelector, withObject: "")
+                    }
                 }
             }
         }

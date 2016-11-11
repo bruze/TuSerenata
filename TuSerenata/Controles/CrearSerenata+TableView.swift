@@ -28,9 +28,9 @@ extension CrearSerenata: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .Default, reuseIdentifier: "")
-        if /*gruposBuscados.count > 0 ||*/ filtrando {
+        if gruposBuscados.count > 0 && filtrando && indexPath.row < gruposBuscados.count {
             cell.textLabel?.text = gruposBuscados[indexPath.row].nombre
-        } else {
+        } else if gerente.musicosFiltrados.count > 0 && indexPath.row < gerente.musicosFiltrados.count {
             cell.textLabel?.text = gerente.musicosFiltrados[indexPath.row].nombre
         }
         return cell
