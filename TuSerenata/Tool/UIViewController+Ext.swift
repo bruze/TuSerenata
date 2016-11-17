@@ -6,36 +6,36 @@
 //  Copyright © 2016 Bruno Garelli. All rights reserved.
 //
 
-import PropertyExtensions
+import AssociatedValues
 import JLChatViewController
 import UCZProgressView
 
-extension UIViewController: PropertyExtensions {
+extension UIViewController/*: PropertyExtensions*/ {
     internal var cargando: UCZProgressView {
         get {
-            return getProperty("cargando", initial: cargaVacia)
+            return getAssociatedValue(key: "cargando", object: self, initialValue: cargaVacia)
         }
         set {
-            setValue(newValue, forProperty: "cargando")
+            set(associatedValue: newValue, key: "cargando", object: self)
         }
     }
     internal var capa: UIView {
         get {
-            return getProperty("capa", initial: UIView.init())
+            return getAssociatedValue(key: "capa", object: self, initialValue: UIView.init())
         }
         set {
-            setValue(newValue, forProperty: "capa")
+            set(associatedValue: newValue, key: "capa", object: self)
         }
     }
     internal var popup: UIView {
         get {
-            return getProperty("popup", initial: UIView.init())
+            return getAssociatedValue(key: "popup", object: self, initialValue: UIView.init())
         }
         set {
-            setValue(newValue, forProperty: "popup")
+            set(associatedValue: newValue, key: "popup", object: self)
         }
     }
-    internal func toqueHijosAceptado(aceptado: Bool) {
+    internal func toqueHijosAceptado(_ aceptado: Bool) {
         view.subviews.forEach { (vista) in
             vista.1.userInteractionEnabled = aceptado
         }
@@ -43,7 +43,7 @@ extension UIViewController: PropertyExtensions {
     internal func opacarFondo() {
         toqueHijosAceptado(false)
         capa = UIView.init(frame: view.frame)
-        capa.backgroundColor = UIColor.blackColor()
+        capa.backgroundColor = UIColor.black
         capa.alpha = 0.6
         view.addSubview(capa)
         capa.becomeFirstResponder()
@@ -53,12 +53,12 @@ extension UIViewController: PropertyExtensions {
         popup.removeFromSuperview()
         toqueHijosAceptado(true)
     }
-    internal func ventanaEmergente(datos: DicStrStr, acciones: [BloqueVoid]) {
+    internal func ventanaEmergente(_ datos: DicStrStr, acciones: [BloqueVoid]) {
         opacarFondo()
 
         popup = UIView.init(frame: CGRect.init(x: 0, y: 0, w: 200, h: 150))
-        popup.backgroundColor = UIColor.whiteColor()
-        popup.opaque = true
+        popup.backgroundColor = UIColor.white
+        popup.isOpaque = true
         
         let button1 = AMKButton.init(frame: CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 120, height: 60))).addBlock(acciones[0], ForAction: 0).addBlock({self.fondoNormal()}, ForAction: 1)
         button1.defaultLabel = datos["acc1"]!

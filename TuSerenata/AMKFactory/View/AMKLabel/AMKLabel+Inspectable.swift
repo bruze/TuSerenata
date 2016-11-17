@@ -74,7 +74,7 @@ extension AMKLabel {
         }
         set {
             setValue(newValue, forProperty: "overrideTextSize")
-            let otherFont = textFont.fontWithSize(newValue)
+            let otherFont = textFont.withSize(newValue)
             self.textFont = otherFont
             setNeedsDisplay()
         }

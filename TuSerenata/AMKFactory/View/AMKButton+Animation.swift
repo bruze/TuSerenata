@@ -50,30 +50,30 @@ extension AMKButton {
             setValue(newValue, forProperty: "animLayer")
         }
     }
-    func passingLayerColor(color: UIColor, GoingRight right: Bool) {
-        animLayer.backgroundColor = color.CGColor
+    func passingLayerColor(_ color: UIColor, GoingRight right: Bool) {
+        animLayer.backgroundColor = color.cgColor
         let animation = CABasicAnimation.init(keyPath: "position.x")
         animation.duration = 0.4
         animation.fillMode = kCAFillModeForwards
-        animation.removedOnCompletion = false
-        if lastMove == .Left {
-            lastMove = .Right
+        animation.isRemovedOnCompletion = false
+        if lastMove == .left {
+            lastMove = .right
             animation.fromValue = animLayer.position.x
             animation.toValue = animLayer.position.x + bounds.width * 2
         } else {
-            lastMove = .Left
+            lastMove = .left
             animation.fromValue = bounds.width * 2
             animation.toValue = animLayer.position.x - bounds.width
         }
         let sizeAnim = CABasicAnimation.init(keyPath: "bounds.width")
-        if lastMove == .Left {
+        if lastMove == .left {
             sizeAnim.fromValue = 0
             sizeAnim.toValue = bounds.width
         } else {
             sizeAnim.fromValue = bounds.w
             sizeAnim.toValue = 0
         }
-        animLayer.addAnimation(animation, forKey: "position.x")
-        animLayer.addAnimation(sizeAnim, forKey: "bounds.width")
+        animLayer.add(animation, forKey: "position.x")
+        animLayer.add(sizeAnim, forKey: "bounds.width")
     }
 }

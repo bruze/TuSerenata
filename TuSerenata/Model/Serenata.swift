@@ -10,9 +10,9 @@ import Firebase
 
 class Serenata: NSObject {
     enum EstadoSerenata: Int {
-        case Creada = 0
-        case Aprobada = 1
-        case Finalizada = 2
+        case creada = 0
+        case aprobada = 1
+        case finalizada = 2
     }
     
     let key: String!
@@ -27,7 +27,7 @@ class Serenata: NSObject {
         self.key = key
         self.usuario = nil
         self.grupo = nil
-        self.estado = .Creada
+        self.estado = .creada
         self.ref = nil
         self.detalles = [:]
         super.init()
@@ -40,7 +40,7 @@ class Serenata: NSObject {
         key = captura.key
         usuario = nil
         grupo = nil
-        self.estado = .Creada
+        self.estado = .creada
         self.ref = captura.ref
         self.detalles = [:]
         super.init()

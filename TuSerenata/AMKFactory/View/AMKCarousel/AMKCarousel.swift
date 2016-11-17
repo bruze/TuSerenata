@@ -9,7 +9,7 @@
 //import LTInfiniteScrollView
 import UIKit
 import EZSwiftExtensions
-import PropertyExtensions
+import AssociatedValues
 
 @IBDesignable
 class AMKCarousel: UIView {
@@ -23,7 +23,7 @@ class AMKCarousel: UIView {
     }
     @IBOutlet var views: [UIView]? {
         didSet {
-            scrollView.reloadDataWithInitialIndex(0)
+            scrollView.reloadData(withInitialIndex: 0)
             addSubview(scrollView)
             setNeedsLayout()
         }
@@ -54,7 +54,7 @@ class AMKCarousel: UIView {
             //setNeedsLayout()
         }
     }
-    override func didAddSubview(subview: UIView) {
+    override func didAddSubview(_ subview: UIView) {
         //subview.centerInSuperView()
         //setNeedsLayout()
     }

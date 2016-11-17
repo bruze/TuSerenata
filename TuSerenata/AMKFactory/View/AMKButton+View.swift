@@ -26,7 +26,7 @@ extension AMKButton {
             setValue(newValue, forProperty: "pressBackColor")
         }
     }
-    internal func resetView(view: UIView?) -> Bool {
+    internal func resetView(_ view: UIView?) -> Bool {
         if let unwrap = view {
             unwrap.removeSubviews()
             unwrap.removeFromSuperview()

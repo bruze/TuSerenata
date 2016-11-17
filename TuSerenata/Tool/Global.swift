@@ -24,34 +24,34 @@ typealias ChequeoGrupo = (Musico) -> Bool
 
 let gerente = Gerente.unistancia
 let usuario = gerente.usuario
-let notifiCenter = NSNotificationCenter.defaultCenter()
+let notifiCenter = NotificationCenter.default
 let cargaVacia = UCZProgressView.init()
-let bundle = NSBundle.init()
-let fileMan = NSFileManager.defaultManager()
+let bundle = Bundle.init()
+let fileMan = FileManager.default
 
-infix operator ~> {}
-private let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)
+infix operator ~>
+private let queue = DispatchQueue(label: "serial-worker", attributes: [])
 //MARK: Global Operators
 func ~> <R> (
-    backgroundClosure: () -> R,
-    mainClosure:       (result: R) -> ()) {
+    backgroundClosure: @escaping () -> R,
+    mainClosure:       @escaping (_ result: R) -> ()) {
 
-    dispatch_async(queue) {
+    queue.async {
         let result = backgroundClosure()
-        dispatch_async(dispatch_get_main_queue(), {
-            mainClosure(result: result)
+        DispatchQueue.main.async(execute: {
+            mainClosure(result)
         })
     }
 }
 let emptyLayer = CALayer.init()
 public struct Global {
     enum RLMove {
-        case Right
-        case Left
+        case right
+        case left
     }
-    static public func stringToInt(value: String) -> Int? {
-        if let num = NSNumberFormatter().numberFromString(value) {
-            return num.integerValue
+    static public func stringToInt(_ value: String) -> Int? {
+        if let num = NumberFormatter().number(from: value) {
+            return num.intValue
         } else {
             return nil
         }
@@ -81,17 +81,17 @@ public struct Global {
     static let CLRLoginBackShadow = Global.initColor(0, green: 0, blue: 0, alpha: 0.60)
 
     enum Filter: UInt {
-        case All = 0
-        case Given
-        case Received
+        case all = 0
+        case given
+        case received
 
         func toString() -> String {
             switch self {
-            case .All:
+            case .all:
                 return "all"
-            case .Given:
+            case .given:
                 return "given"
-            case .Received:
+            case .received:
                 return "received"
             }
         }
@@ -124,13 +124,13 @@ public struct Global {
 
     //MARK: Global Functions
 
-    static func initColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1)
+    static func initColor(_ red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1)
                                                                                 -> UIColor {
         let color = UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: 1)
         return color
     }
 
-    static func distinct<T: Equatable>(source: [T]) -> [T] {
+    static func distinct<T: Equatable>(_ source: [T]) -> [T] {
         var unique = [T]()
         for item in source {
             if !unique.contains(item) {
@@ -140,69 +140,69 @@ public struct Global {
         return unique
     }
 
-    static func stylizeTextFieldDefault(textField: UITextField!) {
-        textField.layer.borderColor = Global.CLRLoginTFieldBorder.CGColor
+    static func stylizeTextFieldDefault(_ textField: UITextField!) {
+        textField.layer.borderColor = Global.CLRLoginTFieldBorder.cgColor
         textField.layer.borderWidth = 1.0
-        textField.backgroundColor = UIColor.whiteColor()
+        textField.backgroundColor = UIColor.white
         textField.layer.shadowOpacity = 0.0
         textField.background = UIImage()
     }
 
-    static func stylizeTextFieldOnFocus(textField: UITextField!) {
-        textField.layer.shadowColor = Global.CLRLoginTFieldShadow.CGColor
+    static func stylizeTextFieldOnFocus(_ textField: UITextField!) {
+        textField.layer.shadowColor = Global.CLRLoginTFieldShadow.cgColor
         textField.layer.masksToBounds = false
         textField.layer.shadowOpacity = 1.0
 
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         var blurFrame = textField.bounds
         blurFrame.size.height += 2.0
         blurEffectView.frame = blurFrame
-        blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
         //Set the blurred image made from blurred view as textfield's background
         textField.background = imageWithView(blurEffectView)
     }
 
-    static func stylizeTextViewDefault(textView: UITextView!) {
+    static func stylizeTextViewDefault(_ textView: UITextView!) {
         textView.textContainerInset  = UIEdgeInsets(top: 12, left: 8, bottom: 0, right: 0)
-        textView.layer.borderColor   = Global.CLRLoginTFieldBorder.CGColor
+        textView.layer.borderColor   = Global.CLRLoginTFieldBorder.cgColor
         textView.layer.borderWidth   = 1.0
         textView.layer.shadowOpacity = 0.0
-        textView.backgroundColor     = UIColor.whiteColor()
+        textView.backgroundColor     = UIColor.white
     }
 
-    static func stylizeTextViewOnFocus(textView: UITextView!) {
-        textView.layer.shadowColor = Global.CLRLoginTFieldShadow.CGColor
+    static func stylizeTextViewOnFocus(_ textView: UITextView!) {
+        textView.layer.shadowColor = Global.CLRLoginTFieldShadow.cgColor
         textView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         textView.layer.masksToBounds = false
         textView.layer.shadowRadius = 3.0
         textView.layer.shadowOpacity = 1.0
 
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         var blurFrame = textView.bounds
         blurFrame.size.height += 2.0
         blurEffectView.frame = blurFrame
-        blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        blurEffectView.backgroundColor = UIColor.whiteColor()
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.backgroundColor = UIColor.white
 
         //Set the blurred image made from blurred view as textfield's background
         textView.backgroundColor = UIColor(patternImage: imageWithView(blurEffectView))
     }
 
-    static func imageWithView(view: UIView) -> UIImage {
+    static func imageWithView(_ view: UIView) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0.0)
-        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
 
-    static func iterateEnum<T: Hashable>(_: T.Type) -> AnyGenerator<T> {
+    static func iterateEnum<T: Hashable>(_: T.Type) -> AnyIterator<T> {
         var i = 0
-        return AnyGenerator {
-            let next = withUnsafePointer(&i) { UnsafePointer<T>($0).memory }
+        return AnyIterator {
+            let next = withUnsafePointer(to: &i) { UnsafeRawPointer($0).load(as: T.self) }
             //let increment = i+1
             defer {
                 i += 1
@@ -277,34 +277,34 @@ public struct Global {
         }
     }
 
-    static func kFormatter(num: Int) -> String {
+    static func kFormatter(_ num: Int) -> String {
         if num > 999 {
-            let formatter = NSNumberFormatter()
+            let formatter = NumberFormatter()
             formatter.minimumFractionDigits = 1
             formatter.maximumFractionDigits = 1
-            formatter.roundingMode = .RoundDown
-            return formatter.stringFromNumber(Double(num)/1000)! + "K"
+            formatter.roundingMode = .down
+            return formatter.string(from: Double(num)/1000)! + "K"
         }
         return "\(num)"
 
     }
 
     static func notifyStopRefreshing() {
-        let notiCenter = NSNotificationCenter.defaultCenter()
-        notiCenter.postNotification(
-                    NSNotification(name: "stopRefreshing", object: nil)
+        let notiCenter = NotificationCenter.default
+        notiCenter.post(
+                    Notification(name: Notification.Name(rawValue: "stopRefreshing"), object: nil)
         )
     }
 
-    static func toastMessage(message: String) {
-        let notiCenter = NSNotificationCenter.defaultCenter()
-        notiCenter.postNotificationName(Notif.ShowAToast.raw(),
+    static func toastMessage(_ message: String) {
+        let notiCenter = NotificationCenter.default
+        notiCenter.post(name: Notification.Name(rawValue: Notif.ShowAToast.raw()),
                                         object:nil,
                                         userInfo:["message": message])
     }
-    static func alertMessage(message: String) {
-        let notiCenter = NSNotificationCenter.defaultCenter()
-        notiCenter.postNotificationName(Notif.ShowAAlert.raw(),
+    static func alertMessage(_ message: String) {
+        let notiCenter = NotificationCenter.default
+        notiCenter.post(name: Notification.Name(rawValue: Notif.ShowAAlert.raw()),
                                         object:nil,
                                         userInfo:["message": message])
     }

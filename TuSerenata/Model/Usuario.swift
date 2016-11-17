@@ -13,7 +13,7 @@ class Usuario: NSObject {
     let key: String!
     let nombre: String!
     let ciudad: String!
-    private let sexo: String!
+    fileprivate let sexo: String!
     let ref: FIRDatabaseReference?
     var refMensajes: FIRDatabaseReference?
     var mensajesNuevos: [JLMessage]?
@@ -32,16 +32,16 @@ class Usuario: NSObject {
 
     init(snapshot: FIRDataSnapshot) {
          key    = snapshot.key
-        nombre  = snapshot.value!["nombre"] as! String
-        ciudad  = snapshot.value!["ciudad"] as! String
-         sexo   = snapshot.value!["sexo"] as! String
+        nombre  = anytool.dicstrany(any: snapshot.value!)["nombre"] as! String
+        ciudad  = anytool.dicstrany(any: snapshot.value!)["ciudad"] as! String
+         sexo   = anytool.dicstrany(any: snapshot.value!)["sexo"] as! String
          ref = snapshot.ref
         if snapshot.hasChild("mensajes") {
-            let mensajes = snapshot.childSnapshotForPath("mensajes")
+            let mensajes = snapshot.childSnapshot(forPath: "mensajes")
             self.refMensajes = mensajes.ref
             self.refMensajes?.keepSynced(true)
             if mensajes.hasChild("nuevos") {
-                let mensajesNuevos = mensajes.childSnapshotForPath("nuevos")
+                let mensajesNuevos = mensajes.childSnapshot(forPath: "nuevos")
             }
             /*if mensajes.hasChild("viejos") {
                 let mensajesViejos = mensajes.childSnapshotForPath("viejos")
@@ -54,13 +54,13 @@ class Usuario: NSObject {
     }
     
     func toAnyObject() -> AnyObject {
-        return [
+        return ([
             "nombre": nombre,
             "ciudad": ciudad,
             "sexo": sexo
             //"genero": genero,
             //"completed": completed
-        ]
+        ] as? AnyObject)!
     }
     
     func cargarMensajes() {
@@ -72,7 +72,7 @@ class Usuario: NSObject {
                 self.checkearNuevosMensajes()
             }
         })*/
-        ref!.observeEventType(.Value, andPreviousSiblingKeyWithBlock: { (captura, llave) in
+        ref!.observe(.value, andPreviousSiblingKeyWith: { (captura, llave) in
             //print(llave)
             //print(captura)
             }) { (error) in
@@ -88,6 +88,6 @@ class Usuario: NSObject {
     }
     
     func esMusico() -> Bool {
-        return self.isKindOfClass(Musico)
+        return self.isKind(of: Musico.self)
     }
 }

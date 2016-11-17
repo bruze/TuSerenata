@@ -15,12 +15,12 @@ extension CrearSerenata: UITextFieldDelegate {
             return result
         }
     }
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let oldString = textField.text ?? ""
-        let startIndex = oldString.startIndex.advancedBy(range.location)
-        let endIndex = startIndex.advancedBy(range.length)
-        let newString = oldString.stringByReplacingCharactersInRange(
-            startIndex ..< endIndex, withString: string)
+        let startIndex = oldString.characters.index(oldString.startIndex, offsetBy: range.location)
+        let endIndex = index(startIndex, offsetBy: range.length)
+        let newString = oldString.replacingCharacters(
+            in: startIndex ..< endIndex, with: string)
         
         if textField == campoCiudad {
             textosFiltrantes["ciudad"] = newString

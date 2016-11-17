@@ -17,14 +17,14 @@ class Login: UIViewController {
     @IBOutlet weak var botonEntrar: AMKButton!
     
     internal func irRegistro() {
-        performSegueWithIdentifier("irRegistro", sender: nil)
+        performSegue(withIdentifier: "irRegistro", sender: nil)
     }
     
     internal func intenteLogueo() {
-        FIRAuth.auth()?.signInWithEmail("dos@dos.com", password: "123456", completion: { (user, error) in
+        FIRAuth.auth()?.signIn(withEmail: "dos@dos.com", password: "123456", completion: { (user, error) in
             if let loggedUser = user {
                 let users = FirebaseRef.child("users")
-                users.observeEventType(.Value, withBlock: { (captura) in
+                users.observe(.value, with: { (captura) in
                     if captura.hasChild(loggedUser.uid) {
                         Gerente.unistancia.obtenerUsuario(loggedUser.uid, finalizar: { (usuario) in
                             Gerente.unistancia.usuario = usuario
@@ -43,7 +43,7 @@ class Login: UIViewController {
         })
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         botonEntrar.enabled = false
         // 1

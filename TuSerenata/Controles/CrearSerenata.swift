@@ -88,17 +88,17 @@ class CrearSerenata: UIViewController {
         //menuView.commitMenuViewUpdate()
         calendario.commitCalendarViewUpdate()
     }
-    func filtroEstrellas(boton: AnyObject) {
+    func filtroEstrellas(_ boton: AnyObject) {
         let amkButton = (boton as? AMKButton)!
         if amkButton.selected && amkButton.previousSibling == nil {
             amkButton.backgroundColor = amkButton.defaultBackColor
         } else {
-            amkButton.backgroundColor = UIColor.yellowColor()
+            amkButton.backgroundColor = UIColor.yellow
             if amkButton.selected {
                 amkButton.selected.toggle()
             }
             amkButton.performOnPreviousSibling { (but) in
-                but.backgroundColor = UIColor.yellowColor()
+                but.backgroundColor = UIColor.yellow
                 but.selected = true
             }
         }
@@ -107,11 +107,11 @@ class CrearSerenata: UIViewController {
             but.selected = false
         }
     }
-    func seleccionGenero(boton: AnyObject) {
+    func seleccionGenero(_ boton: AnyObject) {
         if (boton as? AMKButton)!.selected {
-            (boton as? AMKButton)!.labelFontColor = UIColor.whiteColor()
+            (boton as? AMKButton)!.labelFontColor = UIColor.white
         } else {
-            (boton as? AMKButton)!.labelFontColor = UIColor.blackColor()
+            (boton as? AMKButton)!.labelFontColor = UIColor.black
         }
         actualizarFiltrados()
         //print(estrellasFiltradas)
@@ -119,17 +119,17 @@ class CrearSerenata: UIViewController {
     internal func cargarFiltros() {
         //GENERO MUSICAL
         filtros.append({ musico in
-            let resultado = musico.genero.lowercaseString.contains(self.textosFiltrantes["genero"]!.lowercaseString)
+            let resultado = musico.genero.lowercased().contains(self.textosFiltrantes["genero"]!.lowercased())
             return resultado || self.campoGenero.text!.isEmpty()
         })
         //CIUDAD
         filtros.append({ musico in
-            let resultado = musico.ciudad.lowercaseString.contains(self.textosFiltrantes["ciudad"]!.lowercaseString)
+            let resultado = musico.ciudad.lowercased().contains(self.textosFiltrantes["ciudad"]!.lowercased())
             return resultado || self.campoCiudad.text!.isEmpty()
         })
         //VOCES
         filtros.append({ musico in
-            let resultado = musico.voz.lowercaseString.contains(self.sexo.lowercaseString)
+            let resultado = musico.voz.lowercased().contains(self.sexo.lowercased())
             return resultado || self.sexo == "NINGUNO" || self.sexo == "AMBOS"
         })
         //ESTRELLAS
@@ -146,7 +146,7 @@ class CrearSerenata: UIViewController {
 }
 
 extension CrearSerenata: CVCalendarViewDelegate {
-    func didSelectDayView(dayView: DayView, animationDidFinish: Bool) {
+    func didSelectDayView(_ dayView: DayView, animationDidFinish: Bool) {
         print(dayView.dayLabel.text)
     }
     func presentationMode() -> CalendarMode {

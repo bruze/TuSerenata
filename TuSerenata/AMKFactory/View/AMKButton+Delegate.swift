@@ -102,9 +102,9 @@ extension AMKButton {
             if actionBlocks?.count == 0 {
                 let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
                 if let executer = delegate as? UIViewController {
-                    executer.performSelector(aSelector, withObject: self)
+                    executer.perform(aSelector, with: self)
                 } else if let executer = delegate as? ViewController {
-                    executer.performSelector(aSelector, withObject: self)
+                    executer.perform(aSelector, with: self)
                 } else if let executer = ez.topMostVC {
                     if executer.respondsToSelector(aSelector) {
                         executer.performSelector(aSelector, withObject: "")
@@ -121,9 +121,9 @@ extension AMKButton {
             let aSelector = Selector.init(extendedGraphemeClusterLiteral: setSelectedAfterActionCheck)
             if !setSelectedAfterActionCheck.isEmpty {
                 if let executer = delegate as? UIViewController {
-                    executer.performSelector(aSelector, withObject: self)
+                    executer.perform(aSelector, with: self)
                 } else if let executer = delegate as? ViewController {
-                    executer.performSelector(aSelector, withObject: self)
+                    executer.perform(aSelector, with: self)
                 } else if let executer = ez.topMostVC {
                     if executer.respondsToSelector(aSelector) {
                         executer.performSelector(aSelector, withObject: "")
@@ -136,7 +136,7 @@ extension AMKButton {
         if !enabledAction.isEmpty {
             if let executer = delegate as? UIViewController {
                 let aSelector = Selector.init(extendedGraphemeClusterLiteral: enabledAction)
-                executer.performSelector(aSelector, withObject: "")
+                executer.perform(aSelector, with: "")
             }
         }
     }
@@ -144,11 +144,11 @@ extension AMKButton {
         if !disabledAction.isEmpty {
             if let executer = delegate as? UIViewController {
                 let aSelector = Selector.init(extendedGraphemeClusterLiteral: disabledAction)
-                executer.performSelector(aSelector, withObject: "")
+                executer.perform(aSelector, with: "")
             }
         }
     }
-    internal func addBlock(block: () -> (), ForAction action: Int) -> AMKButton {
+    internal func addBlock(_ block: @escaping () -> (), ForAction action: Int) -> AMKButton {
         actionBlocks?.append(block)
         return self
     }

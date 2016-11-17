@@ -25,7 +25,7 @@ extension UIViewController: PayPalPaymentDelegate {
         // To place an Order, and defer both Authorization and Capture to
         // your server, use PayPalPaymentIntentOrder.
         // (PayPalPaymentIntentOrder is valid only for PayPal payments, not credit card payments.)
-        payment.intent = .Sale
+        payment.intent = .sale
         
         // If your app collects Shipping Address information from the customer,
         // or already stores that information on your server, you may provide it here.
@@ -44,7 +44,7 @@ extension UIViewController: PayPalPaymentDelegate {
         let paymentViewController = PayPalPaymentViewController.init(payment: payment, configuration: paypalConfig, delegate: self)
         
         // Present the PayPalPaymentViewController.
-        presentViewController(paymentViewController!, animated: true, completion: nil)
+        present(paymentViewController!, animated: true, completion: nil)
     }
     internal var paypalConfig: PayPalConfiguration {
         get {
@@ -64,13 +64,13 @@ extension UIViewController: PayPalPaymentDelegate {
         
         // Or if you wish to have the user choose a Shipping Address from those already
         // associated with the user's PayPal account, then add:
-        paypalConfig.payPalShippingAddressOption = .PayPal
+        paypalConfig.payPalShippingAddressOption = .payPal
     }
-    public func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController, didCompletePayment completedPayment: PayPalPayment) {
+    public func payPalPaymentViewController(_ paymentViewController: PayPalPaymentViewController, didComplete completedPayment: PayPalPayment) {
         
     }
     
-    public func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController) {
-        dismissViewControllerAnimated(true, completion: {})
+    public func payPalPaymentDidCancel(_ paymentViewController: PayPalPaymentViewController) {
+        dismiss(animated: true, completion: {})
     }
 }

@@ -17,7 +17,7 @@ extension AMKButton {
             setValue(newValue, forProperty: "observing")
         }
     }
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if context == &kvoContext {
             //print("Change at keyPath = \(keyPath) for \(object)")
             if keyPath == "enabled" {

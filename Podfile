@@ -15,10 +15,11 @@ target 'TuSerenata' do
   #Soporte para widgets especiales
   pod 'LTInfiniteScrollView'
   #Manejo de Teclado
-  pod 'IQKeyboardManagerSwift', '4.0.5'
+  pod 'IQKeyboardManagerSwift'#, '4.0.5'
   #Herramientas
-  pod 'EZSwiftExtensions', '1.6'
-  pod 'PropertyExtensions'
+  pod 'EZSwiftExtensions'#, '1.6'
+  #pod 'PropertyExtensions' Deprecated, now using 'AssociatedValues'
+  pod 'AssociatedValues'
   #Chat
   pod "JLChatViewController"
   #Pagos
@@ -26,5 +27,5 @@ target 'TuSerenata' do
   #Animación de Carga
   pod 'UCZProgressView'
   #Calendario
-  pod 'CVCalendar', '1.3.0'
+  pod 'CVCalendar'#, '1.3.0'
 end

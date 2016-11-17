@@ -7,21 +7,21 @@
 //
 
 import UIKit
-import PropertyExtensions
+import AssociatedValues
 
 extension AMKButton {
     @IBInspectable var autoCenter: Bool {
         get {
-            return getProperty("autoCenter", initial: false)
+            return getAssociatedValue(key: "autoCenter", object: self, initialValue: false)
         }
         set {
-            setValue(newValue, forProperty: "autoCenter")
+            set(associatedValue: newValue, key: "autoCenter", object: self)
             currentDefaultLabel?.center = CGPoint.init(x: w / 2, y: h / 2)
         }
     }
     var currentDefaultLabel: UILabel? {
         get {
-            if let view = viewWithTag(AMKTypeTag.LabelDefault.rawValue) {
+            if let view = viewWithTag(AMKTypeTag.labelDefault.rawValue) {
                 return view as? UILabel
             }
             return nil

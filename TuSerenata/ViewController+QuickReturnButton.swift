@@ -13,42 +13,42 @@ private let checkpoint: CGPoint  = CGPoint.init(x: 1, y: 1)
 private var initialRecognizeButtonHeigth: CGFloat = 0.0
 
 enum FooterAnimation {
-    case Default
-    case Moving
-    case Done
-    case Invalid
+    case `default`
+    case moving
+    case done
+    case invalid
     func nextState() -> FooterAnimation {
         switch self {
-        case .Default:
-            return Moving
-        case .Moving:
-            return Done
-        case .Done:
-            return Default
-        case .Invalid:
-            return Invalid
+        case .default:
+            return .moving
+        case .moving:
+            return .done
+        case .done:
+            return .`default`
+        case .invalid:
+            return .invalid
         }
     }
     mutating func next() {
         switch self {
-        case .Default:
-            self = Moving
-        case .Moving:
-            self = Done
-        case .Done:
-            self = Default
-        case .Invalid:
-            self = Invalid
+        case .default:
+            self = .moving
+        case .moving:
+            self = .done
+        case .done:
+            self = .`default`
+        case .invalid:
+            self = .invalid
         }
     }
 }
 
 typealias QuickReturnSwiftState = (FooterAnimation, Float, Bool)
 typealias QuickReturnResult = (Float, FooterAnimation)
-typealias QuickReturnMove = FooterAnimation -> QuickReturnResult
+typealias QuickReturnMove = (FooterAnimation) -> QuickReturnResult
 typealias QuickReturnParameters = (Bool, Float)
 private let thresHold: Float = 10
-func quickReturn(params: QuickReturnParameters) -> QuickReturnMove {
+func quickReturn(_ params: QuickReturnParameters) -> QuickReturnMove {
     return { state in
         let valueSet = params.1
         if params.0 {
@@ -59,13 +59,13 @@ func quickReturn(params: QuickReturnParameters) -> QuickReturnMove {
     }
 }
 
-func nextState(swiftState: QuickReturnSwiftState) -> FooterAnimation {
+func nextState(_ swiftState: QuickReturnSwiftState) -> FooterAnimation {
     let current = swiftState.0
     let val = swiftState.1
     if swiftState.2 {
-        return current == .Default ? .Invalid : current.nextState()
+        return current == .default ? .invalid : current.nextState()
     } else {
-        return current == .Done ? .Invalid : (val < thresHold ? .Done : .Moving)
+        return current == .done ? .invalid : (val < thresHold ? .done : .moving)
     }
 }
 
@@ -111,40 +111,40 @@ extension ViewController {
         initialRecognizeButtonHeigth = CGFloat(containerHeight)
     }
     
-    func percentQuickReturn(value: Float) -> Float {
+    func percentQuickReturn(_ value: Float) -> Float {
         return abs(value / (Float(tableView.rowHeight) * 2 ))
     }
     
     func checkIfFullyAnimated() {
-        if footerAnimationState == .Moving {
+        if footerAnimationState == .moving {
             footerAnimationState.next()
             animateButtonHeight(checkpoint)
         }
     }
     
-    func processPercentageHeight(percentage: Float) -> Float -> Float {
+    func processPercentageHeight(_ percentage: Float) -> (Float) -> Float {
         return { height in
             return height * (1 - percentage)
         }
     }
     
-    func getSetValue(initial: Float) -> Float -> Float {
+    func getSetValue(_ initial: Float) -> (Float) -> Float {
         return { height in
             let percentage = self.percentQuickReturn(initial)
             return self.processPercentageHeight(percentage)(height)
         }
     }
     
-    func animateButtonHeight(value: CGPoint) {
+    func animateButtonHeight(_ value: CGPoint) {
         let yValue = Float(value.y)
         let heightConstant = Float(recognizeEmployeeContainerHeight.constant)
         let scrollUp = yValue > 0
         let quickMove = quickReturn((scrollUp, getSetValue(yValue)(heightConstant)))(footerAnimationState)
         let finalState = quickMove.1
-        if finalState != .Invalid {
+        if finalState != .invalid {
             footerAnimationState = quickMove.1
             let value = quickMove.0
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 let setValue = CGFloat(value)
                 self.recognizeEmployeeContainerHeight.constant = setValue
                 if scrollUp {

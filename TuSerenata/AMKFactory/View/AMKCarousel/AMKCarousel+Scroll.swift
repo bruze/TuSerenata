@@ -8,6 +8,19 @@
 
 import UIKit
 import LTInfiniteScrollView
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 extension AMKCarousel: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDelegate {
     var scrollView: LTInfiniteScrollView {
@@ -20,7 +33,7 @@ extension AMKCarousel: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDeleg
         }
     }
 
-    func viewAtIndex(index: Int, reusingView view: UIView?) -> UIView {
+    func view(at index: Int, reusing view: UIView?) -> UIView {
         //let button = AMKButton.init(frame: CGRect.zero)
         //button.defaultLabel = "Hello"
         /*button.pressBackColor = UIColor.cyanColor()
@@ -59,13 +72,13 @@ extension AMKCarousel: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDeleg
 
      }*/
     internal func setupScroll() {
-        scrollView.backgroundColor = UIColor.clearColor()
+        scrollView.backgroundColor = UIColor.clear
         scrollView.clipsToBounds = true
         scrollView.verticalScroll = true
         scrollView.dataSource = self
         scrollView.delegate = self
         scrollView.maxScrollDistance = 10
-        scrollView.reloadDataWithInitialIndex(0)
+        scrollView.reloadData(withInitialIndex: 0)
         scrollSetupDone = true
     }
 }

@@ -16,7 +16,7 @@ extension AMKLabel {
         }
         set {
             setValue(newValue, forProperty: "label")
-            label!.hidden = true
+            label!.isHidden = true
         }
         /*didSet {
             //label?.enabled = false

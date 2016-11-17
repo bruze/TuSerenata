@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PropertyExtensions
+import AssociatedValues
 
 @IBDesignable
 class Gradiente: UIView {
@@ -46,13 +46,13 @@ class Gradiente: UIView {
     internal func tryShowGradient() {
         capaGradiente = CAGradientLayer()
         //capaGradiente.removeFromSuperlayer()
-        capaGradiente.colors = [gradienteInicial.CGColor, gradienteFinal.CGColor]
+        capaGradiente.colors = [gradienteInicial.cgColor, gradienteFinal.cgColor]
         capaGradiente.locations = [0.0, 1.0]
         capaGradiente.startPoint = CGPoint(x: 0.0, y: 1.0)
         capaGradiente.endPoint = CGPoint(x: 1.0, y: 1.0)
         capaGradiente.frame = CGRect(x: 0.0, y: 0.0, width: frame.size.width, height: frame.size.height)
         //backgroundColor = UIColor.clearColor()
-        layer.insertSublayer(capaGradiente, atIndex: 0)
+        layer.insertSublayer(capaGradiente, at: 0)
         layoutIfNeeded()
     }
     

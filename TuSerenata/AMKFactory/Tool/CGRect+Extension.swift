@@ -16,7 +16,7 @@ extension CGRect {
                          "=".join(["h", String(h) + ","]) ])
     }
 
-    static public func loadFromString(model: String) -> CGRect {
+    static public func loadFromString(_ model: String) -> CGRect {
         var lModel = model
         let xValue = lModel.getNextValueForModel("x=", cutAt: ",")
         let yValue = lModel.getNextValueForModel("y=", cutAt: ",")

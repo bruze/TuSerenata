@@ -33,7 +33,7 @@ class Gerente: NSObject {
     }
     
     static let unistancia = Gerente.init()
-    func obtenerUsuario(uid: String, finalizar: (Usuario?) -> ()) {
+    func obtenerUsuario(_ uid: String, finalizar: @escaping (Usuario?) -> ()) {
         /*users.observeEventType(.Value, andPreviousSiblingKeyWithBlock: { (captura, llave) in
             if captura.hasChild(uid) {
                 finalizar(Usuario(snapshot: captura.childSnapshotForPath(uid)))
@@ -42,14 +42,14 @@ class Gerente: NSObject {
                 
         }*/
         users.keepSynced(true)
-        users.observeEventType(.Value, withBlock: { (captura) in
+        users.observe(.value, with: { (captura) in
             if captura.hasChild(uid) {
-                let capturaUsuario = captura.childSnapshotForPath(uid)
+                let capturaUsuario = captura.childSnapshot(forPath: uid)
                 /*capturaUsuario.ref.observeEventType(.Value, withBlock: { (capturaU) in
                     print(capturaU)
                 })*/
                 if capturaUsuario.hasChild("musico") {
-                    if (capturaUsuario.childSnapshotForPath("musico").value! as? Int)! == 0 {
+                    if (capturaUsuario.childSnapshot(forPath: "musico").value! as? Int)! == 0 {
                         if capturaUsuario.hasChild("ciudad") {
                             finalizar(Usuario(snapshot: capturaUsuario))
                         }
@@ -66,13 +66,13 @@ class Gerente: NSObject {
             }
         })
     }
-    func obtenerMusico(uid: String, finalizar: (Musico?) -> ()) {
+    func obtenerMusico(_ uid: String, finalizar: @escaping (Musico?) -> ()) {
         //let users: FIRDatabaseReference = FirebaseRef.child("users")
-        users.observeEventType(.Value, withBlock: { (captura) in
+        users.observe(.value, with: { (captura) in
             if captura.hasChild(uid) {
-                let capturaMusico = captura.childSnapshotForPath(uid)
+                let capturaMusico = captura.childSnapshot(forPath: uid)
                 if capturaMusico.hasChild("musico") {
-                    if (capturaMusico.childSnapshotForPath("musico").value! as? Int)! == 1 {
+                    if (capturaMusico.childSnapshot(forPath: "musico").value! as? Int)! == 1 {
                         if capturaMusico.hasChilds("genero", "ciudad", "voz", "estrellas") {
                             finalizar(Musico(captura: capturaMusico))
                         } else {
@@ -85,7 +85,7 @@ class Gerente: NSObject {
             }
         })
     }
-    func filtrarGrupos(condiciones: [ChequeoGrupo]) -> [Musico] {
+    func filtrarGrupos(_ condiciones: [ChequeoGrupo]) -> [Musico] {
         var gruposDeInteres: [Musico] = []
         for grupo in musicosFiltrados {
             var cumple = true
@@ -101,11 +101,11 @@ class Gerente: NSObject {
         }
         return gruposDeInteres
     }
-    func filtrarMusicos(notificar: BloqueVoid, condiciones: [ChequeoGrupo]?) /*-> [Musico]*/ {
+    func filtrarMusicos(_ notificar: @escaping BloqueVoid, condiciones: [ChequeoGrupo]?) /*-> [Musico]*/ {
         musicosFiltrados.removeAll()
-        grupos.observeEventType(.ChildAdded, withBlock: { (captura) in
+        grupos.observe(.childAdded, with: { (captura) in
             for child in captura.children {
-                self.obtenerMusico(child.key!!, finalizar: { musico in
+                self.obtenerMusico((child as AnyObject).key!!, finalizar: { musico in
                     if !self.musicosFiltrados.contains(musico!) {
                         self.musicosFiltrados.append(musico!)
                     }
@@ -116,7 +116,7 @@ class Gerente: NSObject {
             }
         })
     }
-    func musicosPor(inout condiciones: [ChequeoGrupo], musicos: [Musico]) -> [Musico]? {
+    func musicosPor(_ condiciones: inout [ChequeoGrupo], musicos: [Musico]) -> [Musico]? {
         if condiciones.count == 0 {
             return musicos
         } else {

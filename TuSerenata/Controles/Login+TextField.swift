@@ -8,11 +8,11 @@
 
 //import Foundation
 extension Login: UITextFieldDelegate {
-    func otroCampo(unCampo: UITextField) -> UITextField {
+    func otroCampo(_ unCampo: UITextField) -> UITextField {
         return unCampo == campoNombre ? campoContrasena : campoNombre
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let txtW = textField.bounds.size.width
         let strL = string.length
         let strLCero = strL == 0

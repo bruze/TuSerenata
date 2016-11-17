@@ -9,8 +9,8 @@
 import UIKit
 
 class Registro: UIViewController {
-    @IBAction func irAtras(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func irAtras(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

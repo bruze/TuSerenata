@@ -9,14 +9,14 @@
 import UIKit
 import DualSlideMenu
 import JLChatViewController
-import PropertyExtensions
+import AssociatedValues
 
 class ViewController: UIViewController {
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentNoNetwork)
+        PayPalMobile.preconnect(withEnvironment: PayPalEnvironmentNoNetwork)
     }
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     func seleccioneTipoReserva() {
-        ventanaEmergente(["acc1": "Reserva Inmediata", "acc2": "Reserva Fecha"], acciones: [{ print("Aun no creada esta vista") }, { self.performSegueWithIdentifier("crearSerenata", sender: nil) }])
+        ventanaEmergente(["acc1": "Reserva Inmediata", "acc2": "Reserva Fecha"], acciones: [{ print("Aun no creada esta vista") }, { self.performSegue(withIdentifier: "crearSerenata", sender: nil) }])
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,13 +46,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func itemMenuTap(sender: UIBarButtonItem) {
+    @IBAction func itemMenuTap(_ sender: UIBarButtonItem) {
         //print(Gerente.unistancia.usuario?.toAnyObject())
         (appDelegate.slide!.leftMenu as? MenuVC)!.nombre.text = gerente.usuario!.nombre
         appDelegate.slide!.toggle("right")
     }
 
-    @IBAction func rightItemTap(sender: UIBarButtonItem) {
+    @IBAction func rightItemTap(_ sender: UIBarButtonItem) {
         openPayment()
         
         //openChat()

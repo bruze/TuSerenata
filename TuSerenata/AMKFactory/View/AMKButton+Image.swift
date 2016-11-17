@@ -17,7 +17,7 @@ extension AMKButton {
             setValue(newValue, forProperty: "defaultImage")
             if defaultImage != nil {
                 resetView(imageContainer)
-                images[AMKTypeTag.ImageDefault] = defaultImage
+                images[AMKTypeTag.imageDefault] = defaultImage
                 imageContainer = UIImageView.init(image: defaultImage!)
                 addSubview(imageContainer)
                 imageContainer.center = CGPoint.init(x: w / 2, y: h / 2)
@@ -30,7 +30,7 @@ extension AMKButton {
         }
         set {
             setValue(newValue, forProperty: "pressImage")
-            images[AMKTypeTag.ImagePressed] = pressImage
+            images[AMKTypeTag.imagePressed] = pressImage
         }
     }
     @IBInspectable weak var disabledImage: UIImage? {
@@ -39,7 +39,7 @@ extension AMKButton {
         }
         set {
             setValue(newValue, forProperty: "disabledImage")
-            images[AMKTypeTag.ImageDisabled] = disabledImage
+            images[AMKTypeTag.imageDisabled] = disabledImage
         }
     }
     @IBInspectable var imageLeading: CGFloat {
@@ -81,17 +81,17 @@ extension AMKButton {
     internal func getImage(ForTag tag: AMKTypeTag) -> UIImage? {
         var image: UIImage? = nil
         switch tag {
-        case .Default:
+        case .default:
             image = nil
-        case .CurrentImage:
+        case .currentImage:
             image = nil
-        case .ImageDefault:
+        case .imageDefault:
             image = images[tag]
-        case .ImageDisabled:
+        case .imageDisabled:
             image = images[tag]
-        case .ImagePressed:
+        case .imagePressed:
             image = images[tag]
-        case .LabelDefault:
+        case .labelDefault:
             image = nil
         }
         return image

@@ -8,10 +8,10 @@
 
 import Foundation
 import JLChatViewController
-import PropertyExtensions
+import AssociatedValues
 
-extension JLMessage: PropertyExtensions {
-    static func desdeCaptura(captura: FIRDataSnapshot) -> JLMessage {
+extension JLMessage/*: PropertyExtensions*/ {
+    static func desdeCaptura(_ captura: FIRDataSnapshot) -> JLMessage {
         let texto = (captura.value!["mensaje"] as? String)!
         let enviadoPor = (captura.value!["enviadoPor"] as? String)!
         let mensaje = JLMessage.init(text: texto, senderID: enviadoPor, messageDate: NSDate.init(), senderImage: nil)

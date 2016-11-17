@@ -13,10 +13,10 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
     var contestatario: Musico!
     var mensajes: [JLMessage] = []
     internal func cargarMensajes() {
-        gerente.usuario!.refMensajes!.observeEventType(.Value, withBlock: { (captura) in
+        gerente.usuario!.refMensajes!.observe(.value, with: { (captura) in
             if captura.exists() {
                 if captura.hasChild("nuevos") {
-                    let nuevos = captura.childSnapshotForPath("nuevos")
+                    let nuevos = captura.childSnapshot(forPath: "nuevos")
                     print(self.chatTableView.myID)
                     for capturaIntermedia in nuevos.children {
                         let capturaMensajes = (capturaIntermedia as? FIRDataSnapshot)!
@@ -25,7 +25,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
                             self.chatTableView.addOldMessages(1, changesHandler: { 
                                 
                             })
-                            let nuevo = JLMessage.init(text: "HOLA", senderID: (gerente.usuario?.key)!, messageDate: NSDate.init(), senderImage: nil)
+                            let nuevo = JLMessage.init(text: "HOLA", senderID: (gerente.usuario?.key)!, messageDate: Date.init(), senderImage: nil)
                             self.mensajes.append(nuevo)
                             let otro = JLMessage.desdeCaptura(capturaMensaje as! FIRDataSnapshot)
                             self.mensajes.append(otro)
@@ -72,7 +72,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
         
         JLChatAppearence.configErrorButton(nil, selectedStateImage: nil)
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     /**
@@ -80,10 +80,10 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      - parameter indexPath: The position of JLMessage required
      */
     
-    func jlChatMessageAtIndexPath(indexPath:NSIndexPath)->JLMessage? {
+    func jlChatMessageAtIndexPath(_ indexPath:NSIndexPath)->JLMessage? {
         return mensajes[indexPath.row]
     }
-    func jlChatKindOfHeaderViewInSection(section: Int) -> JLChatSectionHeaderViewKind {
+    func jlChatKindOfHeaderViewInSection(_ section: Int) -> JLChatSectionHeaderViewKind {
         //you can change it to see the diference
         if  self.mensajes.count == 0{
             return JLChatSectionHeaderViewKind.CustomView
@@ -97,10 +97,10 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      - parameter section: The section that have the header views with date for example
      - returns: The number of messages of the corresponding section
      */
-    func jlChatNumberOfMessagesInSection(section:Int)->Int {
+    func jlChatNumberOfMessagesInSection(_ section:Int)->Int {
         return mensajes.count
     }
-    func numberOfDateAndCustomSectionsInJLChat(chat: JLChatTableView) -> Int {
+    func numberOfDateAndCustomSectionsInJLChat(_ chat: JLChatTableView) -> Int {
         return mensajes.count
     }
     /**
@@ -108,7 +108,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      - parameter indexPath: The indexPath for the cell
      - returns: The loaded cell
      */
-    func jlChat(chat:JLChatTableView,MessageCellForRowAtIndexPath indexPath:NSIndexPath)->JLChatMessageCell {
+    func jlChat(_ chat:JLChatTableView,MessageCellForRowAtIndexPath indexPath:NSIndexPath)->JLChatMessageCell {
         let cell = JLChatMessageCell.init(style: .Default, reuseIdentifier: "ChatCell")
         let message = mensajes[indexPath.row]
         if message.senderID != gerente.usuario?.key { // soy yo
@@ -121,8 +121,8 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      Executed when it is necessary to load older messages.
      */
     func loadOlderMessages() {
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        let delayTime = DispatchTime.now() + Double(Int64(5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
             
             self.chatTableView.reloadData()
             
@@ -131,7 +131,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
     /**
      Executed when there is a tap on any message.
      */
-    func didTapMessageAtIndexPath(indexPath:NSIndexPath) {
+    func didTapMessageAtIndexPath(_ indexPath:IndexPath) {
         
     }
     /**
@@ -149,7 +149,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
     /**
      executed to discover if the UIMenuItem with title can be shown
      */
-    func shouldShowMenuItemForCellAtIndexPath(title:String,indexPath:NSIndexPath)->Bool {
+    func shouldShowMenuItemForCellAtIndexPath(_ title:String,indexPath:IndexPath)->Bool {
         return true
     }
     /**
@@ -175,13 +175,13 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
     /**
      The action that delete message.
      */
-    func performDeleteActionForCellAtIndexPath(indexPath:NSIndexPath) {
+    func performDeleteActionForCellAtIndexPath(_ indexPath:IndexPath) {
         
     }
     /**
      The action that tries to send again the message.
      */
-    func performSendActionForCellAtIndexPath(indexPath:NSIndexPath) {
+    func performSendActionForCellAtIndexPath(_ indexPath:IndexPath) {
         
     }
 }

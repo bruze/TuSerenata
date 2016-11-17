@@ -10,20 +10,20 @@ import UIKit
 
 extension ViewController: UITableViewDelegate {
     func setupTable() {
-        tableView.layoutMargins = UIEdgeInsetsZero
-        tableView.contentInset = UIEdgeInsetsZero
-        tableView.layer.borderColor = Global.CLRLoginTFieldBorder.CGColor
+        tableView.layoutMargins = UIEdgeInsets.zero
+        tableView.contentInset = UIEdgeInsets.zero
+        tableView.layer.borderColor = Global.CLRLoginTFieldBorder.cgColor
         tableView.layer.borderWidth = 1.0
         tableView.tableFooterView = UIView.init(frame: CGRect.init())
-        tableView.backgroundColor = UIColor.whiteColor()
-        tableView.separatorStyle = .None
+        tableView.backgroundColor = UIColor.white
+        tableView.separatorStyle = .none
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isSelected = false
     }
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        let translation = scrollView.panGestureRecognizer.translationInView(scrollView)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let translation = scrollView.panGestureRecognizer.translation(in: scrollView)
         if translation.y < 0 {
             guard abs(translation.y) > 10 else {
                 return
@@ -32,7 +32,7 @@ extension ViewController: UITableViewDelegate {
         animateButtonHeight(translation)
     }
     
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint,
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint,
                                    targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         checkIfFullyAnimated()
     }
