@@ -10,6 +10,29 @@ import JLChatViewController
 import IQKeyboardManagerSwift
 
 class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatMessagesMenuDelegate, ChatDelegate {
+    /**
+     Implement this method to load the correct message cell for the indexPath
+     - parameter indexPath: The indexPath for the cell
+     - returns: The loaded cell
+     */
+    public func jlChat(_ chat: JLChatTableView, MessageCellForRowAtIndexPath indexPath: IndexPath) -> JLChatMessageCell {
+        let cell = JLChatMessageCell.init(style: .default, reuseIdentifier: "ChatCell")
+        let message = mensajes[indexPath.row]
+        if message.senderID != gerente.usuario?.key { // soy yo
+            cell.textLabel?.textAlignment = .right
+        }
+        cell.textLabel?.text = message.text!
+        return cell
+    }
+
+    /**
+     This method will be called always when its necessary to get the corresponding message of indexPath
+     - parameter indexPath: The position of JLMessage required
+     */
+    public func jlChatMessageAtIndexPath(_ indexPath: IndexPath) -> JLMessage? {
+        return mensajes[indexPath.row]
+    }
+
     var contestatario: Musico!
     var mensajes: [JLMessage] = []
     internal func cargarMensajes() {
@@ -21,7 +44,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
                     for capturaIntermedia in nuevos.children {
                         let capturaMensajes = (capturaIntermedia as? FIRDataSnapshot)!
                         for capturaMensaje in capturaMensajes.children {
-                            self.chatTableView.addNewMessages(1, changesHandler: {}, completionHandler: { self.chatTableView.reloadData(); self.chatTableView.reloadSections(NSIndexSet.init(indexesInRange: NSRange.init(0...0)), withRowAnimation: .Automatic) })
+                            self.chatTableView.addNewMessages(1, changesHandler: {}, completionHandler: { self.chatTableView.reloadData(); self.chatTableView.reloadSections(NSIndexSet.init(indexesIn: NSRange.init()) as IndexSet, with: .automatic) })
                             self.chatTableView.addOldMessages(1, changesHandler: { 
                                 
                             })
@@ -53,8 +76,8 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        toolBar.leftButton.hidden = true
-        toolBar.rightButton.enabled = true
+        toolBar.leftButton.isHidden = true
+        toolBar.rightButton.isEnabled = true
         cargarMensajes()
 
         chatTableView.myID = gerente.usuario?.key
@@ -80,17 +103,17 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      - parameter indexPath: The position of JLMessage required
      */
     
-    func jlChatMessageAtIndexPath(_ indexPath:NSIndexPath)->JLMessage? {
+    /*func jlChatMessageAtIndexPath(_ indexPath:NSIndexPath)->JLMessage? {
         return mensajes[indexPath.row]
-    }
+    }*/
     func jlChatKindOfHeaderViewInSection(_ section: Int) -> JLChatSectionHeaderViewKind {
         //you can change it to see the diference
         if  self.mensajes.count == 0{
-            return JLChatSectionHeaderViewKind.CustomView
+            return JLChatSectionHeaderViewKind.customView
         }
         
         //return JLChatSectionHeaderViewKind.CustomDateView
-        return JLChatSectionHeaderViewKind.DefaultDateView
+        return JLChatSectionHeaderViewKind.defaultDateView
     }
     /**
      The number of messages in corresponding section
@@ -108,7 +131,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
      - parameter indexPath: The indexPath for the cell
      - returns: The loaded cell
      */
-    func jlChat(_ chat:JLChatTableView,MessageCellForRowAtIndexPath indexPath:NSIndexPath)->JLChatMessageCell {
+    /*func jlChat(_ chat:JLChatTableView,MessageCellForRowAtIndexPath indexPath:NSIndexPath)->JLChatMessageCell {
         let cell = JLChatMessageCell.init(style: .Default, reuseIdentifier: "ChatCell")
         let message = mensajes[indexPath.row]
         if message.senderID != gerente.usuario?.key { // soy yo
@@ -116,7 +139,7 @@ class ChatVC: JLChatViewController, ChatDataSource, ChatToolBarDelegate, JLChatM
         }
         cell.textLabel?.text = message.text!
         return cell
-    }
+    }*/
     /**
      Executed when it is necessary to load older messages.
      */

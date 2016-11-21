@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import AssociatedValues
 
 extension AMKButton {
     @IBInspectable weak var defaultImage: UIImage? {
         get {
-            return getProperty("defaultImage", initial: nil)
+            return getAssociatedValue(key: "defaultImage", object: self, initialValue: nil)
         }
         set {
-            setValue(newValue, forProperty: "defaultImage")
+            set(associatedValue: newValue, key: "defaultImage", object: self)
             if defaultImage != nil {
                 resetView(imageContainer)
                 images[AMKTypeTag.imageDefault] = defaultImage
@@ -26,46 +27,46 @@ extension AMKButton {
     }
     @IBInspectable weak var pressImage: UIImage? {
         get {
-            return getProperty("pressImage", initial: nil)
+            return getAssociatedValue(key: "pressImage", object: self, initialValue: nil)
         }
         set {
-            setValue(newValue, forProperty: "pressImage")
+            set(associatedValue: newValue, key: "pressImage", object: self)
             images[AMKTypeTag.imagePressed] = pressImage
         }
     }
     @IBInspectable weak var disabledImage: UIImage? {
         get {
-            return getProperty("disabledImage", initial: nil)
+            return getAssociatedValue(key: "disabledImage", object: self, initialValue: nil)
         }
         set {
-            setValue(newValue, forProperty: "disabledImage")
+            set(associatedValue: newValue, key: "disabledImage", object: self)
             images[AMKTypeTag.imageDisabled] = disabledImage
         }
     }
     @IBInspectable var imageLeading: CGFloat {
         get {
-            return getProperty("imageLeading", initial: 0)
+            return getAssociatedValue(key: "imageLeading", object: self, initialValue: 0)
         }
         set {
-            setValue(newValue, forProperty: "imageLeading")
+            set(associatedValue: newValue, key: "imageLeading", object: self)
             imageContainer.center.x = w / 2 + imageLeading
         }
     }
     @IBInspectable var imageYOffset: CGFloat {
         get {
-            return getProperty("imageYOffset", initial: 0)
+            return getAssociatedValue(key: "imageYOffset", object: self, initialValue: 0)
         }
         set {
-            setValue(newValue, forProperty: "imageYOffset")
+            set(associatedValue: newValue, key: "imageYOffset", object: self)
             imageContainer.center.y = h / 2 + imageYOffset
         }
     }
     var imageContainer: UIImageView {
         get {
-            return getProperty("imageContainer", initial: UIImageView.init())
+            return getAssociatedValue(key: "imageContainer", object: self, initialValue: UIImageView.init())
         }
         set {
-            setValue(newValue, forProperty: "imageContainer")
+            set(associatedValue: newValue, key: "imageContainer", object: self)
         }
     }
     internal func addImageViewWith(Image image: UIImage?, AndTag tag: AMKTypeTag) {

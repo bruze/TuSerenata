@@ -6,22 +6,23 @@
 //  Copyright © 2016 Bruno Garelli. All rights reserved.
 //
 
-//import Foundation
+import AssociatedValues
+
 extension AMKButton {
     @IBInspectable var selectable: Bool {
         get {
-            return getProperty("selectable", initial: true)
+            return getAssociatedValue(key: "selectable", object: self, initialValue: true)
         }
         set {
-            setValue(newValue, forProperty: "selectable")
+            set(associatedValue: newValue, key: "selectable", object: self)
         }
     }
     var selected: Bool {
         get {
-            return getProperty("selected", initial: false)
+            return getAssociatedValue(key: "selected", object: self, initialValue: false)
         }
         set {
-            setValue(newValue, forProperty: "selected")
+            set(associatedValue: newValue, key: "selected", object: self)
         }
     }
 }

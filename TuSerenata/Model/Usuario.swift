@@ -13,7 +13,7 @@ class Usuario: NSObject {
     let key: String!
     let nombre: String!
     let ciudad: String!
-    fileprivate let sexo: String!
+    let sexo: String!
     let ref: FIRDatabaseReference?
     var refMensajes: FIRDatabaseReference?
     var mensajesNuevos: [JLMessage]?

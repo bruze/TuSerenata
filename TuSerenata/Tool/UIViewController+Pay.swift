@@ -6,7 +6,7 @@
 //  Copyright © 2016 Bruno Garelli. All rights reserved.
 //
 
-//import Foundation
+import AssociatedValues
 
 extension UIViewController: PayPalPaymentDelegate {
     //MARK:PAYMENT
@@ -48,10 +48,10 @@ extension UIViewController: PayPalPaymentDelegate {
     }
     internal var paypalConfig: PayPalConfiguration {
         get {
-            return getProperty("paypalConfig", initial: PayPalConfiguration.init())
+            return getAssociatedValue(key: "paypalConfig", object: self, initialValue: PayPalConfiguration.init())
         }
         set {
-            setValue(newValue, forProperty: "paypalConfig")
+            set(associatedValue: newValue, key: "paypalConfig", object: self)
         }
     }
     internal func configPayPal() {

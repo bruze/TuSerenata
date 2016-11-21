@@ -7,21 +7,23 @@
 //
 
 import Foundation
+import AssociatedValues
 
 extension AMKButton {
     internal var observing: Bool {
         get {
-            return getProperty("observing", initial: false)
+            return getAssociatedValue(key: "observing", object: self, initialValue: false)
         }
         set {
-            setValue(newValue, forProperty: "observing")
+            set(associatedValue: newValue, key: "observing", object: self)
         }
     }
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if context == &kvoContext {
             //print("Change at keyPath = \(keyPath) for \(object)")
             if keyPath == "enabled" {
-                if let value = change?["new"]! as? Bool {
+                let dict = anytool.dicstrany(any: change!)
+                if let value = dict["new"]! as? Bool {
                     if value {
                         currentDefaultLabel?.alpha = 1.0
                         if !enabledAction.isEmpty {

@@ -44,16 +44,16 @@ class Serenata: NSObject {
         self.ref = captura.ref
         self.detalles = [:]
         super.init()
-
-        gerente.obtenerUsuario((captura.value!["usuarioID"] as? String)!, finalizar: {usuario in self.usuario = usuario})
-        gerente.obtenerMusico((captura.value!["grupoID"] as? String)!, finalizar: {musico in self.grupo = musico})
+        let dict = anytool.dicstrany(any: captura.value!)
+        gerente.obtenerUsuario((dict["usuarioID"] as? String)!, finalizar: {usuario in self.usuario = usuario})
+        gerente.obtenerMusico((dict["grupoID"] as? String)!, finalizar: {musico in self.grupo = musico})
     }
     
     func toAnyObject() -> AnyObject {
-        return [
+        return ([
             "usuarioID": usuario!.key,
             "grupoID": grupo?.key,
             //"estado": estado.debugDescription
-        ]
+        ] as? AnyObject)!
     }
 }

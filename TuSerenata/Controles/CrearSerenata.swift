@@ -147,12 +147,12 @@ class CrearSerenata: UIViewController {
 
 extension CrearSerenata: CVCalendarViewDelegate {
     func didSelectDayView(_ dayView: DayView, animationDidFinish: Bool) {
-        print(dayView.dayLabel.text)
+        //print(dayView.dayLabel.text)
     }
     func presentationMode() -> CalendarMode {
-        return .MonthView
+        return .monthView
     }
     func firstWeekday() -> Weekday {
-        return .Sunday
+        return .sunday
     }
 }

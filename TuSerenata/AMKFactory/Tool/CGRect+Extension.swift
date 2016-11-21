@@ -10,10 +10,10 @@ import UIKit
 
 extension CGRect {
     func toString() -> String {
-        return ",".join(["=".join(["x", String(x)]),
-                         "=".join(["y", String(y)]),
-                         "=".join(["w", String(w)]),
-                         "=".join(["h", String(h) + ","]) ])
+        return ",".join(["=".join(["x", String(describing: x)]),
+                         "=".join(["y", String(describing: y)]),
+                         "=".join(["w", String(describing: w)]),
+                         "=".join(["h", String(describing: h) + ","]) ])
     }
 
     static public func loadFromString(_ model: String) -> CGRect {

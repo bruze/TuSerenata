@@ -8,6 +8,7 @@
 
 
 import UIKit
+import AssociatedValues
 
 private let checkpoint: CGPoint  = CGPoint.init(x: 1, y: 1)
 private var initialRecognizeButtonHeigth: CGFloat = 0.0
@@ -72,10 +73,10 @@ func nextState(_ swiftState: QuickReturnSwiftState) -> FooterAnimation {
 extension ViewController {
     var footerAnimationState: FooterAnimation {
         get {
-            return getProperty("footerAnimationState", initial: .Default)
+            return getAssociatedValue(key: "footerAnimationState", object: self, initialValue: .default)
         }
         set {
-            setValue(newValue, forProperty: "footerAnimationState")
+            set(associatedValue: newValue, key: "footerAnimationState", object: self)
         }
     }
     var containerHeight: Float {
@@ -84,26 +85,26 @@ extension ViewController {
     }
     @IBOutlet weak var recognizeEmployeeContainerHeight: NSLayoutConstraint! {
         get {
-            return getProperty("recognizeEmployeeContainerHeight", initial: NSLayoutConstraint.init())
+            return getAssociatedValue(key: "recognizeEmployeeContainerHeight", object: self, initialValue: NSLayoutConstraint.init())
         }
         set {
-            setValue(newValue, forProperty: "recognizeEmployeeContainerHeight")
+            set(associatedValue: newValue, key: "recognizeEmployeeContainerHeight", object: self)
         }
     }
     @IBOutlet weak var tableView: UITableView! {
         get {
-            return getProperty("tableView", initial: UITableView.init())
+            return getAssociatedValue(key: "tableView", object: self, initialValue: UITableView.init())
         }
         set {
-            setValue(newValue, forProperty: "tableView")
+            set(associatedValue: newValue, key: "tableView", object: self)
         }
     }
     @IBOutlet weak var buttonView: UIView! {
         get {
-            return getProperty("buttonView", initial: UIView.init())
+            return getAssociatedValue(key: "buttonView", object: self, initialValue: UIView.init())
         }
         set {
-            setValue(newValue, forProperty: "buttonView")
+            set(associatedValue: newValue, key: "buttonView", object: self)
         }
     }
     ///////////////////////////FUNCTIONS/////////////////////////////////////

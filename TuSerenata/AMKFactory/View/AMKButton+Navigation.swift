@@ -6,22 +6,22 @@
 //  Copyright © 2016 Bruno Garelli. All rights reserved.
 //
 
-//import Foundation
+import AssociatedValues
 extension AMKButton {
     @IBOutlet weak var previousSibling: AMKButton? {
         get {
-            return getProperty("previousSibling", initial: nil)
+            return getAssociatedValue(key: "previousSibling", object: self, initialValue: nil)
         }
         set {
-            setValue(newValue, forProperty: "previousSibling")
+            set(associatedValue: newValue, key: "previousSibling", object: self)
         }
     }
     @IBOutlet weak var nextSibling: AMKButton? {
         get {
-            return getProperty("nextSibling", initial: nil)
+            return getAssociatedValue(key: "nextSibling", object: self, initialValue: nil)
         }
         set {
-            setValue(newValue, forProperty: "nextSibling")
+            set(associatedValue: newValue, key: "nextSibling", object: self)
         }
     }
     func performOnPreviousSibling(Block block: BloqueBoton) {

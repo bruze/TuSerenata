@@ -283,7 +283,7 @@ public struct Global {
             formatter.minimumFractionDigits = 1
             formatter.maximumFractionDigits = 1
             formatter.roundingMode = .down
-            return formatter.string(from: Double(num)/1000)! + "K"
+            return formatter.string(for: Double(num)/1000)! + "K"
         }
         return "\(num)"
 

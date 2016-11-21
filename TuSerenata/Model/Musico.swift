@@ -29,9 +29,10 @@ class Musico: Usuario {
     }
     
     init(captura: FIRDataSnapshot) {
-        genero = (captura.value!["genero"] as? String)!
-        voz = (captura.value!["voz"] as? String)!
-        estrellas = (captura.value!["estrellas"] as? Int)!
+        let dict = anytool.dicstrany(any: captura.value!)
+        genero = (dict["genero"] as? String)!
+        voz = (dict["voz"] as? String)!
+        estrellas = (dict["estrellas"] as? Int)!
         super.init(snapshot: captura)
        /* key = snapshot.key
         genero = snapshot.value["genero"] as! String
@@ -41,10 +42,10 @@ class Musico: Usuario {
     }
     
     override func toAnyObject() -> AnyObject {
-        return [
+        return ([
             "nombre": nombre,
             "genero": genero
-        ]
+        ] as? AnyObject)!
     }
     
     deinit {

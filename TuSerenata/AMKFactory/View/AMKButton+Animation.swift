@@ -7,35 +7,36 @@
 //
 
 import UIKit
+import AssociatedValues
 typealias Move = Global.RLMove
 extension AMKButton {
     @IBInspectable var showPassAtTap: Bool {
         get {
-            return getProperty("showPassAtTap", initial: false)
+            return getAssociatedValue(key: "showPassAtTap", object: self, initialValue: false)
         }
         set {
-            setValue(newValue, forProperty: "showPassAtTap")
+            set(associatedValue: newValue, key: "showPassAtTap", object: self)
         }
     }
     var lastMove: Move {
         get {
-            return getProperty("lastMove", initial: .Left)
+            return getAssociatedValue(key: "lastMove", object: self, initialValue: .left)
         }
         set {
-            setValue(newValue, forProperty: "lastMove")
+            set(associatedValue: newValue, key: "lastMove", object: self)
         }
     }
     var layerLoaded: Bool {
         get {
-            return getProperty("layerLoaded", initial: false)
+            return getAssociatedValue(key: "layerLoaded", object: self, initialValue: false)
         }
         set {
-            setValue(newValue, forProperty: "layerLoaded")
+            set(associatedValue: newValue, key: "layerLoaded", object: self)
         }
     }
     var animLayer: CALayer {
         get {
-            let pLayer = getProperty("animLayer", initial: emptyLayer)
+            let pLayer = getAssociatedValue(key: "animLayer", object: self, initialValue: emptyLayer)
             if !layerLoaded {
                 pLayer.frame = bounds
                 pLayer.contentsRect = bounds
@@ -47,7 +48,7 @@ extension AMKButton {
             return pLayer
         }
         set {
-            setValue(newValue, forProperty: "animLayer")
+            set(associatedValue: newValue, key: "animLayer", object: self)
         }
     }
     func passingLayerColor(_ color: UIColor, GoingRight right: Bool) {

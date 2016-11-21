@@ -37,7 +37,7 @@ extension UIViewController/*: PropertyExtensions*/ {
     }
     internal func toqueHijosAceptado(_ aceptado: Bool) {
         view.subviews.forEach { (vista) in
-            vista.1.userInteractionEnabled = aceptado
+            vista.1.isUserInteractionEnabled = aceptado
         }
     }
     internal func opacarFondo() {
@@ -96,7 +96,7 @@ extension UIViewController/*: PropertyExtensions*/ {
                 self.navigationController?.pushViewController(vc, animated: true)
             })
             
-            self.prepareForSegue(chatSegue, sender: nil)
+            self.prepare(for: chatSegue, sender: nil)
             
             chatSegue.perform()
         }

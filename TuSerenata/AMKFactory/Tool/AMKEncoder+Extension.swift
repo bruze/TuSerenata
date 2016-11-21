@@ -28,9 +28,9 @@ extension String {
     mutating func getNextValueForModel(_ key: String, cutAt: String) -> Int {
         let range = self.range(of: key)
         let indexStop = self.range(of: cutAt)
-        let indexRange = (range?.upperBound)!...index(before: (indexStop?.lowerBound)!)
+        //let indexRange = (range?.upperBound)!...index(before: (indexStop?.lowerBound)!)
         let indexRemove = (range?.lowerBound)!...(indexStop?.lowerBound)!
-        let value = self.substring(with: indexRange)
+        let value = self.substring(with: /*indexRange*/range!)
         removeSubrange(indexRemove)
         return Global.stringToInt(value)!
     }

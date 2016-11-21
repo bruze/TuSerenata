@@ -8,6 +8,8 @@
 
 import UIKit
 import LTInfiniteScrollView
+import AssociatedValues
+
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -25,11 +27,10 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 extension AMKCarousel: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDelegate {
     var scrollView: LTInfiniteScrollView {
         get {
-            let scroll = getProperty("scrollView", initial: LTInfiniteScrollView.init(frame: bounds))
-            return scroll
+            return getAssociatedValue(key: "scrollView", object: self, initialValue: LTInfiniteScrollView.init(frame: bounds))
         }
         set {
-            setValue(newValue, forProperty: "scrollView")
+            set(associatedValue: newValue, key: "scrollView", object: self)
         }
     }
 

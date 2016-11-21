@@ -242,7 +242,7 @@ extension String {
         return nil
     }
 
-    func toDouble(_ locale: Locale = Locale.system) -> Double? {
+    func toDouble(_ locale: Locale = Locale.current) -> Double? {
         let nf = NumberFormatter()
         nf.locale = locale
         if let number = nf.number(from: self) {

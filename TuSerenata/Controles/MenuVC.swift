@@ -32,7 +32,7 @@ import DualSlideMenu
     func irACrearSerenata() {
         appDelegate.slide!.toggle("right")
         let navegador = ((ez.topMostVC! as? DualSlideMenuViewController)!.mainView as? UINavigationController)!
-        navegador.childViewControllers[0].performSegueWithIdentifier("crearSerenata", sender: nil)
+        navegador.childViewControllers[0].performSegue(withIdentifier: "crearSerenata", sender: nil)
     }
     
     func onSwipe() {

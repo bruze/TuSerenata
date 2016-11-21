@@ -13,18 +13,18 @@ import AssociatedValues
 class Gradiente: UIView {
     var capaGradiente: CAGradientLayer {
         get {
-            return getProperty("capaGradiente", initial: CAGradientLayer.init())
+            return getAssociatedValue(key: "capaGradiente", object: self, initialValue: CAGradientLayer.init())
         }
         set {
-            setValue(newValue, forProperty: "capaGradiente")
+            set(associatedValue: newValue, key: "capaGradiente", object: self)
         }
     }
     @IBInspectable var gradienteInicial: UIColor {
         get {
-            return getProperty("gradienteInicial", initial: UIColor.clearColor())
+            return getAssociatedValue(key: "gradienteInicial", object: self, initialValue: UIColor.clear)
         }
         set {
-            setValue(newValue, forProperty: "gradienteInicial")
+            set(associatedValue: newValue, key: "gradienteInicial", object: self)
             if !gradienteFinal.isEmpty() {
                 tryShowGradient()
             }
@@ -33,10 +33,10 @@ class Gradiente: UIView {
     
     @IBInspectable var gradienteFinal: UIColor {
         get {
-            return getProperty("gradienteFinal", initial: UIColor.clearColor())
+            return getAssociatedValue(key: "gradienteFinal", object: self, initialValue: UIColor.clear)
         }
         set {
-            setValue(newValue, forProperty: "gradienteFinal")
+            set(associatedValue: newValue, key: "gradienteFinal", object: self)
             if !gradienteInicial.isEmpty() {
                 tryShowGradient()
             }

@@ -15,10 +15,12 @@ import AssociatedValues
 class AMKCarousel: UIView {
     @IBInspectable override var storeID: String {
         get {
-            return getProperty("storeID", initial: "")
+            return getAssociatedValue(key: "storeID", object: self, initialValue: "")
+            //return getAssociatedValueForProperty("storeID", ofObject: self, withInitialValue: {return ""}())
         }
         set {
-            setValue(newValue, forProperty: "storeID")
+            set(associatedValue: newValue, key: "storeID", object: self)
+            //setAssociatedValue(newValue, forProperty: "storeID", ofObject: self)
         }
     }
     @IBOutlet var views: [UIView]? {

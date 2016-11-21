@@ -8,6 +8,7 @@
 
 import UIKit
 import EZSwiftExtensions
+import AssociatedValues
 extension AMKButton {
     /*internal var actions: [String] {
         get {
@@ -43,58 +44,58 @@ extension AMKButton {
     }*/
     var actionBlocks: [() -> ()]? {
         get {
-            return getProperty("actionBlocks", initial: [])
+            return getAssociatedValue(key: "actionBlocks", object: self, initialValue: {return []}())
         }
         set {
-            setValue(newValue, forProperty: "actionBlocks")
+            set(associatedValue: newValue, key: "actionBlocks", object: self)
         }
     }
     @IBInspectable var touchAction: String {
         get {
-            return getProperty("touchAction", initial: "")
+            return getAssociatedValue(key: "touchAction", object: self, initialValue: {return ""}())
         }
         set {
-            setValue(newValue, forProperty: "touchAction")
+            set(associatedValue: newValue, key: "touchAction", object: self)
         }
     }
     @IBInspectable var enabledAction: String {
         get {
-            return getProperty("enabledAction", initial: "")
+            return getAssociatedValue(key: "enabledAction", object: self, initialValue: {return ""}())
         }
         set {
-            setValue(newValue, forProperty: "enabledAction")
+            set(associatedValue: newValue, key: "enabledAction", object: self)
         }
     }
     @IBInspectable var disabledAction: String {
         get {
-            return getProperty("disabledAction", initial: "")
+            return getAssociatedValue(key: "disabledAction", object: self, initialValue: {return ""}())
         }
         set {
-            setValue(newValue, forProperty: "disabledAction")
+            set(associatedValue: newValue, key: "disabledAction", object: self)
         }
     }
     @IBOutlet var delegate: AnyObject? {
         get {
-            return getProperty("delegate", initial: nil)
+            return getAssociatedValue(key: "delegate", object: self, initialValue: {return nil}())
         }
         set {
-            setValue(newValue, forProperty: "delegate")
+            set(associatedValue: newValue, key: "delegate", object: self)
         }
     }
     @IBInspectable var setSelectedAfterAction: Bool {
         get {
-            return getProperty("setSelectedAfterAction", initial: false)
+            return getAssociatedValue(key: "setSelectedAfterAction", object: self, initialValue: {return false}())
         }
         set {
-            setValue(newValue, forProperty: "setSelectedAfterAction")
+            set(associatedValue: newValue, key: "setSelectedAfterAction", object: self)
         }
     }
     @IBInspectable var setSelectedAfterActionCheck: String {
         get {
-            return getProperty("setSelectedAfterActionCheck", initial: "")
+            return getAssociatedValue(key: "setSelectedAfterActionCheck", object: self, initialValue: {return ""}())
         }
         set {
-            setValue(newValue, forProperty: "setSelectedAfterActionCheck")
+            set(associatedValue: newValue, key: "setSelectedAfterActionCheck", object: self)
         }
     }
     internal func delegatePerformTouch() {
@@ -106,8 +107,8 @@ extension AMKButton {
                 } else if let executer = delegate as? ViewController {
                     executer.perform(aSelector, with: self)
                 } else if let executer = ez.topMostVC {
-                    if executer.respondsToSelector(aSelector) {
-                        executer.performSelector(aSelector, withObject: "")
+                    if executer.responds(to: aSelector) {
+                        executer.perform(aSelector, with: "")
                     }
                 }
             } else {
@@ -125,8 +126,8 @@ extension AMKButton {
                 } else if let executer = delegate as? ViewController {
                     executer.perform(aSelector, with: self)
                 } else if let executer = ez.topMostVC {
-                    if executer.respondsToSelector(aSelector) {
-                        executer.performSelector(aSelector, withObject: "")
+                    if executer.responds(to: aSelector) {
+                        executer.perform(aSelector, with: "")
                     }
                 }
             }

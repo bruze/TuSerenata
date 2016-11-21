@@ -226,8 +226,8 @@ class AMKLabel: UIView, XMLParserDelegate {
             }
         } else if let executer = ez.topMostVC {
             let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
-            if executer.respondsToSelector(aSelector) {
-                executer.performSelector(aSelector, withObject: "")
+            if executer.responds(to: aSelector) {
+                executer.perform(aSelector, with: "")
             }
         }
     }
@@ -238,7 +238,7 @@ extension Collection where Iterator.Element == String {
         var result = ""
         self.forEach { (component) in
             result.append(component)
-            if index(after: self.index(of: component)?) != self.endIndex {
+            if index(after: self.index(of: component)!) != self.endIndex {
                 result.append(separator)
             }
         }
