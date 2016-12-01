@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //try! FIRAuth.auth()?.signOut()
+        try! FIRAuth.auth()?.signOut()
         if let authorized = FIRAuth.auth()?.currentUser {
             mostrarPantallaAterrizaje()
             Gerente.unistancia.obtenerUsuario(authorized.uid, finalizar: {usuario in
