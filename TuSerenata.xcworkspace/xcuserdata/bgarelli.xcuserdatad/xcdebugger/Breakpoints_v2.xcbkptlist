@@ -272,7 +272,7 @@
             startingLineNumber = "99"
             endingLineNumber = "99"
             landmarkName = "filtrarGrupos(_:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -289,6 +289,70 @@
             endingLineNumber = "144"
             landmarkName = "actualizarFiltrados()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuSerenata/Controles/Registro.swift"
+            timestampString = "502312945.231188"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "intenteRegistro()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuSerenata/Controles/Registro.swift"
+            timestampString = "502312946.167071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "intenteRegistro()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TuSerenata.Registro.(intenteRegistro () -&gt; ()).(closure #1)"
+                  moduleName = "TuSerenata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bgarelli/Git/TuSerenata/TuSerenata/TuSerenata/Controles/Registro.swift"
+                  timestampString = "502312970.710649"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1469">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TuSerenata.Registro.(intenteRegistro () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "TuSerenata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bgarelli/Git/TuSerenata/TuSerenata/TuSerenata/Controles/Registro.swift"
+                  timestampString = "502312970.713987"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

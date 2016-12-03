@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="1186"/>
+            <point key="canvasLocation" x="631" y="1200"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="FMz-tK-Vhx">
@@ -161,15 +161,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5t2-6A-AgL">
-                                <rect key="frame" x="10" y="307" width="270" height="289"/>
+                                <rect key="frame" x="10" y="351" width="355" height="245"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="245" id="3Xi-ae-T4B"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="UOJ-LI-g8T" id="MP2-go-rPV"/>
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="EfI-2k-g4a"/>
                                 </connections>
                             </tableView>
                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wef-KA-tfl" userLabel="Buscar" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="92.5" y="260" width="105" height="37"/>
+                                <rect key="frame" x="135" y="304" width="105" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="BPH-In-zkg"/>
                                     <constraint firstAttribute="width" constant="105" id="VcE-QY-GDM"/>
@@ -204,7 +207,7 @@
                                 </connections>
                             </textField>
                             <view hidden="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGW-Ff-mxc" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="7" y="183" width="276" height="302"/>
+                                <rect key="frame" x="50" y="183" width="276" height="302"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="276" id="42u-yd-0qJ"/>
@@ -232,7 +235,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="577-YT-Ra1" userLabel="Estrella1" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="109" y="136" width="24" height="24"/>
+                                <rect key="frame" x="109" y="180" width="24" height="24"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="BUr-bV-RoR"/>
@@ -250,7 +253,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsP-zr-f8i" userLabel="Estrella2" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="141" y="136" width="24" height="24"/>
+                                <rect key="frame" x="141" y="180" width="24" height="24"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="NH4-d8-RwO"/>
@@ -269,7 +272,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nb0-d8-ikq" userLabel="Estrella3" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="173" y="136" width="24" height="24"/>
+                                <rect key="frame" x="173" y="180" width="24" height="24"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="LRA-Dk-d3d"/>
@@ -288,7 +291,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-Zz-2Ia" userLabel="Estrella4" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="205" y="136" width="24" height="24"/>
+                                <rect key="frame" x="205" y="180" width="24" height="24"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="ChP-Fb-ICy"/>
@@ -307,7 +310,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-Gv-Zv8" userLabel="Estrella5" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="237" y="136" width="24" height="24"/>
+                                <rect key="frame" x="237" y="180" width="24" height="24"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="D4I-Hp-Q1V"/>
@@ -331,7 +334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHz-Yy-CB0" userLabel="Masculina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="80" y="168" width="35" height="35"/>
+                                <rect key="frame" x="80" y="212" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="dBB-mH-Yke"/>
                                     <constraint firstAttribute="height" constant="35" id="sLP-dC-KQW"/>
@@ -348,7 +351,7 @@
                                 </connections>
                             </view>
                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I94-xc-A0a" userLabel="Femenina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="115" y="168" width="35" height="35"/>
+                                <rect key="frame" x="115" y="212" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="i5I-58-ypr"/>
                                     <constraint firstAttribute="width" constant="35" id="xsk-Ui-ycL"/>
@@ -435,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoC-E8-SNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="1186"/>
+            <point key="canvasLocation" x="1554" y="1173"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="IHl-Kl-6mJ">
@@ -726,9 +729,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uy2-g1-Buf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434.5" y="336.5"/>
+            <point key="canvasLocation" x="673" y="350"/>
         </scene>
-        <!--Registrarse-->
+        <!--Delegate-->
         <scene sceneID="RSH-f8-UM7">
             <objects>
                 <viewController storyboardIdentifier="registro" title="Registrarse" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aQp-wy-4NZ" customClass="Registro" customModule="TuSerenata" customModuleProvider="target" sceneMemberID="viewController">
@@ -869,11 +872,11 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="defLabelYOffset">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="intenteLogueo"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="intenteRegistro"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autoCenter" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="delegate" destination="DtM-ay-SmC" id="mZk-hP-nnN"/>
+                                    <outlet property="delegate" destination="aQp-wy-4NZ" id="pdh-Mv-6pT"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -899,10 +902,14 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="clave" destination="NzZ-pP-8qs" id="a0f-BT-Zrc"/>
+                        <outlet property="email" destination="eiY-YN-nTB" id="MC3-0Z-Npx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNw-bt-81o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="336"/>
+            <point key="canvasLocation" x="1516" y="336"/>
         </scene>
     </scenes>
     <resources>
@@ -910,6 +917,6 @@
         <image name="profile" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oCw-2d-vay"/>
+        <segue reference="mix-QV-U7c"/>
     </inferredMetricsTieBreakers>
 </document>
