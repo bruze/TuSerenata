@@ -28,7 +28,10 @@ import DualSlideMenu
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    func logout() {
+        try! FIRAuth.auth()?.signOut()
+        appDelegate.authorize()
+    }
     func irACrearSerenata() {
         appDelegate.slide!.toggle("right")
         let navegador = ((ez.topMostVC! as? DualSlideMenuViewController)!.mainView as? UINavigationController)!

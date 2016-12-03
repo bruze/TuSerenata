@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8mU-XG-Y8D">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8mU-XG-Y8D">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Delegate-->
@@ -20,7 +24,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="fRl-eg-RIK">
                                 <rect key="frame" x="0.0" y="192" width="375" height="415"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="q4B-VY-TNP">
                                         <rect key="frame" x="0.0" y="1" width="375" height="44"/>
@@ -36,7 +40,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="2nf-hk-ejs"/>
                                 </connections>
                             </tableView>
-                            <view autoresizesSubviews="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AxG-Da-Nov" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AxG-Da-Nov" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="TWk-xO-66r"/>
@@ -45,13 +49,13 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Reservar Serenata"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
-                                        <color key="value" red="1" green="0.81402818218660922" blue="0.21773651824229201" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.81402818218660922" blue="0.21773651824229201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
-                                        <color key="value" red="0.70370592948717947" green="0.44727707276984408" blue="0.28453506673692508" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.70370592948717947" green="0.44727707276984408" blue="0.28453506673692508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
-                                        <color key="value" red="1" green="0.098819292749245946" blue="0.28449897502536081" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.098819292749245946" blue="0.28449897502536081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="defLabelXOffset">
                                         <real key="value" value="118"/>
@@ -74,7 +78,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Vbq-Gf-qfw" secondAttribute="trailing" id="L6x-jX-P8N"/>
                             <constraint firstItem="Vbq-Gf-qfw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mbf-Yn-9dG"/>
@@ -100,7 +104,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="buttonView" destination="AxG-Da-Nov" id="kuD-lB-UZf"/>
                         <outlet property="recognizeEmployeeContainerHeight" destination="kF9-YJ-Kks" id="zLH-Fl-ZbT"/>
@@ -111,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217.5" y="1186.5"/>
+            <point key="canvasLocation" x="670" y="1186"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="FMz-tK-Vhx">
@@ -122,54 +125,51 @@
                         <viewControllerLayoutGuide type="bottom" id="aAu-8X-MzC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Zh-Tv-q0H" customClass="Gradiente" customModule="TuSerenata" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="290" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-gy-eu8" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="68" y="606" width="240" height="51"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-gy-eu8" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="67" y="606" width="240" height="51"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="9IY-7x-xTO"/>
                                     <constraint firstAttribute="height" constant="51" id="Y9W-nN-YSh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
-                                        <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Comprar"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
-                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
-                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfQ-Sa-EZJ">
-                                <rect key="frame" x="10" y="79" width="59" height="21"/>
+                                <rect key="frame" x="10" y="35" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7z-Hs-NWk">
-                                <rect key="frame" x="10" y="113" width="61" height="21"/>
+                                <rect key="frame" x="10" y="69" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5t2-6A-AgL">
-                                <rect key="frame" x="10" y="351" width="355" height="245"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="245" id="3Xi-ae-T4B"/>
-                                </constraints>
+                                <rect key="frame" x="10" y="307" width="270" height="289"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="UOJ-LI-g8T" id="MP2-go-rPV"/>
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="EfI-2k-g4a"/>
                                 </connections>
                             </tableView>
-                            <view tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wef-KA-tfl" userLabel="Buscar" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="135" y="304" width="105" height="37"/>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wef-KA-tfl" userLabel="Buscar" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="92.5" y="260" width="105" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="BPH-In-zkg"/>
                                     <constraint firstAttribute="width" constant="105" id="VcE-QY-GDM"/>
@@ -177,18 +177,18 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Buscar"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
-                                        <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
-                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
-                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xii-JL-Pot">
-                                <rect key="frame" x="99" y="73" width="266" height="30"/>
+                                <rect key="frame" x="99" y="29" width="181" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -196,7 +196,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ti7-K6-s5W">
-                                <rect key="frame" x="99" y="106" width="266" height="30"/>
+                                <rect key="frame" x="99" y="62" width="181" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -204,21 +204,21 @@
                                 </connections>
                             </textField>
                             <view hidden="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGW-Ff-mxc" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="50" y="183" width="276" height="302"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="7" y="183" width="276" height="302"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="276" id="42u-yd-0qJ"/>
                                     <constraint firstAttribute="height" constant="302" id="vJT-R6-Ppb"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNM-mZ-BZG">
-                                <rect key="frame" x="10" y="147" width="52" height="21"/>
+                                <rect key="frame" x="10" y="103" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dS9-aM-HH1">
-                                <rect key="frame" x="99" y="139" width="266" height="30"/>
+                                <rect key="frame" x="99" y="95" width="181" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -226,14 +226,14 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puntuación:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QQ-l8-43i">
-                                <rect key="frame" x="10" y="181" width="91" height="21"/>
+                                <rect key="frame" x="10" y="137" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="577-YT-Ra1" userLabel="Estrella1" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="109" y="180" width="24" height="24"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="577-YT-Ra1" userLabel="Estrella1" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="109" y="136" width="24" height="24"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="BUr-bV-RoR"/>
                                     <constraint firstAttribute="width" constant="24" id="Cg2-DC-kdJ"/>
@@ -249,9 +249,9 @@
                                     <outlet property="nextSibling" destination="fsP-zr-f8i" id="5Jv-7G-Lpu"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsP-zr-f8i" userLabel="Estrella2" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="141" y="180" width="24" height="24"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsP-zr-f8i" userLabel="Estrella2" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="141" y="136" width="24" height="24"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="NH4-d8-RwO"/>
                                     <constraint firstAttribute="height" constant="24" id="Voi-Yb-aEZ"/>
@@ -268,9 +268,9 @@
                                     <outlet property="previousSibling" destination="577-YT-Ra1" id="rtf-Si-WMt"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nb0-d8-ikq" userLabel="Estrella3" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="173" y="180" width="24" height="24"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nb0-d8-ikq" userLabel="Estrella3" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="173" y="136" width="24" height="24"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="LRA-Dk-d3d"/>
                                     <constraint firstAttribute="height" constant="24" id="yIF-R8-fUg"/>
@@ -287,9 +287,9 @@
                                     <outlet property="previousSibling" destination="fsP-zr-f8i" id="qi6-jR-3vQ"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-Zz-2Ia" userLabel="Estrella4" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="205" y="180" width="24" height="24"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-Zz-2Ia" userLabel="Estrella4" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="205" y="136" width="24" height="24"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="ChP-Fb-ICy"/>
                                     <constraint firstAttribute="width" constant="24" id="eG3-U0-Kye"/>
@@ -306,9 +306,9 @@
                                     <outlet property="previousSibling" destination="nb0-d8-ikq" id="nqU-Gu-mxe"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-Gv-Zv8" userLabel="Estrella5" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="237" y="180" width="24" height="24"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-Gv-Zv8" userLabel="Estrella5" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="237" y="136" width="24" height="24"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="D4I-Hp-Q1V"/>
                                     <constraint firstAttribute="height" constant="24" id="rDF-rS-NFC"/>
@@ -325,20 +325,20 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voz:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Naa-xa-nML">
-                                <rect key="frame" x="23" y="210" width="34" height="21"/>
+                                <rect key="frame" x="23" y="166" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view tag="5" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHz-Yy-CB0" userLabel="Masculina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="80" y="212" width="35" height="35"/>
+                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHz-Yy-CB0" userLabel="Masculina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="80" y="168" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="dBB-mH-Yke"/>
                                     <constraint firstAttribute="height" constant="35" id="sLP-dC-KQW"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
-                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="M"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="seleccionGenero:"/>
@@ -347,15 +347,15 @@
                                     <outlet property="delegate" destination="UOJ-LI-g8T" id="Ndv-3B-Urz"/>
                                 </connections>
                             </view>
-                            <view tag="4" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I94-xc-A0a" userLabel="Femenina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
-                                <rect key="frame" x="115" y="212" width="35" height="35"/>
+                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I94-xc-A0a" userLabel="Femenina" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="115" y="168" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="i5I-58-ypr"/>
                                     <constraint firstAttribute="width" constant="35" id="xsk-Ui-ycL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
-                                        <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="F"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="seleccionGenero:"/>
@@ -365,7 +365,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UrP-gy-eu8" firstAttribute="leading" secondItem="2Zh-Tv-q0H" secondAttribute="leading" constant="67" id="1tN-xk-n8C"/>
                             <constraint firstItem="Ti7-K6-s5W" firstAttribute="leading" secondItem="Xii-JL-Pot" secondAttribute="leading" id="2fA-E0-S4Y"/>
@@ -415,14 +415,13 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">
-                                <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteFinal">
-                                <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="campoCiudad" destination="Xii-JL-Pot" id="8Fj-Ev-Hfm"/>
                         <outlet property="campoGenero" destination="Ti7-K6-s5W" id="ICb-zO-wgC"/>
@@ -436,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoC-E8-SNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764.5" y="1186.5"/>
+            <point key="canvasLocation" x="1486" y="1186"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="IHl-Kl-6mJ">
@@ -446,7 +445,7 @@
             </objects>
             <point key="canvasLocation" x="399.5" y="717"/>
         </scene>
-        <!--Menu-->
+        <!--Delegate-->
         <scene sceneID="hez-T4-1oT">
             <objects>
                 <viewController storyboardIdentifier="Menu" title="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S0F-lp-uiv" customClass="MenuVC" customModule="TuSerenata" customModuleProvider="target" sceneMemberID="viewController">
@@ -470,7 +469,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de Usuario o Grupo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZv-f6-HQy">
                                         <rect key="frame" x="38" y="243" width="215" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -483,7 +482,7 @@
                                     <constraint firstItem="vZv-f6-HQy" firstAttribute="top" secondItem="4jJ-eu-g03" secondAttribute="bottom" constant="8" id="l8t-Nq-px0"/>
                                 </constraints>
                             </view>
-                            <view tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ryq-9h-VRd" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryq-9h-VRd" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="350" width="290" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PZI-pf-1zk"/>
@@ -492,27 +491,44 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Comprar Serenata"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
-                                        <color key="value" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZe-hQ-pIP" userLabel="Logout" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="617" width="290" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="89t-qC-5JJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="logout"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="logout"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="S0F-lp-uiv" id="qzI-gR-S6r"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FZe-hQ-pIP" secondAttribute="trailing" id="00i-1F-wx9"/>
                             <constraint firstAttribute="trailing" secondItem="0oV-Se-vZc" secondAttribute="trailing" id="9TT-3y-tvH"/>
+                            <constraint firstItem="Avh-yI-RLL" firstAttribute="top" secondItem="FZe-hQ-pIP" secondAttribute="bottom" id="At1-bR-FXb"/>
                             <constraint firstItem="0oV-Se-vZc" firstAttribute="top" secondItem="6HH-0Z-PQF" secondAttribute="topMargin" id="Dnv-FP-ZqA"/>
                             <constraint firstItem="0oV-Se-vZc" firstAttribute="leading" secondItem="6HH-0Z-PQF" secondAttribute="leading" id="Rzn-Ym-T6K"/>
+                            <constraint firstItem="FZe-hQ-pIP" firstAttribute="leading" secondItem="6HH-0Z-PQF" secondAttribute="leading" id="T2U-O1-Jqi"/>
                             <constraint firstItem="Ryq-9h-VRd" firstAttribute="top" secondItem="0oV-Se-vZc" secondAttribute="bottom" constant="8" id="TMo-XJ-iFB"/>
                             <constraint firstItem="Ryq-9h-VRd" firstAttribute="leading" secondItem="6HH-0Z-PQF" secondAttribute="leading" id="u4j-Lv-uVJ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">
-                                <color key="value" red="0.58619791666666665" green="0.33069955688368768" blue="0.24746374871646354" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.58619791666666665" green="0.33069955688368768" blue="0.24746374871646354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteFinal">
-                                <color key="value" red="1" green="0.73758980023743614" blue="0.46685800640729758" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="1" green="0.73758980023743614" blue="0.46685800640729758" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -533,7 +549,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8mU-XG-Y8D" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dV3-O6-7ia">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -545,7 +560,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4s7-jx-8Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.5" y="336.5"/>
+            <point key="canvasLocation" x="-159" y="336"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="Ynf-G4-FmF">
@@ -589,9 +604,9 @@
                                                     <outlet property="delegate" destination="DtM-ay-SmC" id="7xv-bE-oqX"/>
                                                 </connections>
                                             </textField>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oeo-xf-htB" userLabel="Button Login" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeo-xf-htB" userLabel="Button Login" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
                                                 <rect key="frame" x="68" y="395" width="240" height="65"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="Kcq-cf-CZr"/>
                                                     <constraint firstAttribute="height" constant="65" id="zgJ-aY-hVv"/>
@@ -599,13 +614,13 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="ENTRAR"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
-                                                        <color key="value" red="0.9678105323397248" green="0.9685220060793438" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="0.9678105323397248" green="0.9685220060793438" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
-                                                        <color key="value" red="0.79270778597878744" green="0.64232906879194629" blue="0.56685192953020136" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="0.79270778597878744" green="0.64232906879194629" blue="0.56685192953020136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
-                                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="defLabelXOffset">
                                                         <real key="value" value="95"/>
@@ -620,9 +635,9 @@
                                                     <outlet property="delegate" destination="DtM-ay-SmC" id="FOa-Ix-ZDb"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V11-7D-Ugy" userLabel="Button Login" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V11-7D-Ugy" userLabel="Button Login" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
                                                 <rect key="frame" x="68" y="489" width="240" height="35"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="bBu-xH-2jO"/>
                                                     <constraint firstAttribute="height" constant="35" id="w4m-8F-Vgj"/>
@@ -630,13 +645,13 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="REGISTRARSE"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
-                                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
-                                                        <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
-                                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="1" green="0.42990755780000001" blue="0.083807330319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="defLabelXOffset">
                                                         <real key="value" value="95"/>
@@ -681,7 +696,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZBm-qo-jEq" firstAttribute="top" secondItem="ust-Eg-aux" secondAttribute="bottom" id="6NJ-Dt-T3p"/>
                             <constraint firstAttribute="trailing" secondItem="ust-Eg-aux" secondAttribute="trailing" id="Cjc-PB-l4s"/>
@@ -690,10 +705,10 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">
-                                <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteFinal">
-                                <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
@@ -702,7 +717,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="botonEntrar" destination="oeo-xf-htB" id="juM-SM-ZhN"/>
                         <outlet property="campoContrasena" destination="WSP-Au-siO" id="TcJ-Li-Zde"/>
@@ -744,13 +758,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUB-3m-lIZ">
                                         <rect key="frame" x="8" y="10" width="62" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euz-iC-v4l">
                                         <rect key="frame" x="8" y="50" width="63" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rj6-q0-W05">
@@ -761,7 +775,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjU-hI-MB1">
                                         <rect key="frame" x="19" y="90" width="41" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-YN-nTB">
@@ -777,13 +791,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-Wa-C0H">
                                         <rect key="frame" x="18" y="130" width="43" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirma Clave" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhx-ub-hZ2">
                                         <rect key="frame" x="0.0" y="173" width="80" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACh-j8-QGp">
@@ -833,7 +847,7 @@
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1z-rI-3V6" userLabel="Button Login" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
                                 <rect key="frame" x="68" y="594" width="240" height="65"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Pdo-XV-K2u"/>
                                     <constraint firstAttribute="width" constant="240" id="XfG-FR-NDf"/>
@@ -841,13 +855,13 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="REGISTRO"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
-                                        <color key="value" red="0.96781053230000003" green="0.96852200610000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.96781053230000003" green="0.96852200610000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
-                                        <color key="value" red="0.79270778600000003" green="0.64232906879999996" blue="0.56685192949999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.79270778600000003" green="0.64232906879999996" blue="0.56685192949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="pressBackColor">
-                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="defLabelXOffset">
                                         <real key="value" value="95"/>
@@ -863,7 +877,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fYF-ao-yh9" firstAttribute="top" secondItem="Qp2-dG-ISI" secondAttribute="bottom" constant="150" id="6b0-1y-6P2"/>
                             <constraint firstItem="4V1-IT-a3q" firstAttribute="top" secondItem="d1z-rI-3V6" secondAttribute="bottom" constant="8" id="Ju9-1E-5eT"/>
@@ -878,18 +892,17 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">
-                                <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.58619791669999999" green="0.33069955690000002" blue="0.24746374870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteFinal">
-                                <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="1" green="0.73758980019999998" blue="0.46685800640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNw-bt-81o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870.5" y="336.5"/>
+            <point key="canvasLocation" x="961" y="336"/>
         </scene>
     </scenes>
     <resources>
@@ -897,6 +910,6 @@
         <image name="profile" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mix-QV-U7c"/>
+        <segue reference="oCw-2d-vay"/>
     </inferredMetricsTieBreakers>
 </document>

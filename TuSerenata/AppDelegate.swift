@@ -31,11 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
     }
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //try! FIRAuth.auth()?.signOut()
+    func authorize() {
         if let authorized = FIRAuth.auth()?.currentUser {
             mostrarPantallaAterrizaje()
             Gerente.unistancia.obtenerUsuario(authorized.uid, finalizar: {usuario in
@@ -47,6 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window!.rootViewController = login//slide
             window!.makeKeyAndVisible()
         }
+    }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        authorize()
         
         JLChatAppearence.configIncomingMessages(nil, showIncomingSenderImage: false, incomingTextColor: nil)
         JLChatAppearence.configOutgoingMessages(nil, showOutgoingSenderImage: false, outgoingTextColor: nil)
