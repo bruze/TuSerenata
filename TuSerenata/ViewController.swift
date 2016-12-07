@@ -48,6 +48,10 @@ class ViewController: UIViewController {
 
     @IBAction func itemMenuTap(_ sender: UIBarButtonItem) {
         //print(Gerente.unistancia.usuario?.toAnyObject())
+        guard gerente.usuario != nil else {
+            appDelegate.logout()
+            return
+        }
         (appDelegate.slide!.leftMenu as? MenuVC)!.nombre.text = gerente.usuario!.nombre
         appDelegate.slide!.toggle("right")
     }

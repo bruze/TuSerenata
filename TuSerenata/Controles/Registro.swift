@@ -9,6 +9,10 @@
 import UIKit
 import FirebaseAuth
 class Registro: UIViewController {
+    @IBOutlet weak var genero: UITextField!
+    @IBOutlet weak var ciudad: UITextField!
+    @IBOutlet weak var apellido: UITextField!
+    @IBOutlet weak var nombre: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var clave: UITextField!
     @IBAction func irAtras(_ sender: UIBarButtonItem) {
@@ -24,7 +28,7 @@ class Registro: UIViewController {
                 print(error!)
             }
             if usuario != nil {
-                let nuevoUsuario = Usuario.init(nombre: "", ciudad: "", sexo: "", completed: true, key: usuario!.uid)
+                let nuevoUsuario = Usuario.init(nombre: self.nombre.text!+" "+self.apellido.text!, ciudad: self.ciudad.text!, sexo: self.genero.text!, completed: true, key: usuario!.uid)
                 let nuevoUsuarioReferencia = gerente.users.child(usuario!.uid)
                 nuevoUsuarioReferencia.setValue(nuevoUsuario.toAnyObject())
                 //usuario!.displayName =
