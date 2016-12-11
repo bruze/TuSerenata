@@ -18,10 +18,20 @@ class Registro: UIViewController {
     @IBAction func irAtras(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    
     override func viewDidLoad() {
     }
-    
+    func ocultarBotonesHabilitar() {
+        botonHabilitarGrupo.isHidden = true
+        botonHabilitarUsuario.isHidden = true
+    }
+    func habilitarRegistroUsuario() {
+        ocultarBotonesHabilitar()
+        botonRegistro.isHidden = false
+        camposUsuario.isHidden = false
+    }
+    func habilitarRegistroGrupo() {
+        ocultarBotonesHabilitar()
+    }
     func intenteRegistro() {
         FIRAuth.auth()?.createUser(withEmail: email.text!, password: clave.text!, completion: { (usuario, error) in
             if error != nil {

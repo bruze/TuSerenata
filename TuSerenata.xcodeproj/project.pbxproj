@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		324C9B811DADEEC700462550 /* FIRDataSnapshot+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */; };
 		327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3270170F1DA0243A00987DCF /* GoogleService-Info.plist */; };
+		32D37F1B1DF7A0D4001966F9 /* Registro+Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */; };
 		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
 		9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */; };
 		9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FIRDataSnapshot+Ext.swift"; path = "Tool/FIRDataSnapshot+Ext.swift"; sourceTree = "<group>"; };
 		3270170F1DA0243A00987DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Registro+Outlet.swift"; path = "Controles/Registro+Outlet.swift"; sourceTree = "<group>"; };
 		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Loc.swift"; sourceTree = "<group>"; };
 		9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+QuickReturnButton.swift"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				9D24805E1D998F1E001440EB /* Login+TextField.swift */,
 				9D483D3B1D99AF2B00AD569C /* Registro.swift */,
 				9D7E0C3E1D9DABBE00A5A112 /* CrearSerenata+TextField.swift */,
+				32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */,
 			);
 			name = Controles;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				9DC594131D8C82B900639952 /* CGRect+Extension.swift in Sources */,
 				9DC600721DD365A1007E4E25 /* AMKLabel+ArcText.swift in Sources */,
 				9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */,
+				32D37F1B1DF7A0D4001966F9 /* Registro+Outlet.swift in Sources */,
 				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
 				9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */,
 				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,

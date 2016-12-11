@@ -755,7 +755,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYF-ao-yh9" userLabel="Datos">
+                            <view hidden="YES" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYF-ao-yh9" userLabel="Datos">
                                 <rect key="frame" x="25" y="170" width="325" height="397"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUB-3m-lIZ">
@@ -886,7 +886,7 @@
                                     <constraint firstItem="eiY-YN-nTB" firstAttribute="trailing" secondItem="rj6-q0-W05" secondAttribute="trailing" id="zAm-hm-96X"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1z-rI-3V6" userLabel="Button Login" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                            <view hidden="YES" tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1z-rI-3V6" userLabel="Button Login" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
                                 <rect key="frame" x="67" y="594" width="240" height="65"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -917,10 +917,40 @@
                                     <outlet property="delegate" destination="aQp-wy-4NZ" id="pdh-Mv-6pT"/>
                                 </connections>
                             </view>
+                            <view tag="102" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVR-qL-zwa" userLabel="Registro Usuario" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="67" y="150" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="f77-Kt-HZi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Registrar como Usuario"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="habilitarRegistroUsuario"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
+                                        <color key="value" red="0.75889423079999996" green="0.35771667509999999" blue="0.38892065570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view tag="103" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vc-sH-xbW" userLabel="Registro Grupo" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="67" y="360" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="Registrar Grupo"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="habilitarRegistroGrupo"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackColor">
+                                        <color key="value" red="0.75889423079999996" green="0.35771667509999999" blue="0.38892065570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="DVR-qL-zwa" firstAttribute="leading" secondItem="M7n-yF-beX" secondAttribute="leading" constant="67" id="38V-97-n5N"/>
                             <constraint firstItem="fYF-ao-yh9" firstAttribute="top" secondItem="Qp2-dG-ISI" secondAttribute="bottom" constant="150" id="6b0-1y-6P2"/>
+                            <constraint firstItem="2Vc-sH-xbW" firstAttribute="leading" secondItem="M7n-yF-beX" secondAttribute="leading" constant="67" id="7Nw-be-LZG"/>
+                            <constraint firstAttribute="trailing" secondItem="2Vc-sH-xbW" secondAttribute="trailing" constant="68" id="9Pr-tB-8RU"/>
+                            <constraint firstItem="4V1-IT-a3q" firstAttribute="top" secondItem="2Vc-sH-xbW" secondAttribute="bottom" constant="179" id="HoD-Mv-jlj"/>
+                            <constraint firstItem="2Vc-sH-xbW" firstAttribute="top" secondItem="DVR-qL-zwa" secondAttribute="bottom" constant="82" id="I0a-NC-tgr"/>
                             <constraint firstItem="4V1-IT-a3q" firstAttribute="top" secondItem="d1z-rI-3V6" secondAttribute="bottom" constant="8" id="Ju9-1E-5eT"/>
                             <constraint firstAttribute="trailing" secondItem="fYF-ao-yh9" secondAttribute="trailing" constant="25" id="KL3-gf-rZW"/>
                             <constraint firstItem="jOh-2B-yat" firstAttribute="leading" secondItem="M7n-yF-beX" secondAttribute="leading" id="L3T-47-gs8"/>
@@ -929,7 +959,9 @@
                             <constraint firstItem="d1z-rI-3V6" firstAttribute="leading" secondItem="M7n-yF-beX" secondAttribute="leading" constant="67" id="ZSx-6I-uul"/>
                             <constraint firstItem="fYF-ao-yh9" firstAttribute="leading" secondItem="M7n-yF-beX" secondAttribute="leading" constant="25" id="box-W5-YyC"/>
                             <constraint firstAttribute="trailing" secondItem="jOh-2B-yat" secondAttribute="trailing" id="g06-vl-dpt"/>
+                            <constraint firstItem="DVR-qL-zwa" firstAttribute="top" secondItem="Qp2-dG-ISI" secondAttribute="bottom" constant="130" id="gaf-TP-WZg"/>
                             <constraint firstAttribute="trailing" secondItem="d1z-rI-3V6" secondAttribute="trailing" constant="68" id="n2Q-1B-mxd"/>
+                            <constraint firstAttribute="trailing" secondItem="DVR-qL-zwa" secondAttribute="trailing" constant="68" id="p7Z-xl-alP"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradienteInicial">
