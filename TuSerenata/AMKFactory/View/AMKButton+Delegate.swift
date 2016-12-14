@@ -42,7 +42,7 @@ extension AMKButton {
             }
         }
     }*/
-    var actionBlocks: [() -> ()]? {
+    var actionBlocks: [() -> ()] {
         get {
             return getAssociatedValue(key: "actionBlocks", object: self, initialValue: {return []}())
         }
@@ -99,8 +99,8 @@ extension AMKButton {
         }
     }
     internal func delegatePerformTouch() {
-        if !touchAction.isEmpty || !(actionBlocks?.isEmpty)! {
-            if actionBlocks?.count == 0 {
+        if !touchAction.isEmpty || !(actionBlocks.isEmpty) {
+            if actionBlocks.count == 0 {
                 let aSelector = Selector.init(extendedGraphemeClusterLiteral: touchAction)
                 if let executer = delegate as? UIViewController {
                     executer.perform(aSelector, with: self)
@@ -112,7 +112,7 @@ extension AMKButton {
                     }
                 }
             } else {
-                for action in actionBlocks! {
+                for action in actionBlocks {
                     action()
                 }
             }
@@ -150,7 +150,7 @@ extension AMKButton {
         }
     }
     internal func addBlock(_ block: @escaping () -> (), ForAction action: Int) -> AMKButton {
-        actionBlocks?.append(block)
+        actionBlocks.append(block)
         return self
     }
     //internal func delegatePerform() {

@@ -12,9 +12,10 @@ import Firebase
 class Musico: Usuario {
     
     //let key: String!
-    let voz: String!
-    let genero: String!
-    var estrellas: Int!
+    var voz: String
+    var genero: String
+    var estrellas: Int
+    
     //let ref: FIRDatabaseReference?
     //var completed: Bool!
     
@@ -29,9 +30,12 @@ class Musico: Usuario {
     }
     
     init(captura: FIRDataSnapshot) {
+        
         let dict = anytool.dicstrany(any: captura.value!)
+        //nombre = (dict["nombre"] as? String)!
         genero = (dict["genero"] as? String)!
-        voz = (dict["voz"] as? String)!
+        //ciudad = (dict["ciudad"] as? String)!
+        voz = (dict["voces"] as? String)!
         estrellas = (dict["estrellas"] as? Int)!
         super.init(snapshot: captura)
        /* key = snapshot.key
@@ -44,7 +48,11 @@ class Musico: Usuario {
     override func toAnyObject() -> AnyObject {
         return ([
             "nombre": nombre,
-            "genero": genero
+            "genero": genero,
+            "ciudad": ciudad,
+            "musico": 1,
+            "voces": voz,
+            "estrellas": estrellas
         ] as? AnyObject)!
     }
     

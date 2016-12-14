@@ -14,6 +14,11 @@ extension Registro {
             return view.viewWithTag(100)!
         }
     }
+    dynamic var camposGrupo: UIView {
+        get {
+            return view.viewWithTag(104)!
+        }
+    }
     dynamic var botonRegistro: AMKButton {
         get {
             return (view.viewWithTag(101) as? AMKButton)!

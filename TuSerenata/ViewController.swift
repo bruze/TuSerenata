@@ -26,8 +26,8 @@ class ViewController: UIViewController {
         localizador.startUpdatingLocation()
         setInitialRecognizeButtonHeight()
         setupTable()
-        mostrarCarga()
-        gerente.filtrarMusicos({ self.notificarActualizarFiltrados() }, condiciones: nil)
+        //mostrarCarga()
+        //gerente.filtrarMusicos({ self.notificarActualizarFiltrados() }, condiciones: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

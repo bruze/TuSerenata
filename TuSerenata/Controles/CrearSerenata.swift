@@ -81,6 +81,9 @@ class CrearSerenata: UIViewController {
                  return resultado || self.campoCiudad.text!.isEmpty()
             }]) }, ForAction: 0)
         botonBuscar.addBlock({ self.tableView.reloadData() }, ForAction: 1)*/
+        gerente.filtrarMusicos({ 
+            self.tableView.reloadData()
+        }, condiciones: nil)
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

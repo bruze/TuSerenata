@@ -11,9 +11,9 @@ import JLChatViewController
 
 class Usuario: NSObject {
     let key: String!
-    let nombre: String!
-    let ciudad: String!
-    let sexo: String!
+    var nombre: String
+    var ciudad: String
+    var sexo: String
     let ref: FIRDatabaseReference?
     var refMensajes: FIRDatabaseReference?
     var mensajesNuevos: [JLMessage]?
@@ -34,7 +34,11 @@ class Usuario: NSObject {
          key    = snapshot.key
         nombre  = anytool.dicstrany(any: snapshot.value!)["nombre"] as! String
         ciudad  = anytool.dicstrany(any: snapshot.value!)["ciudad"] as! String
-         sexo   = anytool.dicstrany(any: snapshot.value!)["sexo"] as! String
+        sexo = ""
+        if snapshot.hasChild("sexo") {
+            sexo   = anytool.dicstrany(any: snapshot.value!)["sexo"] as! String
+        }
+         //sexo   = anytool.dicstrany(any: snapshot.value!)["sexo"] as! String
          ref = snapshot.ref
         if snapshot.hasChild("mensajes") {
             let mensajes = snapshot.childSnapshot(forPath: "mensajes")
@@ -57,7 +61,8 @@ class Usuario: NSObject {
         return ([
             "nombre": nombre,
             "ciudad": ciudad,
-            "sexo": sexo
+            "sexo": sexo,
+            "musico": 0
             //"genero": genero,
             //"completed": completed
         ] as? AnyObject)!

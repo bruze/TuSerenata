@@ -54,7 +54,7 @@ class Gerente: NSObject {
                             finalizar(Usuario(snapshot: capturaUsuario))
                         }
                     } else {
-                        if capturaUsuario.hasChilds("genero", "ciudad", "voz", "estrellas") {
+                        if capturaUsuario.hasChilds("genero", "ciudad", "estrellas") && capturaUsuario.hasChild("voces") {
                             finalizar(Musico(captura: capturaUsuario))
                         } else {
                             return // esperar otro update del server
@@ -103,12 +103,14 @@ class Gerente: NSObject {
     }
     func filtrarMusicos(_ notificar: @escaping BloqueVoid, condiciones: [ChequeoGrupo]?) /*-> [Musico]*/ {
         musicosFiltrados.removeAll()
-        grupos.observe(.childAdded, with: { (captura) in
+        grupos.child("musicos").observe(.value, with: { (captura) in
             for child in captura.children {
                 self.obtenerMusico((child as AnyObject).key!!, finalizar: { musico in
                     if !self.musicosFiltrados.contains(musico!) {
                         self.musicosFiltrados.append(musico!)
                     }
+                    /*print(self.musicosFiltrados.count)
+                    print(captura.childrenCount)*/
                     if UInt(self.musicosFiltrados.count) == captura.childrenCount {
                         notificar()
                     }
