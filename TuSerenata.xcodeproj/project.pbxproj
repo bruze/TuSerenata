@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321C7B081E017F1A0057439E /* DetalleGrupo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C7B071E017F1A0057439E /* DetalleGrupo.swift */; };
 		324C9B811DADEEC700462550 /* FIRDataSnapshot+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */; };
 		327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3270170F1DA0243A00987DCF /* GoogleService-Info.plist */; };
 		32D37F1B1DF7A0D4001966F9 /* Registro+Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321C7B071E017F1A0057439E /* DetalleGrupo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalleGrupo.swift; path = Controles/DetalleGrupo.swift; sourceTree = "<group>"; };
 		324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FIRDataSnapshot+Ext.swift"; path = "Tool/FIRDataSnapshot+Ext.swift"; sourceTree = "<group>"; };
 		3270170F1DA0243A00987DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Registro+Outlet.swift"; path = "Controles/Registro+Outlet.swift"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				9D483D3B1D99AF2B00AD569C /* Registro.swift */,
 				9D7E0C3E1D9DABBE00A5A112 /* CrearSerenata+TextField.swift */,
 				32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */,
+				321C7B071E017F1A0057439E /* DetalleGrupo.swift */,
 			);
 			name = Controles;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */,
 				32D37F1B1DF7A0D4001966F9 /* Registro+Outlet.swift in Sources */,
 				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
+				321C7B081E017F1A0057439E /* DetalleGrupo.swift in Sources */,
 				9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */,
 				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,
 				9DDB35351DAC01800032F9CD /* AMKButton+Navigation.swift in Sources */,

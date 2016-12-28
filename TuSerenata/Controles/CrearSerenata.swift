@@ -14,6 +14,7 @@ class CrearSerenata: UIViewController {
     @IBOutlet weak var campoCiudad: UITextField!
     @IBOutlet weak var campoGenero: UITextField!
     @IBOutlet var botonestrellas: [AMKButton]!
+    var grupoSeleccionado: Musico?
     var textosFiltrantes: [String: String] = ["ciudad":"","genero":"","voz":""]
     var filtros: [ChequeoGrupo] = []
     var gruposBuscados: [Musico] = []
@@ -145,6 +146,10 @@ class CrearSerenata: UIViewController {
     internal func actualizarFiltrados() {
         self.gruposBuscados = gerente.filtrarGrupos(filtros)
         tableView.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detalle = (segue.destination as? DetalleGrupo)!
+        detalle.grupo = grupoSeleccionado
     }
 }
 

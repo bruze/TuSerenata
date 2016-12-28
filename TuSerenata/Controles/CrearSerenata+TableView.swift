@@ -11,6 +11,14 @@ import UIKit
 extension CrearSerenata: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.isSelected = false
+        
+        if gruposBuscados.count > 0 && filtrando && indexPath.row < gruposBuscados.count {
+            grupoSeleccionado = gruposBuscados[indexPath.row]
+        } else if gerente.musicosFiltrados.count > 0 && indexPath.row < gerente.musicosFiltrados.count {
+            grupoSeleccionado = gerente.musicosFiltrados[indexPath.row]
+        }
+        
+        performSegue(withIdentifier: "irDetalleGrupo", sender: nil)
     }
 }
 

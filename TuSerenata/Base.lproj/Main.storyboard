@@ -434,11 +434,97 @@
                         <outletCollection property="botonestrellas" destination="nb0-d8-ikq" collectionClass="NSMutableArray" id="Fon-nj-bEc"/>
                         <outletCollection property="botonestrellas" destination="mR8-Zz-2Ia" collectionClass="NSMutableArray" id="tiz-BK-Ep0"/>
                         <outletCollection property="botonestrellas" destination="2Hz-Gv-Zv8" collectionClass="NSMutableArray" id="lmP-op-ln4"/>
+                        <segue destination="ALo-os-P7q" kind="show" identifier="irDetalleGrupo" id="8Nn-I9-6gt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoC-E8-SNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="1173"/>
+            <point key="canvasLocation" x="1495" y="1172"/>
+        </scene>
+        <!--Detalle Grupo-->
+        <scene sceneID="gn1-IF-aay">
+            <objects>
+                <viewController title="Detalle Grupo" id="ALo-os-P7q" customClass="DetalleGrupo" customModule="TuSerenata" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ROB-yJ-vBL"/>
+                        <viewControllerLayoutGuide type="bottom" id="9hb-WI-vlg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iks-zy-9ZD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-CN-zOF">
+                                <rect key="frame" x="20" y="72" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8ZK-qj-ZZi"/>
+                                    <constraint firstAttribute="width" constant="150" id="WRr-Zl-hPS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qV5-rh-ogg" userLabel="Nombre">
+                                <rect key="frame" x="178" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCr-Te-i5h" userLabel="Genero">
+                                <rect key="frame" x="178" y="101" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyq-5g-qe6" userLabel="Ciudad">
+                                <rect key="frame" x="178" y="130" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo9-3R-1Jv" userLabel="Voces">
+                                <rect key="frame" x="178" y="159" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="79o-lu-itB" userLabel="Bio">
+                                <rect key="frame" x="16" y="248" width="343" height="286"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="9eH-yh-b0v"/>
+                                    <constraint firstAttribute="height" constant="286" id="sl3-jB-Gi6"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75889423079999996" green="0.35771667509999999" blue="0.38892065570000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7ex-CN-zOF" firstAttribute="top" secondItem="ROB-yJ-vBL" secondAttribute="bottom" constant="8" id="4on-JC-iB6"/>
+                            <constraint firstItem="kCr-Te-i5h" firstAttribute="top" secondItem="qV5-rh-ogg" secondAttribute="bottom" constant="8" id="6xA-T1-1pg"/>
+                            <constraint firstItem="Uyq-5g-qe6" firstAttribute="top" secondItem="kCr-Te-i5h" secondAttribute="bottom" constant="8" id="AK1-k1-GAe"/>
+                            <constraint firstItem="kCr-Te-i5h" firstAttribute="leading" secondItem="qV5-rh-ogg" secondAttribute="leading" id="HYk-a0-OOb"/>
+                            <constraint firstItem="79o-lu-itB" firstAttribute="top" secondItem="7ex-CN-zOF" secondAttribute="bottom" constant="26" id="Jnc-GW-ESI"/>
+                            <constraint firstItem="qV5-rh-ogg" firstAttribute="top" secondItem="7ex-CN-zOF" secondAttribute="top" id="Lbr-fx-AKy"/>
+                            <constraint firstItem="7ex-CN-zOF" firstAttribute="leading" secondItem="Iks-zy-9ZD" secondAttribute="leading" constant="20" id="MSP-Hr-8aw"/>
+                            <constraint firstItem="Uo9-3R-1Jv" firstAttribute="leading" secondItem="qV5-rh-ogg" secondAttribute="leading" id="dTA-na-8Qt"/>
+                            <constraint firstItem="Uo9-3R-1Jv" firstAttribute="top" secondItem="Uyq-5g-qe6" secondAttribute="bottom" constant="8" id="fNp-Uz-FRr"/>
+                            <constraint firstAttribute="trailing" secondItem="79o-lu-itB" secondAttribute="trailing" constant="16" id="iTn-du-UhB"/>
+                            <constraint firstItem="qV5-rh-ogg" firstAttribute="leading" secondItem="7ex-CN-zOF" secondAttribute="trailing" constant="8" id="mHI-9R-aXI"/>
+                            <constraint firstItem="Uyq-5g-qe6" firstAttribute="leading" secondItem="qV5-rh-ogg" secondAttribute="leading" id="tgW-bU-zOS"/>
+                            <constraint firstItem="79o-lu-itB" firstAttribute="leading" secondItem="Iks-zy-9ZD" secondAttribute="leading" constant="16" id="vWJ-CD-yUx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bio" destination="79o-lu-itB" id="v3R-sY-Qqy"/>
+                        <outlet property="ciudad" destination="Uyq-5g-qe6" id="Ku3-gm-hRQ"/>
+                        <outlet property="genero" destination="kCr-Te-i5h" id="j7V-j4-3nt"/>
+                        <outlet property="imagen" destination="7ex-CN-zOF" id="u4N-Tg-K9M"/>
+                        <outlet property="nombre" destination="qV5-rh-ogg" id="9C7-G1-iBN"/>
+                        <outlet property="voces" destination="Uo9-3R-1Jv" id="gQA-3Y-kl1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hv3-Oj-UJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2328.8000000000002" y="1171.6641679160421"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="IHl-Kl-6mJ">
