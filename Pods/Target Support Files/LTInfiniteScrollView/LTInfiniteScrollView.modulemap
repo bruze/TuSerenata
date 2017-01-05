@@ -1,0 +1,6 @@
+framework module LTInfiniteScrollView {
+  umbrella header "LTInfiniteScrollView-umbrella.h"
+
+  export *
+  module * { export * }
+}

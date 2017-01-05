@@ -1,0 +1,95 @@
+PODS:
+  - AssociatedValues (3.0.0)
+  - CardIO (5.4.1)
+  - CVCalendar (1.4.0)
+  - DualSlideMenu (1.7.3)
+  - EZSwiftExtensions (1.7)
+  - Firebase/Auth (3.9.0):
+    - Firebase/Core
+    - FirebaseAuth (= 3.0.6)
+  - Firebase/Core (3.9.0):
+    - FirebaseAnalytics (= 3.5.1)
+    - FirebaseCore (= 3.4.4)
+  - Firebase/Database (3.9.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 3.1.0)
+  - FirebaseAnalytics (3.5.1):
+    - FirebaseCore (~> 3.4)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseAuth (3.0.6):
+    - FirebaseAnalytics (~> 3.4)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseCore (3.4.4):
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (3.1.0):
+    - FirebaseAnalytics (~> 3.4)
+  - FirebaseInstanceID (1.0.8)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleToolboxForMac/DebugUtils (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+  - GoogleToolboxForMac/Defines (2.1.0)
+  - GoogleToolboxForMac/NSData+zlib (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.0):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.0)
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
+  - GTMSessionFetcher/Core (1.1.7)
+  - IQKeyboardManagerSwift (4.0.7)
+  - JLChatViewController (2.0.1)
+  - LTInfiniteScrollView (4.3.2)
+  - PayPal-iOS-SDK (2.16.1):
+    - PayPal-iOS-SDK/CardIO (= 2.16.1)
+    - PayPal-iOS-SDK/Core (= 2.16.1)
+  - PayPal-iOS-SDK/CardIO (2.16.1):
+    - CardIO (~> 5.4.1)
+  - PayPal-iOS-SDK/Core (2.16.1)
+  - UCZProgressView (1.0.2)
+
+DEPENDENCIES:
+  - AssociatedValues
+  - CVCalendar
+  - DualSlideMenu
+  - EZSwiftExtensions
+  - Firebase/Auth
+  - Firebase/Core
+  - Firebase/Database
+  - IQKeyboardManagerSwift
+  - JLChatViewController
+  - LTInfiniteScrollView
+  - PayPal-iOS-SDK
+  - UCZProgressView
+
+SPEC CHECKSUMS:
+  AssociatedValues: 5c29f5c0bb2672cf9ef0394bcbe3ce28b9fa0c2a
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  CVCalendar: ec1a06a508f99d8e5067258754f811a8a1433a3f
+  DualSlideMenu: 8e1c5255a95c3dcfc1c6dc470105278765f52093
+  EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
+  Firebase: ff77ffb77b317c3720fef57a60e9335cebf962e6
+  FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
+  FirebaseAuth: 96e9674ff31d6e1f826d53e26aa003a57cab0295
+  FirebaseCore: d0ed25f27b6f9158eccc439f1be6f92e81207e28
+  FirebaseDatabase: 3ebb2edb6007c3f0f87b248f3fa212bde56a1468
+  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  IQKeyboardManagerSwift: 58bbcf46b5cf9fd4ed625d28a60cb2fbae4ab0f4
+  JLChatViewController: 81a3d2671f2a8f9b0f672d6fcd739bf802de20dd
+  LTInfiniteScrollView: 6ce2fcaf6d030a9e45a164ba9dcdb1b325a30d03
+  PayPal-iOS-SDK: 774ac7de2d7c3b0ee7e8a35f8b347fd07787321b
+  UCZProgressView: 55836987c15ee6efb7cd6dfe297556602ee46c94
+
+PODFILE CHECKSUM: a803a9c6ff914c60a7e5577528ad14f86264dcc7
+
+COCOAPODS: 1.0.1
