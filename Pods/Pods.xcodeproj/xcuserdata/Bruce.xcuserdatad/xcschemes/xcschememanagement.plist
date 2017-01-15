@@ -44,12 +44,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JLChatViewController-JLChatViewController.xcscheme</key>
+		<key>JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JLChatViewController.xcscheme</key>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,67 +72,67 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1520003FEBEC114D6C84F832AFEDB994</key>
+		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>23BA9083ED0D2392A167A8AFA04427FA</key>
+		<key>30BF027CF51467BEE9B957E06B9EB0AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3032BAA8E2EB6B7A6079A03AEDDFD7EC</key>
+		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CD051F30FC64AA061484269D84720EE</key>
+		<key>4EF743C9A464A42849A24B4D0A836236</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60DF279285EAD9987BA5F8903F08B074</key>
+		<key>68F507154BD8FDD5CB4516E7F56F952B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D46ACCA4C3F2BE3B8F9A9E35B37F4A4</key>
+		<key>B1E1D955FC28D74E8A9F3C2347DCCACB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D04535608058A2FABC0D16935868FB9</key>
+		<key>B5EC6C9B3BA64C5AC469A96A1057C640</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8364974FB0BFFC16DBA404533C5673E1</key>
+		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>846FFC8CC6016ABBDE037990E7B594DD</key>
+		<key>C71E687AC64C4F770AD17F1B291A3BEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC92DD7B57CB69F78A66A29AAD472140</key>
+		<key>C7DCF2B547F7871B9BFD74DE93B0E173</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB9D8D920ECB5603C761F6346B1412CE</key>
+		<key>D0581AF7BF4A6DA140D280B19ECC7BFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E5AB88E8333B9568826C9AA252037278</key>
+		<key>E2EF0A874A01FFC4D77FBAEED4802A12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8C219923A81938955FFC72AE39B961D</key>
+		<key>F6C1517DA001CFBE8BC935F35BC20871</key>
 		<dict>
 			<key>primary</key>
 			<true/>

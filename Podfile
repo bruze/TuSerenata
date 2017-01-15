@@ -22,7 +22,7 @@ target 'TuSerenata' do
   #pod 'PropertyExtensions' Deprecated, now using 'AssociatedValues'
   pod 'AssociatedValues'
   #Chat
-  pod "JLChatViewController"
+  pod "JSQMessagesViewController"
   #Pagos
   pod 'PayPal-iOS-SDK'
   #Animación de Carga

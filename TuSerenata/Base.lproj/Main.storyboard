@@ -108,13 +108,13 @@
                         <outlet property="buttonView" destination="AxG-Da-Nov" id="kuD-lB-UZf"/>
                         <outlet property="recognizeEmployeeContainerHeight" destination="kF9-YJ-Kks" id="zLH-Fl-ZbT"/>
                         <outlet property="tableView" destination="fRl-eg-RIK" id="ZIG-xb-Nlg"/>
-                        <segue destination="pvc-ZC-LjM" kind="show" identifier="goChat" id="pin-2j-jtp"/>
                         <segue destination="UOJ-LI-g8T" kind="show" identifier="crearSerenata" id="mix-QV-U7c"/>
+                        <segue destination="nFc-IJ-pei" kind="show" identifier="goChat" id="9OY-vv-Hrg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631" y="1200"/>
+            <point key="canvasLocation" x="553" y="1361"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="FMz-tK-Vhx">
@@ -526,13 +526,13 @@
             </objects>
             <point key="canvasLocation" x="2328.8000000000002" y="1171.6641679160421"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="IHl-Kl-6mJ">
+        <!--Chat-->
+        <scene sceneID="4yo-uB-j8c">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="JLChatVC" id="pvc-ZC-LjM" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KIq-Xb-mUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="Chat" storyboardName="Chat" id="nFc-IJ-pei" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XaA-zK-IvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399.5" y="717"/>
+            <point key="canvasLocation" x="1017" y="739"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="hez-T4-1oT">

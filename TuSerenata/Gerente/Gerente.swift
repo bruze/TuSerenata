@@ -6,7 +6,7 @@
 //  Copyright © 2016 Bruno Garelli. All rights reserved.
 //
 import FirebaseDatabase
-import JLChatViewController
+
 
 class Gerente: NSObject {
     var usuario: Usuario? = nil

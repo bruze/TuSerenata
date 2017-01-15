@@ -7,7 +7,7 @@
 //
 
 import AssociatedValues
-import JLChatViewController
+
 import UCZProgressView
 
 extension UIViewController/*: PropertyExtensions*/ {
@@ -87,7 +87,11 @@ extension UIViewController/*: PropertyExtensions*/ {
         You must have a segue named "goChat" to get this working
     */
     func openChat() {
-        if let vc = JLBundleController.instantiateJLChatVC() as? ChatVC {
+        /*let chatSt = UIStoryboard.init(name: "Chat", bundle: nil)
+        let initialVC = chatSt.instantiateInitialViewController()
+        pushVC(initialVC!)*/
+        performSegue(withIdentifier: "goChat", sender: nil)
+        /*if let vc = JLBundleController.instantiateJLChatVC() as? ChatVC {
             
             vc.view.frame = self.view.frame
             
@@ -99,6 +103,6 @@ extension UIViewController/*: PropertyExtensions*/ {
             self.prepare(for: chatSegue, sender: nil)
             
             chatSegue.perform()
-        }
+        }*/
     }
 }

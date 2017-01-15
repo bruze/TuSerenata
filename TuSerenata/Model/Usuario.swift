@@ -7,7 +7,6 @@
 //
 
 import FirebaseDatabase
-import JLChatViewController
 
 class Usuario: NSObject {
     let key: String!
@@ -16,7 +15,7 @@ class Usuario: NSObject {
     var sexo: String
     let ref: FIRDatabaseReference?
     var refMensajes: FIRDatabaseReference?
-    var mensajesNuevos: [JLMessage]?
+    var mensajesNuevos: [String]?
     //var completed: Bool!
     
     // Initialize from arbitrary data

@@ -8,7 +8,7 @@
 
 import UIKit
 import DualSlideMenu
-import JLChatViewController
+
 import AssociatedValues
 
 class ViewController: UIViewController {
@@ -57,9 +57,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rightItemTap(_ sender: UIBarButtonItem) {
-        openPayment()
+        //openPayment()
         
-        //openChat()
+        openChat()
     }
 }
 

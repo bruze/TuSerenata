@@ -9,7 +9,6 @@ import UIKit
 import DualSlideMenu
 import IQKeyboardManagerSwift
 import Firebase
-import JLChatViewController
 import CoreLocation
 
 let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
@@ -50,10 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         authorize()
         
-        JLChatAppearence.configIncomingMessages(nil, showIncomingSenderImage: false, incomingTextColor: nil)
-        JLChatAppearence.configOutgoingMessages(nil, showOutgoingSenderImage: false, outgoingTextColor: nil)
         
-        JLBundleController.loadJLChatStoryboard()
         IQKeyboardManager.sharedManager().enable = true
         PayPalMobile.initializeWithClientIds(forEnvironments: [PayPalEnvironmentSandbox: "bruno.garelli-facilitator_api1.yahoo.com"])
         return true

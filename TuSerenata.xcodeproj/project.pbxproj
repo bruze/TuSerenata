@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		321C7B081E017F1A0057439E /* DetalleGrupo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C7B071E017F1A0057439E /* DetalleGrupo.swift */; };
 		324C9B811DADEEC700462550 /* FIRDataSnapshot+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */; };
+		325F39D21E2BDADC001ADF95 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325F39D01E2BDADC001ADF95 /* Chat.storyboard */; };
+		325F39D31E2BDADC001ADF95 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F39D11E2BDADC001ADF95 /* ChatViewController.swift */; };
 		327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3270170F1DA0243A00987DCF /* GoogleService-Info.plist */; };
 		32D37F1B1DF7A0D4001966F9 /* Registro+Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */; };
 		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
@@ -16,7 +18,6 @@
 		9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */; };
 		9D24805D1D998B4A001440EB /* UIViewController+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */; };
 		9D24805F1D998F1E001440EB /* Login+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24805E1D998F1E001440EB /* Login+TextField.swift */; };
-		9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B37101D91E7F700A7F235 /* ChatVC.swift */; };
 		9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */; };
 		9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AC1D8B359500AFC5EF /* ViewController.swift */; };
 		9D31B5B01D8B359500AFC5EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5AE1D8B359500AFC5EF /* Main.storyboard */; };
@@ -33,7 +34,6 @@
 		9DAE43EC1D955C7000E418B8 /* Serenata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43EB1D955C7000E418B8 /* Serenata.swift */; };
 		9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */; };
 		9DAE43F01D95C77400E418B8 /* CrearSerenata+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */; };
-		9DAE43F21D95CCE600E418B8 /* JLMessage+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43F11D95CCE600E418B8 /* JLMessage+Conversion.swift */; };
 		9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FA1D8C78D400639952 /* Gradiente.swift */; };
 		9DC593FD1D8C7E4500639952 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FC1D8C7E4500639952 /* Login.swift */; };
 		9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */; };
@@ -68,6 +68,8 @@
 /* Begin PBXFileReference section */
 		321C7B071E017F1A0057439E /* DetalleGrupo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalleGrupo.swift; path = Controles/DetalleGrupo.swift; sourceTree = "<group>"; };
 		324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FIRDataSnapshot+Ext.swift"; path = "Tool/FIRDataSnapshot+Ext.swift"; sourceTree = "<group>"; };
+		325F39D01E2BDADC001ADF95 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		325F39D11E2BDADC001ADF95 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3270170F1DA0243A00987DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Registro+Outlet.swift"; path = "Controles/Registro+Outlet.swift"; sourceTree = "<group>"; };
 		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +77,6 @@
 		9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+QuickReturnButton.swift"; sourceTree = "<group>"; };
 		9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Pay.swift"; path = "Tool/UIViewController+Pay.swift"; sourceTree = "<group>"; };
 		9D24805E1D998F1E001440EB /* Login+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Login+TextField.swift"; path = "Controles/Login+TextField.swift"; sourceTree = "<group>"; };
-		9D2B37101D91E7F700A7F235 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = Controles/ChatVC.swift; sourceTree = "<group>"; };
 		9D31B5A71D8B359500AFC5EF /* TuSerenata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuSerenata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D31B5AC1D8B359500AFC5EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		9DAE43EB1D955C7000E418B8 /* Serenata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serenata.swift; path = Model/Serenata.swift; sourceTree = "<group>"; };
 		9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearSerenata.swift; path = Controles/CrearSerenata.swift; sourceTree = "<group>"; };
 		9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CrearSerenata+TableView.swift"; path = "Controles/CrearSerenata+TableView.swift"; sourceTree = "<group>"; };
-		9DAE43F11D95CCE600E418B8 /* JLMessage+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JLMessage+Conversion.swift"; path = "Tool/JLMessage+Conversion.swift"; sourceTree = "<group>"; };
 		9DC593FA1D8C78D400639952 /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradiente.swift; path = Fabrica/Gradiente.swift; sourceTree = "<group>"; };
 		9DC593FC1D8C7E4500639952 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Controles/Login.swift; sourceTree = "<group>"; };
 		9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKEncoder+Extension.swift"; sourceTree = "<group>"; };
@@ -158,6 +158,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		325F39CF1E2BDADC001ADF95 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				325F39D01E2BDADC001ADF95 /* Chat.storyboard */,
+				325F39D11E2BDADC001ADF95 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		9D31B59E1D8B359500AFC5EF = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +189,7 @@
 		9D31B5A91D8B359500AFC5EF /* TuSerenata */ = {
 			isa = PBXGroup;
 			children = (
+				325F39CF1E2BDADC001ADF95 /* Chat */,
 				9DC594251D906EE300639952 /* Gerente */,
 				9DC593FE1D8C82AB00639952 /* AMKFactory */,
 				9DC593F91D8C78B700639952 /* Fabrica */,
@@ -217,7 +227,6 @@
 			children = (
 				9DA82D301D8C754E00ECF101 /* MenuVC.swift */,
 				9DC593FC1D8C7E4500639952 /* Login.swift */,
-				9D2B37101D91E7F700A7F235 /* ChatVC.swift */,
 				9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */,
 				9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */,
 				9D24805E1D998F1E001440EB /* Login+TextField.swift */,
@@ -237,7 +246,6 @@
 				9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */,
 				9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */,
 				9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */,
-				9DAE43F11D95CCE600E418B8 /* JLMessage+Conversion.swift */,
 				324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */,
 				9DED15EA1DDE523D00501F5A /* Any+Conversion.swift */,
 			);
@@ -393,6 +401,7 @@
 				9D31B5B51D8B359500AFC5EF /* LaunchScreen.storyboard in Resources */,
 				327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */,
 				9D31B5B21D8B359500AFC5EF /* Assets.xcassets in Resources */,
+				325F39D21E2BDADC001ADF95 /* Chat.storyboard in Resources */,
 				9D31B5B01D8B359500AFC5EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +451,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,6 +479,7 @@
 				9DED15EB1DDE523D00501F5A /* Any+Conversion.swift in Sources */,
 				9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */,
 				9DC600731DD365A1007E4E25 /* AMKLabel+Inspectable.swift in Sources */,
+				325F39D31E2BDADC001ADF95 /* ChatViewController.swift in Sources */,
 				9DC5941C1D8C82B900639952 /* AMKButton.swift in Sources */,
 				9DC600761DD365A1007E4E25 /* AMKLabel.swift in Sources */,
 				9DC594221D8C83AB00639952 /* Global.swift in Sources */,
@@ -484,10 +494,8 @@
 				9DC594181D8C82B900639952 /* AMKButton+Label.swift in Sources */,
 				9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */,
 				9D24805F1D998F1E001440EB /* Login+TextField.swift in Sources */,
-				9D2B37111D91E7F700A7F235 /* ChatVC.swift in Sources */,
 				9DDB35371DAC02380032F9CD /* AMKButton+State.swift in Sources */,
 				9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */,
-				9DAE43F21D95CCE600E418B8 /* JLMessage+Conversion.swift in Sources */,
 				9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */,
 				9DC594161D8C82B900639952 /* AMKButton+Image.swift in Sources */,
 				9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */,
@@ -626,7 +634,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CCA922768C27437FE26509AC /* Pods-TuSerenata.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TuSerenata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -641,7 +649,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TuSerenata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
