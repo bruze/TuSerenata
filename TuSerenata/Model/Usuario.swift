@@ -5,7 +5,7 @@
 //  Created by Bruno Garelli on 9/19/16.
 //  Copyright © 2016 Bruno Garelli. All rights reserved.
 //
-
+import JSQMessagesViewController
 import FirebaseDatabase
 
 class Usuario: NSObject {
@@ -15,7 +15,7 @@ class Usuario: NSObject {
     var sexo: String
     let ref: FIRDatabaseReference?
     var refMensajes: FIRDatabaseReference?
-    var mensajesNuevos: [String]?
+    var mensajesNuevos: [JSQMessage]?
     //var completed: Bool!
     
     // Initialize from arbitrary data
