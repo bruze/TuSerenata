@@ -40,6 +40,25 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="2nf-hk-ejs"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJB-9z-QHN" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="192" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="L2C-s8-ztz"/>
+                                    <constraint firstAttribute="height" constant="44" id="hxd-h4-vCI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
+                                        <color key="value" red="0.75889423079999996" green="0.35771667509999999" blue="0.38892065570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultLabel" value="MAPA"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoCenter" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="touchAction" value="irMapa"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VfR-WM-obb"/>
+                                </connections>
+                            </view>
                             <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AxG-Da-Nov" customClass="AMKButton" customModule="TuSerenata" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <constraints>
@@ -80,12 +99,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rJB-9z-QHN" secondAttribute="trailing" id="Cyy-yQ-LGd"/>
                             <constraint firstAttribute="trailing" secondItem="Vbq-Gf-qfw" secondAttribute="trailing" id="L6x-jX-P8N"/>
                             <constraint firstItem="Vbq-Gf-qfw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mbf-Yn-9dG"/>
+                            <constraint firstItem="rJB-9z-QHN" firstAttribute="top" secondItem="fRl-eg-RIK" secondAttribute="top" id="a46-hK-DAy"/>
                             <constraint firstAttribute="trailing" secondItem="AxG-Da-Nov" secondAttribute="trailing" id="bgz-XO-Zne"/>
                             <constraint firstItem="AxG-Da-Nov" firstAttribute="top" secondItem="fRl-eg-RIK" secondAttribute="bottom" id="dLl-Sf-yTP"/>
                             <constraint firstItem="AxG-Da-Nov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dNb-iN-pyE"/>
                             <constraint firstItem="fRl-eg-RIK" firstAttribute="top" secondItem="Vbq-Gf-qfw" secondAttribute="bottom" id="fTc-eM-kCb"/>
+                            <constraint firstItem="rJB-9z-QHN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gSs-H2-KQq"/>
                             <constraint firstAttribute="bottomMargin" secondItem="AxG-Da-Nov" secondAttribute="bottom" id="gjI-G9-YhS"/>
                             <constraint firstItem="Vbq-Gf-qfw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hxo-fs-AS9"/>
                             <constraint firstAttribute="trailing" secondItem="fRl-eg-RIK" secondAttribute="trailing" id="vLQ-Uy-UZK"/>
@@ -110,11 +132,44 @@
                         <outlet property="tableView" destination="fRl-eg-RIK" id="ZIG-xb-Nlg"/>
                         <segue destination="UOJ-LI-g8T" kind="show" identifier="crearSerenata" id="mix-QV-U7c"/>
                         <segue destination="nFc-IJ-pei" kind="show" identifier="goChat" id="9OY-vv-Hrg"/>
+                        <segue destination="iyW-Nd-Mmz" kind="show" identifier="irMapa" id="zRH-EF-nsE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="553" y="1361"/>
+        </scene>
+        <!--Mapa Control-->
+        <scene sceneID="9e2-gr-e45">
+            <objects>
+                <viewController id="iyW-Nd-Mmz" customClass="MapaControl" customModule="TuSerenata" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yf2-RN-aTK"/>
+                        <viewControllerLayoutGuide type="bottom" id="JBq-4T-uzq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zqq-vj-RGM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r7B-Ge-KGA">
+                                <rect key="frame" x="16" y="82" width="343" height="386"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r7B-Ge-KGA" firstAttribute="top" secondItem="yf2-RN-aTK" secondAttribute="bottom" constant="62" id="6pq-Rd-yJr"/>
+                            <constraint firstItem="r7B-Ge-KGA" firstAttribute="leading" secondItem="Zqq-vj-RGM" secondAttribute="leadingMargin" id="GIt-o5-5SQ"/>
+                            <constraint firstItem="JBq-4T-uzq" firstAttribute="top" secondItem="r7B-Ge-KGA" secondAttribute="bottom" constant="199" id="g8B-S8-dtm"/>
+                            <constraint firstItem="r7B-Ge-KGA" firstAttribute="trailing" secondItem="Zqq-vj-RGM" secondAttribute="trailingMargin" id="tqf-9l-49P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapa" destination="r7B-Ge-KGA" id="kMH-Gu-Mcg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zO-R0-ZDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="2006.4467766116943"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="FMz-tK-Vhx">

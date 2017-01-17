@@ -41,6 +41,10 @@ class ViewController: UIViewController {
         ventanaEmergente(["acc1": "Reserva Inmediata", "acc2": "Reserva Fecha"], acciones: [{ print("Aun no creada esta vista") }, { self.performSegue(withIdentifier: "crearSerenata", sender: nil) }])
     }
     
+    @objc func irMapa() {
+        performSegue(withIdentifier: "irMapa", sender: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

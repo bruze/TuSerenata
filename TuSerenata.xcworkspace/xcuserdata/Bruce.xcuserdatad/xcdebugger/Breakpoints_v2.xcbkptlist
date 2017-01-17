@@ -266,7 +266,7 @@
                   moduleName = "TuSerenata"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Bruce/TuSerenata/TuSerenata/AMKFactory/View/AMKButton+Image.swift"
-                  timestampString = "506219776.47036"
+                  timestampString = "506307564.554352"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -281,7 +281,7 @@
                   moduleName = "TuSerenata"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Bruce/TuSerenata/TuSerenata/AMKFactory/View/AMKButton+Image.swift"
-                  timestampString = "506219776.474144"
+                  timestampString = "506307564.557746"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -496,6 +496,22 @@
             startingLineNumber = "75"
             endingLineNumber = "75"
             landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuSerenata/ViewController.swift"
+            timestampString = "506307446.035201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "irMapa()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

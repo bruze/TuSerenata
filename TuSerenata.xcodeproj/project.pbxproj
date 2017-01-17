@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		321C7B081E017F1A0057439E /* DetalleGrupo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C7B071E017F1A0057439E /* DetalleGrupo.swift */; };
+		3228A7A71E2D9D2400E478FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3228A7A61E2D9D2400E478FD /* MapKit.framework */; };
+		3228A7AA1E2D9E4E00E478FD /* Anotacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228A7A91E2D9E4E00E478FD /* Anotacion.swift */; };
+		3228A7AC1E2DA1FD00E478FD /* MapaControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228A7AB1E2DA1FD00E478FD /* MapaControl.swift */; };
 		324C9B811DADEEC700462550 /* FIRDataSnapshot+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */; };
 		325F39D21E2BDADC001ADF95 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325F39D01E2BDADC001ADF95 /* Chat.storyboard */; };
 		325F39D31E2BDADC001ADF95 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F39D11E2BDADC001ADF95 /* ChatViewController.swift */; };
@@ -67,6 +70,9 @@
 
 /* Begin PBXFileReference section */
 		321C7B071E017F1A0057439E /* DetalleGrupo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalleGrupo.swift; path = Controles/DetalleGrupo.swift; sourceTree = "<group>"; };
+		3228A7A61E2D9D2400E478FD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3228A7A91E2D9E4E00E478FD /* Anotacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Anotacion.swift; path = Mapa/Anotacion.swift; sourceTree = "<group>"; };
+		3228A7AB1E2DA1FD00E478FD /* MapaControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapaControl.swift; path = Mapa/MapaControl.swift; sourceTree = "<group>"; };
 		324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FIRDataSnapshot+Ext.swift"; path = "Tool/FIRDataSnapshot+Ext.swift"; sourceTree = "<group>"; };
 		325F39D01E2BDADC001ADF95 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		325F39D11E2BDADC001ADF95 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3228A7A71E2D9D2400E478FD /* MapKit.framework in Frameworks */,
 				5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +151,7 @@
 		1122E0EC0D2CAB4425ABDD16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3228A7A61E2D9D2400E478FD /* MapKit.framework */,
 				6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */,
 			);
 			name = Frameworks;
@@ -156,6 +164,15 @@
 				C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3228A7A81E2D9E1300E478FD /* Mapa */ = {
+			isa = PBXGroup;
+			children = (
+				3228A7A91E2D9E4E00E478FD /* Anotacion.swift */,
+				3228A7AB1E2DA1FD00E478FD /* MapaControl.swift */,
+			);
+			name = Mapa;
 			sourceTree = "<group>";
 		};
 		325F39CF1E2BDADC001ADF95 /* Chat */ = {
@@ -189,6 +206,7 @@
 		9D31B5A91D8B359500AFC5EF /* TuSerenata */ = {
 			isa = PBXGroup;
 			children = (
+				3228A7A81E2D9E1300E478FD /* Mapa */,
 				325F39CF1E2BDADC001ADF95 /* Chat */,
 				9DC594251D906EE300639952 /* Gerente */,
 				9DC593FE1D8C82AB00639952 /* AMKFactory */,
@@ -372,6 +390,11 @@
 					9D31B5A61D8B359500AFC5EF = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -483,6 +506,7 @@
 				9DC5941C1D8C82B900639952 /* AMKButton.swift in Sources */,
 				9DC600761DD365A1007E4E25 /* AMKLabel.swift in Sources */,
 				9DC594221D8C83AB00639952 /* Global.swift in Sources */,
+				3228A7AA1E2D9E4E00E478FD /* Anotacion.swift in Sources */,
 				9DC5941A1D8C82B900639952 /* AMKButton+Touch.swift in Sources */,
 				9DC5941B1D8C82B900639952 /* AMKButton+View.swift in Sources */,
 				9DC594271D906EFD00639952 /* Gerente.swift in Sources */,
@@ -496,6 +520,7 @@
 				9D24805F1D998F1E001440EB /* Login+TextField.swift in Sources */,
 				9DDB35371DAC02380032F9CD /* AMKButton+State.swift in Sources */,
 				9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */,
+				3228A7AC1E2DA1FD00E478FD /* MapaControl.swift in Sources */,
 				9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */,
 				9DC594161D8C82B900639952 /* AMKButton+Image.swift in Sources */,
 				9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */,
