@@ -259,13 +259,14 @@ final class ChatViewController: JSQMessagesViewController {
   
   override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
     // 1
-    let itemRef = messageRef.childByAutoId()
+    let itemRef = messageRef.child((recipiente?.key)!).childByAutoId()
     
     // 2
     let messageItem = [
-      "senderId": senderId!,
+      "enviadoPor": senderId!,
       "senderName": senderDisplayName!,
       "text": text!,
+      "leido": "NO"
     ]
     
     // 3
