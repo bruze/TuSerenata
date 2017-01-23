@@ -23,6 +23,7 @@
 import UIKit
 import Photos
 import Firebase
+import FirebaseStorage
 import JSQMessagesViewController
 
 final class ChatViewController: JSQMessagesViewController {
@@ -30,12 +31,17 @@ final class ChatViewController: JSQMessagesViewController {
   // MARK: Properties
   private let imageURLNotSetKey = "NOTSET"
   
-  var channelRef: FIRDatabaseReference?
+  //var channelRef: FIRDatabaseReference?
 
   private lazy var messageRef: FIRDatabaseReference = (gerente.usuario?.refMensajes)!//self.channelRef!.child("messages")
   fileprivate lazy var storageRef: FIRStorageReference = FIRStorage.storage().reference(forURL: "gs://chatchat-rw-cf107.appspot.com")
-  private lazy var userIsTypingRef: FIRDatabaseReference = self.channelRef!.child("typingIndicator").child(self.senderId)
-  private lazy var usersTypingQuery: FIRDatabaseQuery = self.channelRef!.child("typingIndicator").queryOrderedByValue().queryEqual(toValue: true)
+  private lazy var userIsTypingRef: FIRDatabaseReference = (gerente.usuario?.refTipeo)!/*self.channelRef!.child("typingIndicator").child(self.senderId)*/
+    private var recipentIsTypingRef: FIRDatabaseReference {
+        get {
+            return (recipiente?.refTipeo)!
+        }
+    }
+  //private lazy var usersTypingQuery: FIRDatabaseQuery = self.channelRef!.child("typingIndicator").queryOrderedByValue().queryEqual(toValue: true)
 
   private var newMessageRefHandle: FIRDatabaseHandle?
   private var updatedMessageRefHandle: FIRDatabaseHandle?
@@ -44,11 +50,12 @@ final class ChatViewController: JSQMessagesViewController {
   private var photoMessageMap = [String: JSQPhotoMediaItem]()
   
   private var localTyping = false
-  var channel: String? {
+  var recipiente: Usuario?
+  /*var channel: String? {
     didSet {
       title = "CHANNEL>??xD"
     }
-  }
+  }*/
 
   var isTyping: Bool {
     get {
@@ -227,12 +234,12 @@ final class ChatViewController: JSQMessagesViewController {
   }
   
   private func observeTyping() {
-    /*let typingIndicatorRef = channelRef!.child("typingIndicator")
-    userIsTypingRef = typingIndicatorRef.child(senderId)
+    /*let typingIndicatorRef = gerente.usuario?.refTipeo
+    userIsTypingRef = (typingIndicatorRef?.child(senderId))!
     userIsTypingRef.onDisconnectRemoveValue()
-    usersTypingQuery = typingIndicatorRef.queryOrderedByValue().queryEqual(toValue: true)
+    userIsTypingRef = typingIndicatorRef!.queryOrderedByValue().queryEqual(toValue: true) as! FIRDatabaseReference*/
     
-    usersTypingQuery.observe(.value) { (data: FIRDataSnapshot) in
+    /*usersTypingQuery.observe(.value) { (data: FIRDataSnapshot) in
       
       // You're the only typing, don't show the indicator
       if data.childrenCount == 1 && self.isTyping {
@@ -243,6 +250,11 @@ final class ChatViewController: JSQMessagesViewController {
       self.showTypingIndicator = data.childrenCount > 0
       self.scrollToBottom(animated: true)
     }*/
+    if let tipeo = recipiente?.refTipeo {
+        let valor = tipeo.value(forKey: "")
+        self.showTypingIndicator = true
+        self.scrollToBottom(animated: true)
+    }
   }
   
   override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
@@ -335,7 +347,7 @@ final class ChatViewController: JSQMessagesViewController {
   override func textViewDidChange(_ textView: UITextView) {
     super.textViewDidChange(textView)
     // If the text is not empty, the user is typing
-    //UNCOM isTyping = textView.text != ""
+    isTyping = textView.text != ""
   }
   
 }

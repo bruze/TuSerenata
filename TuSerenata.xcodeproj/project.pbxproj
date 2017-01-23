@@ -1,712 +1,2148 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		321C7B081E017F1A0057439E /* DetalleGrupo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C7B071E017F1A0057439E /* DetalleGrupo.swift */; };
-		3228A7A71E2D9D2400E478FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3228A7A61E2D9D2400E478FD /* MapKit.framework */; };
-		3228A7AA1E2D9E4E00E478FD /* Anotacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228A7A91E2D9E4E00E478FD /* Anotacion.swift */; };
-		3228A7AC1E2DA1FD00E478FD /* MapaControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228A7AB1E2DA1FD00E478FD /* MapaControl.swift */; };
-		324C9B811DADEEC700462550 /* FIRDataSnapshot+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */; };
-		325F39D21E2BDADC001ADF95 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325F39D01E2BDADC001ADF95 /* Chat.storyboard */; };
-		325F39D31E2BDADC001ADF95 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F39D11E2BDADC001ADF95 /* ChatViewController.swift */; };
-		327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3270170F1DA0243A00987DCF /* GoogleService-Info.plist */; };
-		32D37F1B1DF7A0D4001966F9 /* Registro+Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */; };
-		5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */; };
-		9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */; };
-		9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */; };
-		9D24805D1D998B4A001440EB /* UIViewController+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */; };
-		9D24805F1D998F1E001440EB /* Login+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24805E1D998F1E001440EB /* Login+TextField.swift */; };
-		9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */; };
-		9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5AC1D8B359500AFC5EF /* ViewController.swift */; };
-		9D31B5B01D8B359500AFC5EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5AE1D8B359500AFC5EF /* Main.storyboard */; };
-		9D31B5B21D8B359500AFC5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5B11D8B359500AFC5EF /* Assets.xcassets */; };
-		9D31B5B51D8B359500AFC5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D31B5B31D8B359500AFC5EF /* LaunchScreen.storyboard */; };
-		9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5BD1D8B39C900AFC5EF /* Musico.swift */; };
-		9D483D3C1D99AF2B00AD569C /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D483D3B1D99AF2B00AD569C /* Registro.swift */; };
-		9D7E0C3F1D9DABBE00A5A112 /* CrearSerenata+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E0C3E1D9DABBE00A5A112 /* CrearSerenata+TextField.swift */; };
-		9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D301D8C754E00ECF101 /* MenuVC.swift */; };
-		9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */; };
-		9DAE43E41D943F1400E418B8 /* ViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */; };
-		9DAE43E61D94457500E418B8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */; };
-		9DAE43EA1D946C2C00E418B8 /* ViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E91D946C2C00E418B8 /* ViewController+TableViewDataSource.swift */; };
-		9DAE43EC1D955C7000E418B8 /* Serenata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43EB1D955C7000E418B8 /* Serenata.swift */; };
-		9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */; };
-		9DAE43F01D95C77400E418B8 /* CrearSerenata+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */; };
-		9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FA1D8C78D400639952 /* Gradiente.swift */; };
-		9DC593FD1D8C7E4500639952 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC593FC1D8C7E4500639952 /* Login.swift */; };
-		9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */; };
-		9DC594121D8C82B900639952 /* AMKEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594021D8C82B900639952 /* AMKEncoder.swift */; };
-		9DC594131D8C82B900639952 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594031D8C82B900639952 /* CGRect+Extension.swift */; };
-		9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594051D8C82B900639952 /* AMKButton+Animation.swift */; };
-		9DC594151D8C82B900639952 /* AMKButton+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594061D8C82B900639952 /* AMKButton+Delegate.swift */; };
-		9DC594161D8C82B900639952 /* AMKButton+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594071D8C82B900639952 /* AMKButton+Image.swift */; };
-		9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594081D8C82B900639952 /* AMKButton+KVO.swift */; };
-		9DC594181D8C82B900639952 /* AMKButton+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594091D8C82B900639952 /* AMKButton+Label.swift */; };
-		9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940A1D8C82B900639952 /* AMKButton+Persistence.swift */; };
-		9DC5941A1D8C82B900639952 /* AMKButton+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940B1D8C82B900639952 /* AMKButton+Touch.swift */; };
-		9DC5941B1D8C82B900639952 /* AMKButton+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940C1D8C82B900639952 /* AMKButton+View.swift */; };
-		9DC5941C1D8C82B900639952 /* AMKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940D1D8C82B900639952 /* AMKButton.swift */; };
-		9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5940F1D8C82B900639952 /* AMKCarousel+Scroll.swift */; };
-		9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594101D8C82B900639952 /* AMKCarousel.swift */; };
-		9DC594201D8C834900639952 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5941F1D8C834900639952 /* String+Additions.swift */; };
-		9DC594221D8C83AB00639952 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594211D8C83AB00639952 /* Global.swift */; };
-		9DC594271D906EFD00639952 /* Gerente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594261D906EFD00639952 /* Gerente.swift */; };
-		9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC594281D907A6800639952 /* AppDelegate+Ext.swift */; };
-		9DC5942B1D907C1500639952 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5942A1D907C1500639952 /* Usuario.swift */; };
-		9DC600721DD365A1007E4E25 /* AMKLabel+ArcText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6006D1DD365A1007E4E25 /* AMKLabel+ArcText.swift */; };
-		9DC600731DD365A1007E4E25 /* AMKLabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6006E1DD365A1007E4E25 /* AMKLabel+Inspectable.swift */; };
-		9DC600741DD365A1007E4E25 /* AMKLabel+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6006F1DD365A1007E4E25 /* AMKLabel+Touch.swift */; };
-		9DC600751DD365A1007E4E25 /* AMKLabel+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC600701DD365A1007E4E25 /* AMKLabel+Var.swift */; };
-		9DC600761DD365A1007E4E25 /* AMKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC600711DD365A1007E4E25 /* AMKLabel.swift */; };
-		9DDB35351DAC01800032F9CD /* AMKButton+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDB35341DAC01800032F9CD /* AMKButton+Navigation.swift */; };
-		9DDB35371DAC02380032F9CD /* AMKButton+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDB35361DAC02380032F9CD /* AMKButton+State.swift */; };
-		9DED15EB1DDE523D00501F5A /* Any+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED15EA1DDE523D00501F5A /* Any+Conversion.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		321C7B071E017F1A0057439E /* DetalleGrupo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalleGrupo.swift; path = Controles/DetalleGrupo.swift; sourceTree = "<group>"; };
-		3228A7A61E2D9D2400E478FD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		3228A7A91E2D9E4E00E478FD /* Anotacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Anotacion.swift; path = Mapa/Anotacion.swift; sourceTree = "<group>"; };
-		3228A7AB1E2DA1FD00E478FD /* MapaControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapaControl.swift; path = Mapa/MapaControl.swift; sourceTree = "<group>"; };
-		324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FIRDataSnapshot+Ext.swift"; path = "Tool/FIRDataSnapshot+Ext.swift"; sourceTree = "<group>"; };
-		325F39D01E2BDADC001ADF95 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
-		325F39D11E2BDADC001ADF95 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		3270170F1DA0243A00987DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Registro+Outlet.swift"; path = "Controles/Registro+Outlet.swift"; sourceTree = "<group>"; };
-		6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuSerenata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Loc.swift"; sourceTree = "<group>"; };
-		9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+QuickReturnButton.swift"; sourceTree = "<group>"; };
-		9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Pay.swift"; path = "Tool/UIViewController+Pay.swift"; sourceTree = "<group>"; };
-		9D24805E1D998F1E001440EB /* Login+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Login+TextField.swift"; path = "Controles/Login+TextField.swift"; sourceTree = "<group>"; };
-		9D31B5A71D8B359500AFC5EF /* TuSerenata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuSerenata.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D31B5AC1D8B359500AFC5EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9D31B5AF1D8B359500AFC5EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9D31B5B11D8B359500AFC5EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9D31B5B41D8B359500AFC5EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9D31B5B61D8B359500AFC5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D31B5BD1D8B39C900AFC5EF /* Musico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Musico.swift; path = Model/Musico.swift; sourceTree = "<group>"; };
-		9D31B5BF1D8B3AB200AFC5EF /* TuSerenata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuSerenata-Bridging-Header.h"; sourceTree = "<group>"; };
-		9D483D3B1D99AF2B00AD569C /* Registro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Registro.swift; path = Controles/Registro.swift; sourceTree = "<group>"; };
-		9D7E0C3E1D9DABBE00A5A112 /* CrearSerenata+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CrearSerenata+TextField.swift"; path = "Controles/CrearSerenata+TextField.swift"; sourceTree = "<group>"; };
-		9DA82D301D8C754E00ECF101 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = Controles/MenuVC.swift; sourceTree = "<group>"; };
-		9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Ext.swift"; path = "Tool/UIColor+Ext.swift"; sourceTree = "<group>"; };
-		9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
-		9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Ext.swift"; path = "Tool/UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		9DAE43E91D946C2C00E418B8 /* ViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
-		9DAE43EB1D955C7000E418B8 /* Serenata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serenata.swift; path = Model/Serenata.swift; sourceTree = "<group>"; };
-		9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearSerenata.swift; path = Controles/CrearSerenata.swift; sourceTree = "<group>"; };
-		9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CrearSerenata+TableView.swift"; path = "Controles/CrearSerenata+TableView.swift"; sourceTree = "<group>"; };
-		9DC593FA1D8C78D400639952 /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradiente.swift; path = Fabrica/Gradiente.swift; sourceTree = "<group>"; };
-		9DC593FC1D8C7E4500639952 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Controles/Login.swift; sourceTree = "<group>"; };
-		9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKEncoder+Extension.swift"; sourceTree = "<group>"; };
-		9DC594021D8C82B900639952 /* AMKEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKEncoder.swift; sourceTree = "<group>"; };
-		9DC594031D8C82B900639952 /* CGRect+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
-		9DC594051D8C82B900639952 /* AMKButton+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Animation.swift"; sourceTree = "<group>"; };
-		9DC594061D8C82B900639952 /* AMKButton+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Delegate.swift"; sourceTree = "<group>"; };
-		9DC594071D8C82B900639952 /* AMKButton+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Image.swift"; sourceTree = "<group>"; };
-		9DC594081D8C82B900639952 /* AMKButton+KVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+KVO.swift"; sourceTree = "<group>"; };
-		9DC594091D8C82B900639952 /* AMKButton+Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Label.swift"; sourceTree = "<group>"; };
-		9DC5940A1D8C82B900639952 /* AMKButton+Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Persistence.swift"; sourceTree = "<group>"; };
-		9DC5940B1D8C82B900639952 /* AMKButton+Touch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Touch.swift"; sourceTree = "<group>"; };
-		9DC5940C1D8C82B900639952 /* AMKButton+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+View.swift"; sourceTree = "<group>"; };
-		9DC5940D1D8C82B900639952 /* AMKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKButton.swift; sourceTree = "<group>"; };
-		9DC5940F1D8C82B900639952 /* AMKCarousel+Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKCarousel+Scroll.swift"; sourceTree = "<group>"; };
-		9DC594101D8C82B900639952 /* AMKCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKCarousel.swift; sourceTree = "<group>"; };
-		9DC5941F1D8C834900639952 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Additions.swift"; path = "Tool/String+Additions.swift"; sourceTree = "<group>"; };
-		9DC594211D8C83AB00639952 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Tool/Global.swift; sourceTree = "<group>"; };
-		9DC594261D906EFD00639952 /* Gerente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gerente.swift; path = Gerente/Gerente.swift; sourceTree = "<group>"; };
-		9DC594281D907A6800639952 /* AppDelegate+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Ext.swift"; sourceTree = "<group>"; };
-		9DC5942A1D907C1500639952 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = Model/Usuario.swift; sourceTree = "<group>"; };
-		9DC6006D1DD365A1007E4E25 /* AMKLabel+ArcText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKLabel+ArcText.swift"; sourceTree = "<group>"; };
-		9DC6006E1DD365A1007E4E25 /* AMKLabel+Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKLabel+Inspectable.swift"; sourceTree = "<group>"; };
-		9DC6006F1DD365A1007E4E25 /* AMKLabel+Touch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKLabel+Touch.swift"; sourceTree = "<group>"; };
-		9DC600701DD365A1007E4E25 /* AMKLabel+Var.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKLabel+Var.swift"; sourceTree = "<group>"; };
-		9DC600711DD365A1007E4E25 /* AMKLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKLabel.swift; sourceTree = "<group>"; };
-		9DDB35341DAC01800032F9CD /* AMKButton+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+Navigation.swift"; sourceTree = "<group>"; };
-		9DDB35361DAC02380032F9CD /* AMKButton+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AMKButton+State.swift"; sourceTree = "<group>"; };
-		9DED15EA1DDE523D00501F5A /* Any+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Any+Conversion.swift"; path = "Tool/Any+Conversion.swift"; sourceTree = "<group>"; };
-		C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.release.xcconfig"; sourceTree = "<group>"; };
-		CCA922768C27437FE26509AC /* Pods-TuSerenata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuSerenata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.debug.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		9D31B5A41D8B359500AFC5EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3228A7A71E2D9D2400E478FD /* MapKit.framework in Frameworks */,
-				5F38631F884C840EB3DCB99B /* Pods_TuSerenata.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		1122E0EC0D2CAB4425ABDD16 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3228A7A61E2D9D2400E478FD /* MapKit.framework */,
-				6CEAE6C8EEF94AC7BCB3679C /* Pods_TuSerenata.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2A5E4123DA23449EDD82B451 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CCA922768C27437FE26509AC /* Pods-TuSerenata.debug.xcconfig */,
-				C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3228A7A81E2D9E1300E478FD /* Mapa */ = {
-			isa = PBXGroup;
-			children = (
-				3228A7A91E2D9E4E00E478FD /* Anotacion.swift */,
-				3228A7AB1E2DA1FD00E478FD /* MapaControl.swift */,
-			);
-			name = Mapa;
-			sourceTree = "<group>";
-		};
-		325F39CF1E2BDADC001ADF95 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				325F39D01E2BDADC001ADF95 /* Chat.storyboard */,
-				325F39D11E2BDADC001ADF95 /* ChatViewController.swift */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
-		9D31B59E1D8B359500AFC5EF = {
-			isa = PBXGroup;
-			children = (
-				9D31B5BF1D8B3AB200AFC5EF /* TuSerenata-Bridging-Header.h */,
-				9D31B5A91D8B359500AFC5EF /* TuSerenata */,
-				9D31B5A81D8B359500AFC5EF /* Products */,
-				2A5E4123DA23449EDD82B451 /* Pods */,
-				1122E0EC0D2CAB4425ABDD16 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		9D31B5A81D8B359500AFC5EF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9D31B5A71D8B359500AFC5EF /* TuSerenata.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9D31B5A91D8B359500AFC5EF /* TuSerenata */ = {
-			isa = PBXGroup;
-			children = (
-				3228A7A81E2D9E1300E478FD /* Mapa */,
-				325F39CF1E2BDADC001ADF95 /* Chat */,
-				9DC594251D906EE300639952 /* Gerente */,
-				9DC593FE1D8C82AB00639952 /* AMKFactory */,
-				9DC593F91D8C78B700639952 /* Fabrica */,
-				9DA82D321D8C767D00ECF101 /* Tool */,
-				9DA82D2F1D8C753900ECF101 /* Controles */,
-				9D31B5BC1D8B39AA00AFC5EF /* Model */,
-				9D31B5AA1D8B359500AFC5EF /* AppDelegate.swift */,
-				9D31B5AC1D8B359500AFC5EF /* ViewController.swift */,
-				9D31B5AE1D8B359500AFC5EF /* Main.storyboard */,
-				9D31B5B11D8B359500AFC5EF /* Assets.xcassets */,
-				9D31B5B31D8B359500AFC5EF /* LaunchScreen.storyboard */,
-				3270170F1DA0243A00987DCF /* GoogleService-Info.plist */,
-				9D31B5B61D8B359500AFC5EF /* Info.plist */,
-				9DC594281D907A6800639952 /* AppDelegate+Ext.swift */,
-				9D1489291D9413C000AEFC45 /* ViewController+Loc.swift */,
-				9D14892B1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift */,
-				9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */,
-				9DAE43E91D946C2C00E418B8 /* ViewController+TableViewDataSource.swift */,
-			);
-			path = TuSerenata;
-			sourceTree = "<group>";
-		};
-		9D31B5BC1D8B39AA00AFC5EF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9D31B5BD1D8B39C900AFC5EF /* Musico.swift */,
-				9DC5942A1D907C1500639952 /* Usuario.swift */,
-				9DAE43EB1D955C7000E418B8 /* Serenata.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		9DA82D2F1D8C753900ECF101 /* Controles */ = {
-			isa = PBXGroup;
-			children = (
-				9DA82D301D8C754E00ECF101 /* MenuVC.swift */,
-				9DC593FC1D8C7E4500639952 /* Login.swift */,
-				9DAE43ED1D9565C200E418B8 /* CrearSerenata.swift */,
-				9DAE43EF1D95C77400E418B8 /* CrearSerenata+TableView.swift */,
-				9D24805E1D998F1E001440EB /* Login+TextField.swift */,
-				9D483D3B1D99AF2B00AD569C /* Registro.swift */,
-				9D7E0C3E1D9DABBE00A5A112 /* CrearSerenata+TextField.swift */,
-				32D37F1A1DF7A0D4001966F9 /* Registro+Outlet.swift */,
-				321C7B071E017F1A0057439E /* DetalleGrupo.swift */,
-			);
-			name = Controles;
-			sourceTree = "<group>";
-		};
-		9DA82D321D8C767D00ECF101 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				9DC594211D8C83AB00639952 /* Global.swift */,
-				9DC5941F1D8C834900639952 /* String+Additions.swift */,
-				9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */,
-				9DAE43E51D94457500E418B8 /* UIViewController+Ext.swift */,
-				9D24805C1D998B4A001440EB /* UIViewController+Pay.swift */,
-				324C9B801DADEEC700462550 /* FIRDataSnapshot+Ext.swift */,
-				9DED15EA1DDE523D00501F5A /* Any+Conversion.swift */,
-			);
-			name = Tool;
-			sourceTree = "<group>";
-		};
-		9DC593F91D8C78B700639952 /* Fabrica */ = {
-			isa = PBXGroup;
-			children = (
-				9DC593FA1D8C78D400639952 /* Gradiente.swift */,
-			);
-			name = Fabrica;
-			sourceTree = "<group>";
-		};
-		9DC593FE1D8C82AB00639952 /* AMKFactory */ = {
-			isa = PBXGroup;
-			children = (
-				9DC593FF1D8C82B900639952 /* AMKFactory */,
-			);
-			name = AMKFactory;
-			sourceTree = "<group>";
-		};
-		9DC593FF1D8C82B900639952 /* AMKFactory */ = {
-			isa = PBXGroup;
-			children = (
-				9DC594001D8C82B900639952 /* Tool */,
-				9DC594041D8C82B900639952 /* View */,
-			);
-			path = AMKFactory;
-			sourceTree = "<group>";
-		};
-		9DC594001D8C82B900639952 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				9DC594011D8C82B900639952 /* AMKEncoder+Extension.swift */,
-				9DC594021D8C82B900639952 /* AMKEncoder.swift */,
-				9DC594031D8C82B900639952 /* CGRect+Extension.swift */,
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		9DC594041D8C82B900639952 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9DC6006C1DD365A1007E4E25 /* AMKLabel */,
-				9DC594051D8C82B900639952 /* AMKButton+Animation.swift */,
-				9DC594061D8C82B900639952 /* AMKButton+Delegate.swift */,
-				9DC594071D8C82B900639952 /* AMKButton+Image.swift */,
-				9DC594081D8C82B900639952 /* AMKButton+KVO.swift */,
-				9DC594091D8C82B900639952 /* AMKButton+Label.swift */,
-				9DC5940A1D8C82B900639952 /* AMKButton+Persistence.swift */,
-				9DC5940B1D8C82B900639952 /* AMKButton+Touch.swift */,
-				9DC5940C1D8C82B900639952 /* AMKButton+View.swift */,
-				9DC5940D1D8C82B900639952 /* AMKButton.swift */,
-				9DC5940E1D8C82B900639952 /* AMKCarousel */,
-				9DDB35341DAC01800032F9CD /* AMKButton+Navigation.swift */,
-				9DDB35361DAC02380032F9CD /* AMKButton+State.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9DC5940E1D8C82B900639952 /* AMKCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				9DC5940F1D8C82B900639952 /* AMKCarousel+Scroll.swift */,
-				9DC594101D8C82B900639952 /* AMKCarousel.swift */,
-			);
-			path = AMKCarousel;
-			sourceTree = "<group>";
-		};
-		9DC594251D906EE300639952 /* Gerente */ = {
-			isa = PBXGroup;
-			children = (
-				9DC594261D906EFD00639952 /* Gerente.swift */,
-			);
-			name = Gerente;
-			sourceTree = "<group>";
-		};
-		9DC6006C1DD365A1007E4E25 /* AMKLabel */ = {
-			isa = PBXGroup;
-			children = (
-				9DC6006D1DD365A1007E4E25 /* AMKLabel+ArcText.swift */,
-				9DC6006E1DD365A1007E4E25 /* AMKLabel+Inspectable.swift */,
-				9DC6006F1DD365A1007E4E25 /* AMKLabel+Touch.swift */,
-				9DC600701DD365A1007E4E25 /* AMKLabel+Var.swift */,
-				9DC600711DD365A1007E4E25 /* AMKLabel.swift */,
-			);
-			path = AMKLabel;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		9D31B5A61D8B359500AFC5EF /* TuSerenata */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9D31B5B91D8B359500AFC5EF /* Build configuration list for PBXNativeTarget "TuSerenata" */;
-			buildPhases = (
-				CF8035E93760F12381EA9A80 /* [CP] Check Pods Manifest.lock */,
-				9D31B5A31D8B359500AFC5EF /* Sources */,
-				9D31B5A41D8B359500AFC5EF /* Frameworks */,
-				9D31B5A51D8B359500AFC5EF /* Resources */,
-				8F7B13214F542276DE5CDB57 /* [CP] Embed Pods Frameworks */,
-				5E79A8EF79BBA574EBCF78D0 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TuSerenata;
-			productName = TuSerenata;
-			productReference = 9D31B5A71D8B359500AFC5EF /* TuSerenata.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		9D31B59F1D8B359500AFC5EF /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "Bruno Garelli";
-				TargetAttributes = {
-					9D31B5A61D8B359500AFC5EF = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0810;
-						SystemCapabilities = {
-							com.apple.Maps.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-				};
-			};
-			buildConfigurationList = 9D31B5A21D8B359500AFC5EF /* Build configuration list for PBXProject "TuSerenata" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 9D31B59E1D8B359500AFC5EF;
-			productRefGroup = 9D31B5A81D8B359500AFC5EF /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				9D31B5A61D8B359500AFC5EF /* TuSerenata */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		9D31B5A51D8B359500AFC5EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D31B5B51D8B359500AFC5EF /* LaunchScreen.storyboard in Resources */,
-				327017101DA0243A00987DCF /* GoogleService-Info.plist in Resources */,
-				9D31B5B21D8B359500AFC5EF /* Assets.xcassets in Resources */,
-				325F39D21E2BDADC001ADF95 /* Chat.storyboard in Resources */,
-				9D31B5B01D8B359500AFC5EF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5E79A8EF79BBA574EBCF78D0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F7B13214F542276DE5CDB57 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF8035E93760F12381EA9A80 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		9D31B5A31D8B359500AFC5EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				324C9B811DADEEC700462550 /* FIRDataSnapshot+Ext.swift in Sources */,
-				9DC5942B1D907C1500639952 /* Usuario.swift in Sources */,
-				9DC594121D8C82B900639952 /* AMKEncoder.swift in Sources */,
-				9DAE43EC1D955C7000E418B8 /* Serenata.swift in Sources */,
-				9DC593FD1D8C7E4500639952 /* Login.swift in Sources */,
-				9D7E0C3F1D9DABBE00A5A112 /* CrearSerenata+TextField.swift in Sources */,
-				9DC594151D8C82B900639952 /* AMKButton+Delegate.swift in Sources */,
-				9DC5941E1D8C82B900639952 /* AMKCarousel.swift in Sources */,
-				9DAE43EA1D946C2C00E418B8 /* ViewController+TableViewDataSource.swift in Sources */,
-				9D31B5AD1D8B359500AFC5EF /* ViewController.swift in Sources */,
-				9DC600741DD365A1007E4E25 /* AMKLabel+Touch.swift in Sources */,
-				9DC600751DD365A1007E4E25 /* AMKLabel+Var.swift in Sources */,
-				9D483D3C1D99AF2B00AD569C /* Registro.swift in Sources */,
-				9D14892C1D941CD200AEFC45 /* ViewController+QuickReturnButton.swift in Sources */,
-				9DAE43E41D943F1400E418B8 /* ViewController+TableViewDelegate.swift in Sources */,
-				9DED15EB1DDE523D00501F5A /* Any+Conversion.swift in Sources */,
-				9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */,
-				9DC600731DD365A1007E4E25 /* AMKLabel+Inspectable.swift in Sources */,
-				325F39D31E2BDADC001ADF95 /* ChatViewController.swift in Sources */,
-				9DC5941C1D8C82B900639952 /* AMKButton.swift in Sources */,
-				9DC600761DD365A1007E4E25 /* AMKLabel.swift in Sources */,
-				9DC594221D8C83AB00639952 /* Global.swift in Sources */,
-				3228A7AA1E2D9E4E00E478FD /* Anotacion.swift in Sources */,
-				9DC5941A1D8C82B900639952 /* AMKButton+Touch.swift in Sources */,
-				9DC5941B1D8C82B900639952 /* AMKButton+View.swift in Sources */,
-				9DC594271D906EFD00639952 /* Gerente.swift in Sources */,
-				9DAE43E61D94457500E418B8 /* UIViewController+Ext.swift in Sources */,
-				9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */,
-				9DC594201D8C834900639952 /* String+Additions.swift in Sources */,
-				9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */,
-				9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */,
-				9DC594181D8C82B900639952 /* AMKButton+Label.swift in Sources */,
-				9DC5941D1D8C82B900639952 /* AMKCarousel+Scroll.swift in Sources */,
-				9D24805F1D998F1E001440EB /* Login+TextField.swift in Sources */,
-				9DDB35371DAC02380032F9CD /* AMKButton+State.swift in Sources */,
-				9DC594291D907A6800639952 /* AppDelegate+Ext.swift in Sources */,
-				3228A7AC1E2DA1FD00E478FD /* MapaControl.swift in Sources */,
-				9DC594111D8C82B900639952 /* AMKEncoder+Extension.swift in Sources */,
-				9DC594161D8C82B900639952 /* AMKButton+Image.swift in Sources */,
-				9DC594191D8C82B900639952 /* AMKButton+Persistence.swift in Sources */,
-				9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */,
-				9DC594131D8C82B900639952 /* CGRect+Extension.swift in Sources */,
-				9DC600721DD365A1007E4E25 /* AMKLabel+ArcText.swift in Sources */,
-				9DAE43EE1D9565C200E418B8 /* CrearSerenata.swift in Sources */,
-				32D37F1B1DF7A0D4001966F9 /* Registro+Outlet.swift in Sources */,
-				9DC594171D8C82B900639952 /* AMKButton+KVO.swift in Sources */,
-				321C7B081E017F1A0057439E /* DetalleGrupo.swift in Sources */,
-				9D14892A1D9413C000AEFC45 /* ViewController+Loc.swift in Sources */,
-				9DC594141D8C82B900639952 /* AMKButton+Animation.swift in Sources */,
-				9DDB35351DAC01800032F9CD /* AMKButton+Navigation.swift in Sources */,
-				9D24805D1D998B4A001440EB /* UIViewController+Pay.swift in Sources */,
-				9DAE43F01D95C77400E418B8 /* CrearSerenata+TableView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9D31B5AE1D8B359500AFC5EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D31B5AF1D8B359500AFC5EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9D31B5B31D8B359500AFC5EF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D31B5B41D8B359500AFC5EF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		9D31B5B71D8B359500AFC5EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "TuSerenata-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		9D31B5B81D8B359500AFC5EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "TuSerenata-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9D31B5BA1D8B359500AFC5EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCA922768C27437FE26509AC /* Pods-TuSerenata.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TuSerenata/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zg.TuSerenata;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TuSerenata-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		9D31B5BB1D8B359500AFC5EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8673C071823D7B69FDB834A /* Pods-TuSerenata.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TuSerenata/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zg.TuSerenata;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TuSerenata-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		9D31B5A21D8B359500AFC5EF /* Build configuration list for PBXProject "TuSerenata" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9D31B5B71D8B359500AFC5EF /* Debug */,
-				9D31B5B81D8B359500AFC5EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9D31B5B91D8B359500AFC5EF /* Build configuration list for PBXNativeTarget "TuSerenata" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9D31B5BA1D8B359500AFC5EF /* Debug */,
-				9D31B5BB1D8B359500AFC5EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 9D31B59F1D8B359500AFC5EF /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1122E0EC0D2CAB4425ABDD16</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3228A7A61E2D9D2400E478FD</string>
+				<string>6CEAE6C8EEF94AC7BCB3679C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2A5E4123DA23449EDD82B451</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CCA922768C27437FE26509AC</string>
+				<string>C8673C071823D7B69FDB834A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>321C7B071E017F1A0057439E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>DetalleGrupo.swift</string>
+			<key>path</key>
+			<string>Controles/DetalleGrupo.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>321C7B081E017F1A0057439E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>321C7B071E017F1A0057439E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3228A7A61E2D9D2400E478FD</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MapKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/MapKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>3228A7A71E2D9D2400E478FD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3228A7A61E2D9D2400E478FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3228A7A81E2D9E1300E478FD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3228A7A91E2D9E4E00E478FD</string>
+				<string>3228A7AB1E2DA1FD00E478FD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Mapa</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3228A7A91E2D9E4E00E478FD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Anotacion.swift</string>
+			<key>path</key>
+			<string>Mapa/Anotacion.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3228A7AA1E2D9E4E00E478FD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3228A7A91E2D9E4E00E478FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3228A7AB1E2DA1FD00E478FD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MapaControl.swift</string>
+			<key>path</key>
+			<string>Mapa/MapaControl.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3228A7AC1E2DA1FD00E478FD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3228A7AB1E2DA1FD00E478FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>324C9B801DADEEC700462550</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>FIRDataSnapshot+Ext.swift</string>
+			<key>path</key>
+			<string>Tool/FIRDataSnapshot+Ext.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>324C9B811DADEEC700462550</key>
+		<dict>
+			<key>fileRef</key>
+			<string>324C9B801DADEEC700462550</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>325F39CF1E2BDADC001ADF95</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>325F39D01E2BDADC001ADF95</string>
+				<string>325F39D11E2BDADC001ADF95</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Chat</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>325F39D01E2BDADC001ADF95</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Chat.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>325F39D11E2BDADC001ADF95</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ChatViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>325F39D21E2BDADC001ADF95</key>
+		<dict>
+			<key>fileRef</key>
+			<string>325F39D01E2BDADC001ADF95</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>325F39D31E2BDADC001ADF95</key>
+		<dict>
+			<key>fileRef</key>
+			<string>325F39D11E2BDADC001ADF95</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3270170F1DA0243A00987DCF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>GoogleService-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>327017101DA0243A00987DCF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3270170F1DA0243A00987DCF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>32D37F1A1DF7A0D4001966F9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Registro+Outlet.swift</string>
+			<key>path</key>
+			<string>Controles/Registro+Outlet.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>32D37F1B1DF7A0D4001966F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>32D37F1A1DF7A0D4001966F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5E79A8EF79BBA574EBCF78D0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>5F38631F884C840EB3DCB99B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6CEAE6C8EEF94AC7BCB3679C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6CEAE6C8EEF94AC7BCB3679C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_TuSerenata.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>8F7B13214F542276DE5CDB57</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9D1489291D9413C000AEFC45</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController+Loc.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D14892A1D9413C000AEFC45</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D1489291D9413C000AEFC45</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D14892B1D941CD200AEFC45</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController+QuickReturnButton.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D14892C1D941CD200AEFC45</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D14892B1D941CD200AEFC45</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D24805C1D998B4A001440EB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UIViewController+Pay.swift</string>
+			<key>path</key>
+			<string>Tool/UIViewController+Pay.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D24805D1D998B4A001440EB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D24805C1D998B4A001440EB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D24805E1D998F1E001440EB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Login+TextField.swift</string>
+			<key>path</key>
+			<string>Controles/Login+TextField.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D24805F1D998F1E001440EB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D24805E1D998F1E001440EB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D31B59E1D8B359500AFC5EF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9D31B5BF1D8B3AB200AFC5EF</string>
+				<string>9D31B5A91D8B359500AFC5EF</string>
+				<string>9D31B5A81D8B359500AFC5EF</string>
+				<string>2A5E4123DA23449EDD82B451</string>
+				<string>1122E0EC0D2CAB4425ABDD16</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B59F1D8B359500AFC5EF</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0810</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Bruno Garelli</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>9D31B5A61D8B359500AFC5EF</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3.1</string>
+						<key>LastSwiftMigration</key>
+						<string>0810</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.Maps.iOS</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>9D31B5A21D8B359500AFC5EF</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>9D31B59E1D8B359500AFC5EF</string>
+			<key>productRefGroup</key>
+			<string>9D31B5A81D8B359500AFC5EF</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>9D31B5A61D8B359500AFC5EF</string>
+			</array>
+		</dict>
+		<key>9D31B5A21D8B359500AFC5EF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9D31B5B71D8B359500AFC5EF</string>
+				<string>9D31B5B81D8B359500AFC5EF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9D31B5A31D8B359500AFC5EF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>324C9B811DADEEC700462550</string>
+				<string>9DC5942B1D907C1500639952</string>
+				<string>9DC594121D8C82B900639952</string>
+				<string>9DAE43EC1D955C7000E418B8</string>
+				<string>9DC593FD1D8C7E4500639952</string>
+				<string>9D7E0C3F1D9DABBE00A5A112</string>
+				<string>9DC594151D8C82B900639952</string>
+				<string>9DC5941E1D8C82B900639952</string>
+				<string>9DAE43EA1D946C2C00E418B8</string>
+				<string>9D31B5AD1D8B359500AFC5EF</string>
+				<string>9DC600741DD365A1007E4E25</string>
+				<string>9DC600751DD365A1007E4E25</string>
+				<string>9D483D3C1D99AF2B00AD569C</string>
+				<string>9D14892C1D941CD200AEFC45</string>
+				<string>9DAE43E41D943F1400E418B8</string>
+				<string>9DED15EB1DDE523D00501F5A</string>
+				<string>9DA82D311D8C754E00ECF101</string>
+				<string>9DC600731DD365A1007E4E25</string>
+				<string>325F39D31E2BDADC001ADF95</string>
+				<string>9DC5941C1D8C82B900639952</string>
+				<string>9DC600761DD365A1007E4E25</string>
+				<string>9DC594221D8C83AB00639952</string>
+				<string>3228A7AA1E2D9E4E00E478FD</string>
+				<string>9DC5941A1D8C82B900639952</string>
+				<string>9DC5941B1D8C82B900639952</string>
+				<string>9DC594271D906EFD00639952</string>
+				<string>9DAE43E61D94457500E418B8</string>
+				<string>9DA82D341D8C769300ECF101</string>
+				<string>9DC594201D8C834900639952</string>
+				<string>9DC593FB1D8C78D400639952</string>
+				<string>9D31B5AB1D8B359500AFC5EF</string>
+				<string>9DC594181D8C82B900639952</string>
+				<string>9DC5941D1D8C82B900639952</string>
+				<string>9D24805F1D998F1E001440EB</string>
+				<string>9DDB35371DAC02380032F9CD</string>
+				<string>9DC594291D907A6800639952</string>
+				<string>3228A7AC1E2DA1FD00E478FD</string>
+				<string>9DC594111D8C82B900639952</string>
+				<string>9DC594161D8C82B900639952</string>
+				<string>9DC594191D8C82B900639952</string>
+				<string>9D31B5BE1D8B39C900AFC5EF</string>
+				<string>9DC594131D8C82B900639952</string>
+				<string>9DC600721DD365A1007E4E25</string>
+				<string>9DAE43EE1D9565C200E418B8</string>
+				<string>32D37F1B1DF7A0D4001966F9</string>
+				<string>9DC594171D8C82B900639952</string>
+				<string>321C7B081E017F1A0057439E</string>
+				<string>9D14892A1D9413C000AEFC45</string>
+				<string>9DC594141D8C82B900639952</string>
+				<string>9DDB35351DAC01800032F9CD</string>
+				<string>9D24805D1D998B4A001440EB</string>
+				<string>9DAE43F01D95C77400E418B8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9D31B5A41D8B359500AFC5EF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3228A7A71E2D9D2400E478FD</string>
+				<string>5F38631F884C840EB3DCB99B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9D31B5A51D8B359500AFC5EF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9D31B5B51D8B359500AFC5EF</string>
+				<string>327017101DA0243A00987DCF</string>
+				<string>9D31B5B21D8B359500AFC5EF</string>
+				<string>325F39D21E2BDADC001ADF95</string>
+				<string>9D31B5B01D8B359500AFC5EF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9D31B5A61D8B359500AFC5EF</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9D31B5B91D8B359500AFC5EF</string>
+			<key>buildPhases</key>
+			<array>
+				<string>CF8035E93760F12381EA9A80</string>
+				<string>9D31B5A31D8B359500AFC5EF</string>
+				<string>9D31B5A41D8B359500AFC5EF</string>
+				<string>9D31B5A51D8B359500AFC5EF</string>
+				<string>8F7B13214F542276DE5CDB57</string>
+				<string>5E79A8EF79BBA574EBCF78D0</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TuSerenata</string>
+			<key>productName</key>
+			<string>TuSerenata</string>
+			<key>productReference</key>
+			<string>9D31B5A71D8B359500AFC5EF</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>9D31B5A71D8B359500AFC5EF</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TuSerenata.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9D31B5A81D8B359500AFC5EF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9D31B5A71D8B359500AFC5EF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5A91D8B359500AFC5EF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3228A7A81E2D9E1300E478FD</string>
+				<string>325F39CF1E2BDADC001ADF95</string>
+				<string>9DC594251D906EE300639952</string>
+				<string>9DC593FE1D8C82AB00639952</string>
+				<string>9DC593F91D8C78B700639952</string>
+				<string>9DA82D321D8C767D00ECF101</string>
+				<string>9DA82D2F1D8C753900ECF101</string>
+				<string>9D31B5BC1D8B39AA00AFC5EF</string>
+				<string>9D31B5AA1D8B359500AFC5EF</string>
+				<string>9D31B5AC1D8B359500AFC5EF</string>
+				<string>9D31B5AE1D8B359500AFC5EF</string>
+				<string>9D31B5B11D8B359500AFC5EF</string>
+				<string>9D31B5B31D8B359500AFC5EF</string>
+				<string>3270170F1DA0243A00987DCF</string>
+				<string>9D31B5B61D8B359500AFC5EF</string>
+				<string>9DC594281D907A6800639952</string>
+				<string>9D1489291D9413C000AEFC45</string>
+				<string>9D14892B1D941CD200AEFC45</string>
+				<string>9DAE43E31D943F1400E418B8</string>
+				<string>9DAE43E91D946C2C00E418B8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TuSerenata</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5AA1D8B359500AFC5EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5AB1D8B359500AFC5EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D31B5AA1D8B359500AFC5EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D31B5AC1D8B359500AFC5EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5AD1D8B359500AFC5EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D31B5AC1D8B359500AFC5EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D31B5AE1D8B359500AFC5EF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9D31B5AF1D8B359500AFC5EF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5AF1D8B359500AFC5EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5B01D8B359500AFC5EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D31B5AE1D8B359500AFC5EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D31B5B11D8B359500AFC5EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5B21D8B359500AFC5EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D31B5B11D8B359500AFC5EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D31B5B31D8B359500AFC5EF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9D31B5B41D8B359500AFC5EF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5B41D8B359500AFC5EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5B51D8B359500AFC5EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D31B5B31D8B359500AFC5EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D31B5B61D8B359500AFC5EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5B71D8B359500AFC5EF</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>TuSerenata-Bridging-Header.h</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9D31B5B81D8B359500AFC5EF</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>TuSerenata-Bridging-Header.h</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Owholemodule</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9D31B5B91D8B359500AFC5EF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9D31B5BA1D8B359500AFC5EF</string>
+				<string>9D31B5BB1D8B359500AFC5EF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9D31B5BA1D8B359500AFC5EF</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>CCA922768C27437FE26509AC</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>NO</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TuSerenata/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.zg.TuSerenata</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>TuSerenata-Bridging-Header.h</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9D31B5BB1D8B359500AFC5EF</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C8673C071823D7B69FDB834A</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>NO</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TuSerenata/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.zg.TuSerenata</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>TuSerenata-Bridging-Header.h</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9D31B5BC1D8B39AA00AFC5EF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9D31B5BD1D8B39C900AFC5EF</string>
+				<string>9DC5942A1D907C1500639952</string>
+				<string>9DAE43EB1D955C7000E418B8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Model</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5BD1D8B39C900AFC5EF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Musico.swift</string>
+			<key>path</key>
+			<string>Model/Musico.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D31B5BE1D8B39C900AFC5EF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D31B5BD1D8B39C900AFC5EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D31B5BF1D8B3AB200AFC5EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TuSerenata-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D483D3B1D99AF2B00AD569C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Registro.swift</string>
+			<key>path</key>
+			<string>Controles/Registro.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D483D3C1D99AF2B00AD569C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D483D3B1D99AF2B00AD569C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D7E0C3E1D9DABBE00A5A112</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CrearSerenata+TextField.swift</string>
+			<key>path</key>
+			<string>Controles/CrearSerenata+TextField.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D7E0C3F1D9DABBE00A5A112</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D7E0C3E1D9DABBE00A5A112</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DA82D2F1D8C753900ECF101</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DA82D301D8C754E00ECF101</string>
+				<string>9DC593FC1D8C7E4500639952</string>
+				<string>9DAE43ED1D9565C200E418B8</string>
+				<string>9DAE43EF1D95C77400E418B8</string>
+				<string>9D24805E1D998F1E001440EB</string>
+				<string>9D483D3B1D99AF2B00AD569C</string>
+				<string>9D7E0C3E1D9DABBE00A5A112</string>
+				<string>32D37F1A1DF7A0D4001966F9</string>
+				<string>321C7B071E017F1A0057439E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Controles</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DA82D301D8C754E00ECF101</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>MenuVC.swift</string>
+			<key>path</key>
+			<string>Controles/MenuVC.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DA82D311D8C754E00ECF101</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DA82D301D8C754E00ECF101</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DA82D321D8C767D00ECF101</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC594211D8C83AB00639952</string>
+				<string>9DC5941F1D8C834900639952</string>
+				<string>9DA82D331D8C769300ECF101</string>
+				<string>9DAE43E51D94457500E418B8</string>
+				<string>9D24805C1D998B4A001440EB</string>
+				<string>324C9B801DADEEC700462550</string>
+				<string>9DED15EA1DDE523D00501F5A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Tool</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DA82D331D8C769300ECF101</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UIColor+Ext.swift</string>
+			<key>path</key>
+			<string>Tool/UIColor+Ext.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DA82D341D8C769300ECF101</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DA82D331D8C769300ECF101</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DAE43E31D943F1400E418B8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController+TableViewDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DAE43E41D943F1400E418B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DAE43E31D943F1400E418B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DAE43E51D94457500E418B8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UIViewController+Ext.swift</string>
+			<key>path</key>
+			<string>Tool/UIViewController+Ext.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DAE43E61D94457500E418B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DAE43E51D94457500E418B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DAE43E91D946C2C00E418B8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController+TableViewDataSource.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DAE43EA1D946C2C00E418B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DAE43E91D946C2C00E418B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DAE43EB1D955C7000E418B8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Serenata.swift</string>
+			<key>path</key>
+			<string>Model/Serenata.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DAE43EC1D955C7000E418B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DAE43EB1D955C7000E418B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DAE43ED1D9565C200E418B8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CrearSerenata.swift</string>
+			<key>path</key>
+			<string>Controles/CrearSerenata.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DAE43EE1D9565C200E418B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DAE43ED1D9565C200E418B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DAE43EF1D95C77400E418B8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CrearSerenata+TableView.swift</string>
+			<key>path</key>
+			<string>Controles/CrearSerenata+TableView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DAE43F01D95C77400E418B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DAE43EF1D95C77400E418B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC593F91D8C78B700639952</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC593FA1D8C78D400639952</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Fabrica</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC593FA1D8C78D400639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Gradiente.swift</string>
+			<key>path</key>
+			<string>Fabrica/Gradiente.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC593FB1D8C78D400639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC593FA1D8C78D400639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC593FC1D8C7E4500639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Login.swift</string>
+			<key>path</key>
+			<string>Controles/Login.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC593FD1D8C7E4500639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC593FC1D8C7E4500639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC593FE1D8C82AB00639952</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC593FF1D8C82B900639952</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AMKFactory</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC593FF1D8C82B900639952</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC594001D8C82B900639952</string>
+				<string>9DC594041D8C82B900639952</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>AMKFactory</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594001D8C82B900639952</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC594011D8C82B900639952</string>
+				<string>9DC594021D8C82B900639952</string>
+				<string>9DC594031D8C82B900639952</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Tool</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594011D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKEncoder+Extension.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594021D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKEncoder.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594031D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CGRect+Extension.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594041D8C82B900639952</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC6006C1DD365A1007E4E25</string>
+				<string>9DC594051D8C82B900639952</string>
+				<string>9DC594061D8C82B900639952</string>
+				<string>9DC594071D8C82B900639952</string>
+				<string>9DC594081D8C82B900639952</string>
+				<string>9DC594091D8C82B900639952</string>
+				<string>9DC5940A1D8C82B900639952</string>
+				<string>9DC5940B1D8C82B900639952</string>
+				<string>9DC5940C1D8C82B900639952</string>
+				<string>9DC5940D1D8C82B900639952</string>
+				<string>9DC5940E1D8C82B900639952</string>
+				<string>9DDB35341DAC01800032F9CD</string>
+				<string>9DDB35361DAC02380032F9CD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>View</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594051D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+Animation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594061D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+Delegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594071D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+Image.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594081D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+KVO.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594091D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+Label.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC5940A1D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+Persistence.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC5940B1D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+Touch.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC5940C1D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+View.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC5940D1D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC5940E1D8C82B900639952</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC5940F1D8C82B900639952</string>
+				<string>9DC594101D8C82B900639952</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>AMKCarousel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC5940F1D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKCarousel+Scroll.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594101D8C82B900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKCarousel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594111D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594011D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594121D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594021D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594131D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594031D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594141D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594051D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594151D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594061D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594161D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594071D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594171D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594081D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594181D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594091D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594191D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC5940A1D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC5941A1D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC5940B1D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC5941B1D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC5940C1D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC5941C1D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC5940D1D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC5941D1D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC5940F1D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC5941E1D8C82B900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594101D8C82B900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC5941F1D8C834900639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>String+Additions.swift</string>
+			<key>path</key>
+			<string>Tool/String+Additions.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594201D8C834900639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC5941F1D8C834900639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594211D8C83AB00639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Global.swift</string>
+			<key>path</key>
+			<string>Tool/Global.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594221D8C83AB00639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594211D8C83AB00639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594251D906EE300639952</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC594261D906EFD00639952</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Gerente</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594261D906EFD00639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Gerente.swift</string>
+			<key>path</key>
+			<string>Gerente/Gerente.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594271D906EFD00639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594261D906EFD00639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC594281D907A6800639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate+Ext.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC594291D907A6800639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC594281D907A6800639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC5942A1D907C1500639952</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Usuario.swift</string>
+			<key>path</key>
+			<string>Model/Usuario.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC5942B1D907C1500639952</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC5942A1D907C1500639952</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC6006C1DD365A1007E4E25</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9DC6006D1DD365A1007E4E25</string>
+				<string>9DC6006E1DD365A1007E4E25</string>
+				<string>9DC6006F1DD365A1007E4E25</string>
+				<string>9DC600701DD365A1007E4E25</string>
+				<string>9DC600711DD365A1007E4E25</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>AMKLabel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC6006D1DD365A1007E4E25</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKLabel+ArcText.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC6006E1DD365A1007E4E25</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKLabel+Inspectable.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC6006F1DD365A1007E4E25</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKLabel+Touch.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC600701DD365A1007E4E25</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKLabel+Var.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC600711DD365A1007E4E25</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKLabel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DC600721DD365A1007E4E25</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC6006D1DD365A1007E4E25</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC600731DD365A1007E4E25</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC6006E1DD365A1007E4E25</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC600741DD365A1007E4E25</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC6006F1DD365A1007E4E25</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC600751DD365A1007E4E25</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC600701DD365A1007E4E25</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC600761DD365A1007E4E25</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC600711DD365A1007E4E25</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DDB35341DAC01800032F9CD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+Navigation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DDB35351DAC01800032F9CD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DDB35341DAC01800032F9CD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DDB35361DAC02380032F9CD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AMKButton+State.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DDB35371DAC02380032F9CD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DDB35361DAC02380032F9CD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DED15EA1DDE523D00501F5A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Any+Conversion.swift</string>
+			<key>path</key>
+			<string>Tool/Any+Conversion.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DED15EB1DDE523D00501F5A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DED15EA1DDE523D00501F5A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C8673C071823D7B69FDB834A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TuSerenata.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CCA922768C27437FE26509AC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TuSerenata.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TuSerenata/Pods-TuSerenata.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CF8035E93760F12381EA9A80</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>9D31B59F1D8B359500AFC5EF</string>
+</dict>
+</plist>

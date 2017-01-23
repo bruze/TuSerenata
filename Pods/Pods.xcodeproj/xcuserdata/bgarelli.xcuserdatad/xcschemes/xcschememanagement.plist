@@ -44,12 +44,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JLChatViewController-JLChatViewController.xcscheme</key>
+		<key>JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JLChatViewController.xcscheme</key>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,17 +77,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1ED4DFAAD25E1999D0244868457A351E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>23BA9083ED0D2392A167A8AFA04427FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3032BAA8E2EB6B7A6079A03AEDDFD7EC</key>
+		<key>38B2701268544660FCFFFC78F17F2745</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>3CD051F30FC64AA061484269D84720EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59CDDB315DD2B098E0CD9ED56B026F4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,22 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC92DD7B57CB69F78A66A29AAD472140</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CB9D8D920ECB5603C761F6346B1412CE</key>
+		<key>BA173449AADAE88E21341EE17852EBE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E5AB88E8333B9568826C9AA252037278</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8C219923A81938955FFC72AE39B961D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

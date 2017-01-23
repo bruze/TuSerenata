@@ -15,6 +15,7 @@ class Usuario: NSObject {
     var sexo: String
     let ref: FIRDatabaseReference?
     var refMensajes: FIRDatabaseReference?
+    var refTipeo: FIRDatabaseReference?
     var mensajesNuevos: [JSQMessage]?
     //var completed: Bool!
     
@@ -41,6 +42,7 @@ class Usuario: NSObject {
          ref = snapshot.ref
         if snapshot.hasChild("mensajes") {
             let mensajes = snapshot.childSnapshot(forPath: "mensajes")
+            self.refTipeo = mensajes.childSnapshot(forPath: "tipeando").ref
             self.refMensajes = mensajes.ref
             self.refMensajes?.keepSynced(true)
             if mensajes.hasChild("nuevos") {

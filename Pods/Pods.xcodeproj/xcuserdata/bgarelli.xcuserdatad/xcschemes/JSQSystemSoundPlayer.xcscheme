@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BC92DD7B57CB69F78A66A29AAD472140'
-               BlueprintName = 'JLChatViewController-JLChatViewController'
+               BlueprintIdentifier = '1ED4DFAAD25E1999D0244868457A351E'
+               BlueprintName = 'JSQSystemSoundPlayer'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'JLChatViewController.bundle'>
+               BuildableName = 'JSQSystemSoundPlayer.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
