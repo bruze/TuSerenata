@@ -29,7 +29,7 @@ import DualSlideMenu
         // Dispose of any resources that can be recreated.
     }
     func logout() {
-        try! FIRAuth.auth()?.signOut()
+        try! Auth.auth().signOut()
         appDelegate.authorize()
     }
     func irACrearSerenata() {

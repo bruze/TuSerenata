@@ -31,20 +31,20 @@ final class ChatViewController: JSQMessagesViewController {
   // MARK: Properties
   private let imageURLNotSetKey = "NOTSET"
   
-  //var channelRef: FIRDatabaseReference?
+  //var channelRef: DatabaseReference?
 
-  private lazy var messageRef: FIRDatabaseReference = (gerente.usuario?.refMensajes)!//self.channelRef!.child("messages")
-  fileprivate lazy var storageRef: FIRStorageReference = FIRStorage.storage().reference(forURL: "gs://chatchat-rw-cf107.appspot.com")
-  private lazy var userIsTypingRef: FIRDatabaseReference = (gerente.usuario?.refTipeo)!/*self.channelRef!.child("typingIndicator").child(self.senderId)*/
-    private var recipentIsTypingRef: FIRDatabaseReference {
+  private lazy var messageRef: DatabaseReference = (gerente.usuario?.refMensajes)!//self.channelRef!.child("messages")
+  fileprivate lazy var storageRef: StorageReference = Storage.storage().reference(forURL: "gs://chatchat-rw-cf107.appspot.com")
+  private lazy var userIsTypingRef: DatabaseReference = (gerente.usuario?.refTipeo)!/*self.channelRef!.child("typingIndicator").child(self.senderId)*/
+    private var recipentIsTypingRef: DatabaseReference {
         get {
             return (recipiente?.refTipeo)!
         }
     }
   //private lazy var usersTypingQuery: FIRDatabaseQuery = self.channelRef!.child("typingIndicator").queryOrderedByValue().queryEqual(toValue: true)
 
-  private var newMessageRefHandle: FIRDatabaseHandle?
-  private var updatedMessageRefHandle: FIRDatabaseHandle?
+  private var newMessageRefHandle: DatabaseHandle?
+  private var updatedMessageRefHandle: DatabaseHandle?
   
   private var messages: [JSQMessage] = []
   private var photoMessageMap = [String: JSQPhotoMediaItem]()
@@ -205,14 +205,14 @@ final class ChatViewController: JSQMessagesViewController {
   }
   
   private func fetchImageDataAtURL(_ photoURL: String, forMediaItem mediaItem: JSQPhotoMediaItem, clearsPhotoMessageMapOnSuccessForKey key: String?) {
-    let storageRef = FIRStorage.storage().reference(forURL: photoURL)
-    storageRef.data(withMaxSize: INT64_MAX){ (data, error) in
+    let storageRef = Storage.storage().reference(forURL: photoURL)
+    storageRef.getData(maxSize: INT64_MAX){ (data, error) in
       if let error = error {
         print("Error downloading image data: \(error)")
         return
       }
-      
-      storageRef.metadata(completion: { (metadata, metadataErr) in
+
+      storageRef.getMetadata(completion: { (metadata, metadataErr) in
         if let error = metadataErr {
           print("Error downloading metadata: \(error)")
           return
@@ -237,7 +237,7 @@ final class ChatViewController: JSQMessagesViewController {
     /*let typingIndicatorRef = gerente.usuario?.refTipeo
     userIsTypingRef = (typingIndicatorRef?.child(senderId))!
     userIsTypingRef.onDisconnectRemoveValue()
-    userIsTypingRef = typingIndicatorRef!.queryOrderedByValue().queryEqual(toValue: true) as! FIRDatabaseReference*/
+    userIsTypingRef = typingIndicatorRef!.queryOrderedByValue().queryEqual(toValue: true) as! DatabaseReference*/
     
     /*usersTypingQuery.observe(.value) { (data: FIRDataSnapshot) in
       
@@ -374,10 +374,10 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
           let imageFileURL = contentEditingInput?.fullSizeImageURL
 
           // 5
-          let path = "\(FIRAuth.auth()?.currentUser?.uid)/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(photoReferenceUrl.lastPathComponent)"
+          let path = "\(Auth.auth().currentUser?.uid)/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(photoReferenceUrl.lastPathComponent)"
 
           // 6
-          self.storageRef.child(path).putFile(imageFileURL!, metadata: nil) { (metadata, error) in
+          self.storageRef.child(path).putFile(from: imageFileURL!, metadata: nil) { (metadata, error) in
             if let error = error {
               print("Error uploading photo: \(error.localizedDescription)")
               return

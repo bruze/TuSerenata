@@ -21,7 +21,7 @@ class Login: UIViewController {
     }
     
     internal func intenteLogueo() {
-        FIRAuth.auth()?.signIn(withEmail: "dos@dos.com", password: "123456", completion: { (user, error) in
+        Auth.auth().signIn(withEmail: "dos@dos.com", password: "123456", completion: { (user, error) in
             if let loggedUser = user {
                 let users = FirebaseRef.child("users")
                 users.observe(.value, with: { (captura) in

@@ -18,7 +18,7 @@ extension AppDelegate {
         window?.rootViewController = slide
     }
     func logout() {
-        try! FIRAuth.auth()?.signOut()
+        try! Auth.auth().signOut()
         self.authorize()
     }
 }

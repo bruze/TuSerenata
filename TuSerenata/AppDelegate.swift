@@ -13,7 +13,7 @@ import CoreLocation
 
 let appDelegate = (UIApplication.shared.delegate as? AppDelegate)!
 let FirebaseUrl = "https://tuserenata-dd913.firebaseio.com/"
-let FirebaseRef = FIRDatabase.database().reference()
+let FirebaseRef = Database.database().reference()
 let localizador = CLLocationManager.init()
 //let FirebaseRef = Firebase(url: FirebaseUrl)
 
@@ -27,11 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         super.init()
         localizador.requestAlwaysAuthorization()
-        FIRApp.configure()
-        FIRDatabase.database().persistenceEnabled = true
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
     }
     func authorize() {
-        if let authorized = FIRAuth.auth()?.currentUser {
+        if let authorized = Auth.auth().currentUser {
             mostrarPantallaAterrizaje()
             Gerente.unistancia.obtenerUsuario(authorized.uid, finalizar: {usuario in
                 Gerente.unistancia.usuario = usuario

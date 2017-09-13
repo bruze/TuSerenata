@@ -48,14 +48,12 @@ public final class CVCalendarWeekView: UIView {
     public var utilizable = false /// Recovery service.
 
     public weak var calendarView: CVCalendarView! {
-        get {
-            var calendarView: CVCalendarView!
-            if let monthView = monthView, let activeCalendarView = monthView.calendarView {
-                calendarView = activeCalendarView
-            }
-
-            return calendarView
+        var calendarView: CVCalendarView!
+        if let monthView = monthView, let activeCalendarView = monthView.calendarView {
+            calendarView = activeCalendarView
         }
+        
+        return calendarView
     }
 
     // MARK: - Initialization
@@ -230,7 +228,7 @@ extension CVCalendarWeekView {
         for object in objects {
             if object == nil {
                 if collapsing {
-                    fatalError("Object { \(object) } must not be nil!")
+                    fatalError("Object { \(String(describing: object)) } must not be nil!")
                 } else {
                     return
                 }

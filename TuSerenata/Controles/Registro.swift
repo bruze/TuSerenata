@@ -89,7 +89,7 @@ class Registro: UIViewController {
     }
     func intenteRegistro() {
         if registrandoGrupo {
-            FIRAuth.auth()?.createUser(withEmail: emailGrupo.text!, password: claveGrupo.text!, completion: { (usuario, error) in
+            Auth.auth().createUser(withEmail: emailGrupo.text!, password: claveGrupo.text!, completion: { (usuario, error) in
                 if error != nil {
                     print(error!)
                 }
@@ -110,7 +110,7 @@ class Registro: UIViewController {
                 })
             })
         } else {
-            FIRAuth.auth()?.createUser(withEmail: email.text!, password: clave.text!, completion: { (usuario, error) in
+            Auth.auth().createUser(withEmail: email.text!, password: clave.text!, completion: { (usuario, error) in
                 if error != nil {
                     print(error!)
                 }

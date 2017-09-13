@@ -287,7 +287,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
             endingLineNumber = "144"
-            landmarkName = "actualizarFiltrados()"
+            landmarkName = "cargarFiltros()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -319,8 +319,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "Registro"
-            landmarkType = "3">
+            landmarkName = "registrandoGrupo"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

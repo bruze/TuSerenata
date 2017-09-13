@@ -10,8 +10,8 @@ import FirebaseDatabase
 
 class Gerente: NSObject {
     var usuario: Usuario? = nil
-    let users: FIRDatabaseReference = FirebaseRef.child("users")
-    let grupos: FIRDatabaseReference = FirebaseRef.child("grupos")
+    let users: DatabaseReference = FirebaseRef.child("users")
+    let grupos: DatabaseReference = FirebaseRef.child("grupos")
     var musicosFiltrados: [Musico] = []
     var serenatasContratadas: [String] = ["Reserva con Fecha 30/06/2016 grupo Los Galgos",
                                           "Reserva con Fecha 08/04/2016 grupo Canarios Verdes",
@@ -67,7 +67,7 @@ class Gerente: NSObject {
         })
     }
     func obtenerMusico(_ uid: String, finalizar: @escaping (Musico?) -> ()) {
-        //let users: FIRDatabaseReference = FirebaseRef.child("users")
+        //let users: DatabaseReference = FirebaseRef.child("users")
         users.observe(.value, with: { (captura) in
             if captura.hasChild(uid) {
                 let capturaMusico = captura.childSnapshot(forPath: uid)

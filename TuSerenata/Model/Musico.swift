@@ -29,7 +29,7 @@ class Musico: Usuario {
         //self.ref = nil
     }
     
-    init(captura: FIRDataSnapshot) {
+    init(captura: DataSnapshot) {
         
         let dict = anytool.dicstrany(any: captura.value!)
         //nombre = (dict["nombre"] as? String)!

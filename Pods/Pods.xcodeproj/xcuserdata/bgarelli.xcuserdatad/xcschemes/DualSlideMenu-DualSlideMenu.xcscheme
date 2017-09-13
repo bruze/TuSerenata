@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8364974FB0BFFC16DBA404533C5673E1'
+               BlueprintIdentifier = '30BF027CF51467BEE9B957E06B9EB0AE'
                BlueprintName = 'DualSlideMenu-DualSlideMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DualSlideMenu.bundle'>

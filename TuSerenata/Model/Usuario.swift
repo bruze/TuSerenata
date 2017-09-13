@@ -13,9 +13,9 @@ class Usuario: NSObject {
     var nombre: String
     var ciudad: String
     var sexo: String
-    let ref: FIRDatabaseReference?
-    var refMensajes: FIRDatabaseReference?
-    var refTipeo: FIRDatabaseReference?
+    let ref: DatabaseReference?
+    var refMensajes: DatabaseReference?
+    var refTipeo: DatabaseReference?
     var mensajesNuevos: [JSQMessage]?
     //var completed: Bool!
     
@@ -30,7 +30,7 @@ class Usuario: NSObject {
         super.init()
     }
 
-    init(snapshot: FIRDataSnapshot) {
+    init(snapshot: DataSnapshot) {
          key    = snapshot.key
         nombre  = anytool.dicstrany(any: snapshot.value!)["nombre"] as! String
         ciudad  = anytool.dicstrany(any: snapshot.value!)["ciudad"] as! String

@@ -37,7 +37,7 @@ extension UIViewController/*: PropertyExtensions*/ {
     }
     internal func toqueHijosAceptado(_ aceptado: Bool) {
         view.subviews.forEach { (vista) in
-            vista.1.isUserInteractionEnabled = aceptado
+            vista.isUserInteractionEnabled = aceptado
         }
     }
     internal func opacarFondo() {

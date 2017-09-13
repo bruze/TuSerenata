@@ -7,7 +7,7 @@
 //
 
 //import Foundation
-extension FIRDataSnapshot {
+extension DataSnapshot {
     func hasChilds(_ orphans: String...) -> Bool {
         var hasAll = false
         for orp in orphans {

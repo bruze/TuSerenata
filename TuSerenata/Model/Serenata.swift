@@ -16,10 +16,10 @@ class Serenata: NSObject {
     }
     
     let key: String!
-    let usuario: Usuario?
-    let grupo: Musico?
+    var usuario: Usuario?
+    var grupo: Musico?
     let detalles: DicStrStr
-    let ref: FIRDatabaseReference?
+    let ref: DatabaseReference?
     var estado: EstadoSerenata!
     
     // Initialize from arbitrary data
@@ -36,7 +36,7 @@ class Serenata: NSObject {
         gerente.obtenerMusico(grupoID, finalizar: { musico in self.grupo = musico })
     }
     
-    init(captura: FIRDataSnapshot) {
+    init(captura: DataSnapshot) {
         key = captura.key
         usuario = nil
         grupo = nil
