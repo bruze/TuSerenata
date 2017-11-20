@@ -15,7 +15,9 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        var awe = some()
+        awe.memb = 9
+        print(awe.memb)
         PayPalMobile.preconnect(withEnvironment: PayPalEnvironmentNoNetwork)
     }
     
@@ -26,6 +28,9 @@ class ViewController: UIViewController {
         localizador.startUpdatingLocation()
         setInitialRecognizeButtonHeight()
         setupTable()
+        let rat = RatingView.init(frame: CGRect.init(x: 100, y: 200, width: 500, height: 200), idleImageName: "profile", selectedImageName: "face1")
+        view.addSubview(rat)
+        print(rat.rating)
         //mostrarCarga()
         //gerente.filtrarMusicos({ self.notificarActualizarFiltrados() }, condiciones: nil)
         // Do any additional setup after loading the view, typically from a nib.

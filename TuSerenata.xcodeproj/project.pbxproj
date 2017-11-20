@@ -29,6 +29,7 @@
 		9D31B5BE1D8B39C900AFC5EF /* Musico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31B5BD1D8B39C900AFC5EF /* Musico.swift */; };
 		9D483D3C1D99AF2B00AD569C /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D483D3B1D99AF2B00AD569C /* Registro.swift */; };
 		9D7E0C3F1D9DABBE00A5A112 /* CrearSerenata+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E0C3E1D9DABBE00A5A112 /* CrearSerenata+TextField.swift */; };
+		9D99C5C51F69BCD400FF1572 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D99C5C41F69BCD400FF1572 /* RatingView.swift */; };
 		9DA82D311D8C754E00ECF101 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D301D8C754E00ECF101 /* MenuVC.swift */; };
 		9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */; };
 		9DAE43E41D943F1400E418B8 /* ViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */; };
@@ -94,6 +95,7 @@
 		9D31B5BF1D8B3AB200AFC5EF /* TuSerenata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuSerenata-Bridging-Header.h"; sourceTree = "<group>"; };
 		9D483D3B1D99AF2B00AD569C /* Registro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Registro.swift; path = Controles/Registro.swift; sourceTree = "<group>"; };
 		9D7E0C3E1D9DABBE00A5A112 /* CrearSerenata+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CrearSerenata+TextField.swift"; path = "Controles/CrearSerenata+TextField.swift"; sourceTree = "<group>"; };
+		9D99C5C41F69BCD400FF1572 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingView.swift; path = Fabrica/RatingView.swift; sourceTree = "<group>"; };
 		9DA82D301D8C754E00ECF101 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = Controles/MenuVC.swift; sourceTree = "<group>"; };
 		9DA82D331D8C769300ECF101 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Ext.swift"; path = "Tool/UIColor+Ext.swift"; sourceTree = "<group>"; };
 		9DAE43E31D943F1400E418B8 /* ViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC593FA1D8C78D400639952 /* Gradiente.swift */,
+				9D99C5C41F69BCD400FF1572 /* RatingView.swift */,
 			);
 			name = Fabrica;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				9DC594271D906EFD00639952 /* Gerente.swift in Sources */,
 				9DAE43E61D94457500E418B8 /* UIViewController+Ext.swift in Sources */,
 				9DA82D341D8C769300ECF101 /* UIColor+Ext.swift in Sources */,
+				9D99C5C51F69BCD400FF1572 /* RatingView.swift in Sources */,
 				9DC594201D8C834900639952 /* String+Additions.swift in Sources */,
 				9DC593FB1D8C78D400639952 /* Gradiente.swift in Sources */,
 				9D31B5AB1D8B359500AFC5EF /* AppDelegate.swift in Sources */,
